@@ -1,0 +1,7 @@
+pytrends==4.9.2
+praw==7.7.1
+feedparser==6.0.11
+groq==0.11.0
+requests==2.31.0
+beautifulsoup4==4.12.3
+lxml==5.2.2
