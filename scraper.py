@@ -1,7 +1,7 @@
 """
 K-Beauty Pulse — scraper.py
-데이터 수집: Google Trends + BeautyMatter RSS + Amazon Best Sellers
-(Reddit 제거 버전 — 완전 무료)
+데이터 수집: Google Trends (related_queries 실시간 발굴) + RSS + Amazon
+고정 키워드 없이 매주 자동으로 트렌딩 키워드 발굴
 """
 
 import json
@@ -12,68 +12,127 @@ import feedparser
 import requests
 from pytrends.request import TrendReq
 
-REGIONS = {
-    "americas": {
-        "label": "Americas",
-        "geo": "US",
-        "platform": "Amazon / TikTok Shop",
-        "keywords": ["snail mucin", "glass skin", "korean sunscreen", "PDRN skincare", "milky toner"],
-    },
-    "europe": {
-        "label": "Europe",
-        "geo": "GB",
-        "platform": "Lookfantastic / Boots",
-        "keywords": ["korean skincare", "peptide serum", "LED face mask", "retinol", "clean beauty korean"],
-    },
-    "sea": {
-        "label": "Southeast Asia",
-        "geo": "SG",
-        "platform": "Shopee / TikTok Shop",
-        "keywords": ["tone up sunscreen", "whitening serum", "SPF stick", "glass skin", "brightening cream"],
-    },
-    "mideast": {
-        "label": "Middle East",
-        "geo": "AE",
-        "platform": "Noon / Sephora ME",
-        "keywords": ["anti aging korean", "halal skincare", "PDRN skincare", "ginseng serum", "korean glass skin"],
-    },
-    "india": {
-        "label": "India",
-        "geo": "IN",
-        "platform": "Nykaa / Myntra",
-        "keywords": ["niacinamide serum", "barrier repair", "vitamin c serum", "SPF sunscreen routine", "korean skincare"],
-    },
+# ── 지역 시드 키워드 (발굴의 출발점 — 최소한만 고정) ──────
+# 이 키워드로 related_queries를 당겨서 실시간 트렌딩 키워드를 자동 발굴
+REGION_SEEDS = {
+    "americas": {"label": "Americas", "geo": "US", "platform": "Amazon / TikTok Shop",
+                 "seeds": ["korean skincare", "k-beauty"]},
+    "europe":   {"label": "Europe",   "geo": "GB", "platform": "Lookfantastic / Boots",
+                 "seeds": ["korean skincare", "k-beauty"]},
+    "sea":      {"label": "Southeast Asia", "geo": "SG", "platform": "Shopee / TikTok Shop",
+                 "seeds": ["korean skincare", "k beauty"]},
+    "mideast":  {"label": "Middle East",    "geo": "AE", "platform": "Noon / Sephora ME",
+                 "seeds": ["korean skincare", "k beauty"]},
+    "india":    {"label": "India",    "geo": "IN", "platform": "Nykaa / Myntra",
+                 "seeds": ["korean skincare", "k-beauty"]},
 }
 
 BEAUTYMATTER_RSS = "https://beautymatter.com/feed/"
 COSMETICSBIZ_RSS = "https://cosmeticsbusiness.com/rss"
 
 
-def fetch_google_trends(region_key: str) -> dict:
-    region = REGIONS[region_key]
+# ── 실시간 트렌딩 키워드 발굴 ──────────────────────────────
+def discover_trending_keywords(geo: str, seeds: list) -> list:
+    """
+    시드 키워드의 related_queries에서 급상승 키워드를 자동 추출
+    → 매주 실행마다 다른 실시간 트렌딩 키워드가 나옴
+    """
+    pytrends = TrendReq(hl="en-US", tz=360, timeout=(10, 25))
+    discovered = []
+
+    for seed in seeds:
+        try:
+            pytrends.build_payload(
+                [seed],
+                cat=44,          # 44 = Beauty & Fitness 카테고리
+                timeframe="now 7-d",
+                geo=geo,
+                gprop="",
+            )
+            related = pytrends.related_queries()
+
+            if seed in related and related[seed]:
+                # 급상승(rising) 키워드 우선 추출
+                rising_df = related[seed].get("rising")
+                top_df    = related[seed].get("top")
+
+                if rising_df is not None and not rising_df.empty:
+                    for _, row in rising_df.head(8).iterrows():
+                        kw = str(row["query"]).strip()
+                        if len(kw) > 2:
+                            discovered.append({
+                                "keyword": kw,
+                                "value":   int(row["value"]),
+                                "type":    "rising",  # 급상승
+                            })
+
+                if top_df is not None and not top_df.empty:
+                    for _, row in top_df.head(5).iterrows():
+                        kw = str(row["query"]).strip()
+                        if len(kw) > 2:
+                            discovered.append({
+                                "keyword": kw,
+                                "value":   int(row["value"]),
+                                "type":    "top",     # 인기
+                            })
+
+            time.sleep(5)  # rate limit 방지
+
+        except Exception as e:
+            print(f"[Discovery] {geo} / {seed} 오류: {e}")
+            time.sleep(8)
+
+    # 중복 제거 + 급상승 우선 정렬
+    seen = set()
+    unique = []
+    for item in sorted(discovered, key=lambda x: (x["type"] == "top", -x["value"])):
+        if item["keyword"] not in seen:
+            seen.add(item["keyword"])
+            unique.append(item)
+
+    return unique[:15]  # 상위 15개
+
+
+# ── 발굴된 키워드 검색량 측정 ──────────────────────────────
+def fetch_trends_for_keywords(keywords: list, geo: str) -> dict:
+    """발굴된 키워드들의 실제 검색량 지수 측정"""
     pytrends = TrendReq(hl="en-US", tz=360, timeout=(10, 25))
     results = {}
-    kws = region["keywords"][:5]
-    try:
-        pytrends.build_payload(kws, cat=0, timeframe="now 7-d", geo=region["geo"], gprop="")
-        interest_df = pytrends.interest_over_time()
-        if not interest_df.empty:
-            for kw in kws:
-                if kw in interest_df.columns:
-                    results[kw] = {
-                        "current": int(interest_df[kw].iloc[-1]),
-                        "avg_7d":  int(interest_df[kw].mean()),
-                        "peak":    int(interest_df[kw].max()),
-                        "trend":   "up" if interest_df[kw].iloc[-1] > interest_df[kw].mean() else "down",
-                    }
-        time.sleep(10)
-    except Exception as e:
-        print(f"[Trends] {region_key} 오류: {e}")
-        for kw in kws:
-            results[kw] = {"current": 0, "avg_7d": 0, "peak": 0, "trend": "unknown"}
+
+    # 5개씩 묶어서 요청 (pytrends 최대 5개 제한)
+    kw_names = [k["keyword"] for k in keywords[:10]]
+    chunks = [kw_names[i:i+5] for i in range(0, len(kw_names), 5)]
+
+    for chunk in chunks:
+        try:
+            pytrends.build_payload(
+                chunk,
+                cat=44,
+                timeframe="now 7-d",
+                geo=geo,
+                gprop="",
+            )
+            df = pytrends.interest_over_time()
+
+            if not df.empty:
+                for kw in chunk:
+                    if kw in df.columns:
+                        results[kw] = {
+                            "current": int(df[kw].iloc[-1]),
+                            "avg_7d":  int(df[kw].mean()),
+                            "peak":    int(df[kw].max()),
+                            "trend":   "up" if df[kw].iloc[-1] > df[kw].mean() else "down",
+                        }
+            time.sleep(8)
+
+        except Exception as e:
+            print(f"[Trends] 측정 오류: {e}")
+            time.sleep(10)
+
     return results
 
 
+# ── RSS 뉴스 ───────────────────────────────────────────────
 def fetch_rss_news() -> list:
     articles = []
     for feed_url in [BEAUTYMATTER_RSS, COSMETICSBIZ_RSS]:
@@ -84,7 +143,7 @@ def fetch_rss_news() -> list:
                 if any(kw in title.lower() for kw in [
                     "k-beauty", "korean", "kbeauty", "cosrx", "laneige",
                     "beauty of joseon", "anua", "medicube", "innisfree",
-                    "skincare", "ingredient", "serum", "sunscreen"
+                    "scinic", "skincare", "ingredient", "serum", "sunscreen"
                 ]):
                     articles.append({
                         "title":   title,
@@ -95,9 +154,11 @@ def fetch_rss_news() -> list:
                     })
         except Exception as e:
             print(f"[RSS] {feed_url} 오류: {e}")
+
     return articles[:10]
 
 
+# ── Amazon 베스트셀러 ──────────────────────────────────────
 def fetch_amazon_bestsellers() -> list:
     url = "https://www.amazon.com/Best-Sellers-Beauty-Korean-Skin-Care/zgbs/beauty/10528509011"
     headers = {
@@ -111,7 +172,8 @@ def fetch_amazon_bestsellers() -> list:
         soup = BeautifulSoup(resp.text, "html.parser")
         items = soup.select("div.zg-grid-general-faceout")[:10]
         for i, item in enumerate(items, 1):
-            name_el  = item.select_one("div._cDEzb_p13n-sc-css-line-clamp-3_g3dy1") or item.select_one("span.a-size-small")
+            name_el  = item.select_one("div._cDEzb_p13n-sc-css-line-clamp-3_g3dy1") or \
+                       item.select_one("span.a-size-small")
             price_el = item.select_one("span.p13n-sc-price")
             products.append({
                 "rank":     i,
@@ -124,6 +186,7 @@ def fetch_amazon_bestsellers() -> list:
     return products
 
 
+# ── 전체 수집 실행 ─────────────────────────────────────────
 def collect_all() -> dict:
     print("=== K-Beauty Pulse 데이터 수집 시작 ===")
     data = {
@@ -134,11 +197,23 @@ def collect_all() -> dict:
         "amazon_top":   [],
     }
 
-    print("→ Google Trends 수집 중...")
-    for region_key in REGIONS:
-        print(f"   {region_key}...")
-        data["trends"][region_key] = fetch_google_trends(region_key)
-        time.sleep(10)
+    print("→ 실시간 트렌딩 키워드 발굴 + 검색량 측정 중...")
+    for region_key, region in REGION_SEEDS.items():
+        print(f"   [{region['label']}] 키워드 발굴 중...")
+
+        # 1단계: 실시간 키워드 발굴
+        discovered = discover_trending_keywords(region["geo"], region["seeds"])
+        print(f"   → {len(discovered)}개 키워드 발굴: {[d['keyword'] for d in discovered[:5]]}")
+
+        # 2단계: 발굴된 키워드 검색량 측정
+        search_volumes = fetch_trends_for_keywords(discovered, region["geo"])
+
+        data["trends"][region_key] = {
+            "discovered_keywords": discovered,   # 발굴된 키워드 전체
+            "search_volumes":      search_volumes,  # 검색량 측정값
+            "platform":            region["platform"],
+        }
+        time.sleep(10)  # 지역 간 대기
 
     print("→ RSS 뉴스 수집 중...")
     data["news"] = fetch_rss_news()
