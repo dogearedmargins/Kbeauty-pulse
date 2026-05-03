@@ -66,7 +66,7 @@ def fetch_google_trends(region_key: str) -> dict:
                         "peak":    int(interest_df[kw].max()),
                         "trend":   "up" if interest_df[kw].iloc[-1] > interest_df[kw].mean() else "down",
                     }
-        time.sleep(2)
+        time.sleep(10)
     except Exception as e:
         print(f"[Trends] {region_key} 오류: {e}")
         for kw in kws:
@@ -138,7 +138,7 @@ def collect_all() -> dict:
     for region_key in REGIONS:
         print(f"   {region_key}...")
         data["trends"][region_key] = fetch_google_trends(region_key)
-        time.sleep(3)
+        time.sleep(10)
 
     print("→ RSS 뉴스 수집 중...")
     data["news"] = fetch_rss_news()
