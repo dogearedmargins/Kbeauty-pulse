@@ -76,7 +76,7 @@ def discover_trending_keywords(geo: str, seeds: list) -> list:
                                 "type":    "top",     # 인기
                             })
 
-            time.sleep(5)  # rate limit 방지
+            time.sleep(15)  # rate limit 방지
 
         except Exception as e:
             print(f"[Discovery] {geo} / {seed} 오류: {e}")
@@ -127,7 +127,7 @@ def fetch_trends_for_keywords(keywords: list, geo: str) -> dict:
 
         except Exception as e:
             print(f"[Trends] 측정 오류: {e}")
-            time.sleep(10)
+            time.sleep(25)
 
     return results
 
@@ -213,7 +213,7 @@ def collect_all() -> dict:
             "search_volumes":      search_volumes,  # 검색량 측정값
             "platform":            region["platform"],
         }
-        time.sleep(10)  # 지역 간 대기
+        time.sleep(25)  # 지역 간 대기
 
     print("→ RSS 뉴스 수집 중...")
     data["news"] = fetch_rss_news()
