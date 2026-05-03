@@ -1,6 +1,7 @@
 """
 K-Beauty Pulse — analyzer.py
 Groq API (llama3-70b, 완전 무료) 로 수집 데이터 분석
+related_queries로 발굴된 실시간 키워드 기반
 """
 
 import json
@@ -17,61 +18,56 @@ REGIONS_META = {
 
 
 def build_region_prompt(region_key: str, raw: dict) -> str:
-    """지역별 분석 프롬프트 생성"""
-    meta    = REGIONS_META[region_key]
-    trends  = raw["trends"].get(region_key, {})
-    reddit  = raw["reddit"][:5]
-    news    = raw["news"][:5]
+    meta   = REGIONS_META[region_key]
+    region_data = raw["trends"].get(region_key, {})
+    news   = raw["news"][:5]
 
-    # 트렌드 데이터 텍스트 변환
-    trend_lines = []
-    for kw, vals in trends.items():
-        arrow = "▲" if vals.get("trend") == "up" else "▼"
-        trend_lines.append(
-            f"  - {kw}: 현재 {vals.get('current', 0)}/100 "
-            f"(7일 평균 {vals.get('avg_7d', 0)}) {arrow}"
-        )
+    # 발굴된 키워드 정리
+    discovered = region_data.get("discovered_keywords", [])
+    volumes    = region_data.get("search_volumes", {})
 
-    reddit_lines = [f"  - [{r['subreddit']}] {r['title']} (점수:{r['score']})" for r in reddit[:3]]
+    rising_kws = [d for d in discovered if d["type"] == "rising"][:8]
+    top_kws    = [d for d in discovered if d["type"] == "top"][:5]
+
+    rising_lines = [f"  - 🔥 {d['keyword']} (급상승 {d['value']}%)" for d in rising_kws]
+    top_lines    = [f"  - ⭐ {k} (검색지수 {v.get('current',0)}/100, 추세:{v.get('trend','')})"
+                    for k, v in list(volumes.items())[:5]]
     news_lines   = [f"  - {n['source']}: {n['title']}" for n in news[:3]]
 
     prompt = f"""당신은 K-Beauty 글로벌 B2B 마케팅 전문가입니다.
-아래 실시간 데이터를 분석하여 {meta['label']} 지역 마케터가 이번 주 바로 활용할 수 있는 인사이트를 작성해주세요.
+아래 이번 주 실시간으로 발굴된 트렌딩 키워드 데이터를 분석하여
+{meta['label']} 지역 마케터가 바로 활용할 수 있는 인사이트를 작성하세요.
 
 [지역] {meta['label']}
 [주요 채널] {meta['platform']}
 
-[Google Trends 이번 주 검색량 (0-100 지수)]
-{chr(10).join(trend_lines) if trend_lines else "  - 데이터 없음"}
+[이번 주 급상승 키워드 (Google Trends related_queries 실시간 발굴)]
+{chr(10).join(rising_lines) if rising_lines else "  - 데이터 수집 중"}
 
-[Reddit 트렌딩 포스트]
-{chr(10).join(reddit_lines) if reddit_lines else "  - 데이터 없음"}
+[인기 키워드 검색량]
+{chr(10).join(top_lines) if top_lines else "  - 데이터 수집 중"}
 
 [최신 뉴스]
 {chr(10).join(news_lines) if news_lines else "  - 데이터 없음"}
 
-다음 형식으로 JSON만 출력해주세요 (다른 텍스트 없이):
+다음 형식으로 JSON만 출력 (다른 텍스트 없이):
 {{
   "wow_change": "+X% WoW (추정치)",
   "headline": "이번 주 핵심 한 줄 요약 (50자 이내)",
-  "insight": "마케터용 2-3문장 인사이트. 구체적인 제품명/채널명 포함.",
-  "top_keywords": ["키워드1", "키워드2", "키워드3"],
-  "action": "이번 주 바로 실행할 수 있는 액션 1가지 (1문장)"
+  "insight": "마케터용 2-3문장. 급상승 키워드 중 주목할 브랜드/성분명 구체적으로 언급.",
+  "top_keywords": ["급상승키워드1", "급상승키워드2", "급상승키워드3"],
+  "action": "이번 주 바로 실행할 액션 1가지 (1문장)"
 }}"""
     return prompt
 
 
 def build_global_signal_prompt(region_analyses: dict, raw: dict) -> str:
-    """전체 글로벌 시그널 프롬프트"""
-    summaries = []
-    for rk, analysis in region_analyses.items():
-        summaries.append(f"[{REGIONS_META[rk]['label']}] {analysis.get('headline', '')}")
+    summaries = [f"[{REGIONS_META[rk]['label']}] {a.get('headline', '')}"
+                 for rk, a in region_analyses.items()]
+    amazon_lines = [f"  #{p['rank']} {p['name']}" for p in raw.get("amazon_top", [])[:3]]
 
-    amazon_top3 = raw.get("amazon_top", [])[:3]
-    amazon_lines = [f"  #{p['rank']} {p['name']}" for p in amazon_top3]
-
-    prompt = f"""K-Beauty 글로벌 마케팅 전문가로서, 이번 주 5개 지역 트렌드를 종합하여
-마케터가 즉시 활용할 수 있는 글로벌 시그널 3개를 도출해주세요.
+    prompt = f"""K-Beauty 글로벌 마케팅 전문가로서, 이번 주 5개 지역 실시간 트렌드를 종합하여
+마케터가 즉시 활용할 수 있는 글로벌 시그널 3개를 도출하세요.
 
 [지역별 요약]
 {chr(10).join(summaries)}
@@ -79,7 +75,7 @@ def build_global_signal_prompt(region_analyses: dict, raw: dict) -> str:
 [Amazon US 베스트셀러 TOP3]
 {chr(10).join(amazon_lines) if amazon_lines else "  - 데이터 없음"}
 
-다음 형식으로 JSON만 출력해주세요:
+다음 형식으로 JSON만 출력:
 {{
   "alert": "이번 주 가장 주목할 글로벌 시그널 (1문장, 수치 포함)",
   "signals": [
@@ -99,7 +95,6 @@ def build_global_signal_prompt(region_analyses: dict, raw: dict) -> str:
 
 
 def call_groq(client: Groq, prompt: str) -> dict:
-    """Groq API 호출 (llama3-70b, 무료)"""
     try:
         completion = client.chat.completions.create(
             model="llama3-70b-8192",
@@ -108,27 +103,20 @@ def call_groq(client: Groq, prompt: str) -> dict:
             max_tokens=1024,
         )
         raw_text = completion.choices[0].message.content.strip()
-
-        # JSON 파싱
         if "```json" in raw_text:
             raw_text = raw_text.split("```json")[1].split("```")[0].strip()
         elif "```" in raw_text:
             raw_text = raw_text.split("```")[1].split("```")[0].strip()
-
         return json.loads(raw_text)
-    except json.JSONDecodeError as e:
-        print(f"[Groq] JSON 파싱 실패: {e}\n응답: {raw_text[:200]}")
-        return {}
     except Exception as e:
-        print(f"[Groq] API 오류: {e}")
+        print(f"[Groq] 오류: {e}")
         return {}
 
 
 def analyze(raw: dict) -> dict:
-    """전체 분석 실행"""
     client = Groq(api_key=os.environ["GROQ_API_KEY"])
-
     print("=== Groq 분석 시작 ===")
+
     result = {
         "week":            raw.get("week", ""),
         "collected_at":    raw.get("collected_at", ""),
@@ -136,33 +124,25 @@ def analyze(raw: dict) -> dict:
         "global":          {},
     }
 
-    # 1. 지역별 분석
     for region_key in REGIONS_META:
         print(f"→ {REGIONS_META[region_key]['label']} 분석 중...")
-        prompt   = build_region_prompt(region_key, raw)
-        analysis = call_groq(client, prompt)
-
-        # fallback 기본값
+        analysis = call_groq(client, build_region_prompt(region_key, raw))
         result["region_analyses"][region_key] = {
-            "wow_change":    analysis.get("wow_change", "N/A"),
-            "headline":      analysis.get("headline", ""),
-            "insight":       analysis.get("insight", "데이터 분석 중"),
-            "top_keywords":  analysis.get("top_keywords", []),
-            "action":        analysis.get("action", ""),
+            "wow_change":   analysis.get("wow_change", "N/A"),
+            "headline":     analysis.get("headline", ""),
+            "insight":      analysis.get("insight", "데이터 분석 중"),
+            "top_keywords": analysis.get("top_keywords", []),
+            "action":       analysis.get("action", ""),
         }
 
-    # 2. 글로벌 시그널
     print("→ 글로벌 시그널 분석 중...")
-    global_prompt  = build_global_signal_prompt(result["region_analyses"], raw)
-    global_result  = call_groq(client, global_prompt)
-
+    global_result = call_groq(client, build_global_signal_prompt(result["region_analyses"], raw))
     result["global"] = {
-        "alert":      global_result.get("alert", ""),
-        "signals":    global_result.get("signals", []),
+        "alert":       global_result.get("alert", ""),
+        "signals":     global_result.get("signals", []),
         "global_top5": global_result.get("global_top5", []),
     }
 
-    # 저장
     os.makedirs("data", exist_ok=True)
     with open("data/weekly_analysis.json", "w", encoding="utf-8") as f:
         json.dump(result, f, ensure_ascii=False, indent=2)
