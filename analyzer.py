@@ -55,8 +55,8 @@ def build_region_prompt(region_key: str, raw: dict) -> str:
 
     rising_lines = [f"- {d['keyword']} (급상승 {d['value']}%)"
                     for d in discovered if d.get("type") == "rising"][:8]
-    vol_lines    = [f"- {k} (검색지수 {v.get('current', 0)}/100)"
-                    for k, v in list(volumes.items())[:5]]
+    vol_lines    = [f"- {k} (검색지수 {v.get('current', 0) if isinstance(v, dict) else 0}/100)"
+                for k, v in list(volumes.items())[:5] if isinstance(v, dict)]
     news_lines   = [f"- {n['source']}: {n['title']}" for n in news[:3]]
 
     kw_section = "\n".join(rising_lines) if rising_lines else \
