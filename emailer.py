@@ -209,7 +209,7 @@ def build_html(analysis: dict) -> str:
 def send_email(analysis: dict) -> None:
     """Gmail SMTP로 발송"""
     sender_email = os.environ["GMAIL_ADDRESS"]
-    app_password = os.environ["GMAIL_APP_PASSWORD"]
+    app_password = "".join(c for c in os.environ["GMAIL_APP_PASSWORD"] if c.isascii()).strip().replace(" ", "")
     week         = analysis.get("week", "K-Beauty Weekly Report")
 
     html_content = build_html(analysis)
