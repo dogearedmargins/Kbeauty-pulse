@@ -1,0 +1,1750 @@
+{
+  "meta": {
+    "updated_at": "2025-12-01",
+    "updated_by": "manual research",
+    "week_label": "2025 · Research Baseline",
+    "note": "2025년 연간 리서치 기반 데이터. Sources: BeautyMatter Amazon Top 25 Q4 2025, NielsenIQ Oct 2025, Lookfantastic 2025 Trend Report, Boots 2025, Tuke Marketing TikTok Shop SEA Jun 2025, Beautyworld ME 2025 Evolut, Nykaa Beauty Rewind 2025 Dec 30"
+  },
+  "regions": {
+    "americas": {
+      "metrics": [
+        {
+          "label": "US K-Beauty Revenue",
+          "value": "$2B",
+          "delta": "YoY +37%",
+          "tooltip": "NielsenIQ 2025 기준. 미국 내 K-beauty 총 소매 매출액. 전년 동기 대비 37% 성장."
+        },
+        {
+          "label": "온라인 판매 비중",
+          "value": "70%",
+          "delta": "TikTok 견인",
+          "tooltip": "전체 K-beauty 판매 중 온라인 채널 비중. Amazon·TikTok Shop 중심."
+        },
+        {
+          "label": "Amazon Q4 2025 #1",
+          "value": "Medicube",
+          "delta": "Zero Pore Pad 2.0",
+          "tooltip": "BeautyMatter Amazon Q4 2025 Top 25 기준."
+        },
+        {
+          "label": "TikTok K-beauty 영상",
+          "value": "740K+",
+          "delta": "Q3 2025 +97% QoQ",
+          "tooltip": "TikTok Creative Center Q3 2025. #koreanskincare 영상 수."
+        }
+      ],
+      "sellers": [
+        {
+          "name": "Medicube Zero Pore Pad 2.0",
+          "brand": "Amazon Q4 2025 #1",
+          "score": 100
+        },
+        {
+          "name": "Mighty Patch Original",
+          "brand": "Hero Cosmetics · 4분기 연속 Top",
+          "score": 88
+        },
+        {
+          "name": "Biodance Bio-Collagen Mask",
+          "brand": "Amazon Top 25 #6 Q4 2025",
+          "score": 76
+        },
+        {
+          "name": "COSRX Snail Mucin Essence",
+          "brand": "TikTok Shop 바이럴",
+          "score": 68
+        },
+        {
+          "name": "Anua Heartleaf Serum",
+          "brand": "Sephora 신규 입점",
+          "score": 60
+        }
+      ],
+      "sellers_src": "출처: BeautyMatter Amazon Q4 2025 Top 25 · NielsenIQ Oct 2025",
+      "channels": [
+        {
+          "name": "Amazon",
+          "pct": 45,
+          "tooltip": "K-beauty 최대 유통 채널."
+        },
+        {
+          "name": "TikTok Shop",
+          "pct": 28,
+          "tooltip": "2024년부터 급성장."
+        },
+        {
+          "name": "Sephora/Ulta",
+          "pct": 18,
+          "tooltip": "프리미엄 오프라인 채널."
+        },
+        {
+          "name": "DTC",
+          "pct": 9,
+          "tooltip": "브랜드 공식몰."
+        }
+      ],
+      "channels_src": "출처: NielsenIQ K-beauty 2025 · BeautyMatter Q3 2025",
+      "keywords": [
+        {
+          "kw": "Glass Skin",
+          "tier": 1
+        },
+        {
+          "kw": "Snail Mucin",
+          "tier": 1
+        },
+        {
+          "kw": "PDRN",
+          "tier": 2
+        },
+        {
+          "kw": "Barrier Repair",
+          "tier": 2
+        },
+        {
+          "kw": "Medicube",
+          "tier": 2
+        },
+        {
+          "kw": "Slugging",
+          "tier": 3
+        },
+        {
+          "kw": "Niacinamide",
+          "tier": 3
+        },
+        {
+          "kw": "BHA/AHA",
+          "tier": 4
+        }
+      ],
+      "kw_ranking": [
+        {
+          "kw": "Glass Skin",
+          "score": 98
+        },
+        {
+          "kw": "Snail Mucin",
+          "score": 94
+        },
+        {
+          "kw": "PDRN",
+          "score": 88
+        },
+        {
+          "kw": "Barrier Repair",
+          "score": 82
+        },
+        {
+          "kw": "Medicube",
+          "score": 76
+        }
+      ],
+      "kw_src": "출처: TikTok Creative Center · BeautyMatter 2025 · Spate 2025",
+      "trend_12w": [
+        190,
+        205,
+        215,
+        225,
+        238,
+        248,
+        262,
+        275,
+        258,
+        288,
+        305,
+        324
+      ],
+      "trend_12w_2": [
+        72,
+        80,
+        85,
+        90,
+        98,
+        105,
+        112,
+        118,
+        110,
+        122,
+        130,
+        138
+      ],
+      "trend_tooltip": "스킨케어 12주 연속 상승. 선케어/트리트먼트 4월 이후 동반 상승.",
+      "src_all": "BeautyMatter Amazon Top 25 Q4 2025 · NielsenIQ Oct 2025 · TikTok Creative Center · Spate 2025",
+      "top_keywords": [
+        {
+          "kw": "Snail Mucin",
+          "score": 94,
+          "growth": "+54.2%",
+          "badge": "SURGING"
+        },
+        {
+          "kw": "Korean Sunscreen",
+          "score": 88,
+          "growth": "+49.2%",
+          "badge": "SURGING"
+        },
+        {
+          "kw": "Milky Toner",
+          "score": 76,
+          "growth": "+58.9%",
+          "badge": "NEW"
+        },
+        {
+          "kw": "Glass Skin",
+          "score": 82,
+          "growth": "+32%",
+          "badge": "PEAK"
+        },
+        {
+          "kw": "PDRN",
+          "score": 68,
+          "growth": "+41%",
+          "badge": "RISING"
+        }
+      ],
+      "kw_src_deep": "Google Trends via Spate 2025 · BeautyMatter · NielsenIQ",
+      "trend_monthly": [
+        55,
+        58,
+        65,
+        72,
+        78,
+        82,
+        88,
+        92,
+        90,
+        95,
+        88,
+        80
+      ],
+      "trend_monthly_2": [
+        30,
+        35,
+        55,
+        80,
+        92,
+        88,
+        75,
+        70,
+        60,
+        45,
+        35,
+        28
+      ],
+      "trend_insight": "Spate 2025: Milky Toner +58.9% 성장률 최고. PDRN 하반기 급등세.",
+      "kw_map": {
+        "Snail Mucin": [
+          "COSRX Snail\nMucin Essence",
+          "Biodance\nCollagen Mask",
+          "BoJ Snail\nSerum"
+        ],
+        "Korean Sunscreen": [
+          "BoJ Relief Sun",
+          "ISNTREE\nSun Serum SPF50+",
+          "Anua\nSunscreen"
+        ],
+        "Milky Toner": [
+          "Anua Heartleaf\nMilky Toner",
+          "Laneige\nMilky Skin Serum",
+          "SBM\nMilk Toner"
+        ],
+        "Glass Skin": [
+          "Peach & Lily\nGlass Skin Serum",
+          "Laneige\nSleeping Mask",
+          "COSRX\nHA Cream"
+        ],
+        "PDRN": [
+          "VT PDRN\nEssence",
+          "Medicube\nPDRN Ampoule",
+          "Rael PDRN\nHydrogel Mask"
+        ]
+      },
+      "seasonality": [
+        {
+          "kw": "Snail Mucin",
+          "months": [
+            55,
+            58,
+            65,
+            72,
+            78,
+            82,
+            88,
+            92,
+            90,
+            95,
+            88,
+            80
+          ],
+          "peak": "Sep-Oct"
+        },
+        {
+          "kw": "Korean Sunscreen",
+          "months": [
+            30,
+            35,
+            55,
+            80,
+            92,
+            88,
+            75,
+            70,
+            60,
+            45,
+            35,
+            28
+          ],
+          "peak": "Apr-May"
+        },
+        {
+          "kw": "Milky Toner",
+          "months": [
+            40,
+            42,
+            55,
+            68,
+            72,
+            65,
+            60,
+            58,
+            65,
+            72,
+            68,
+            62
+          ],
+          "peak": "Apr-May"
+        },
+        {
+          "kw": "Glass Skin",
+          "months": [
+            75,
+            72,
+            80,
+            85,
+            82,
+            78,
+            80,
+            85,
+            90,
+            95,
+            88,
+            99
+          ],
+          "peak": "Dec-Jan"
+        },
+        {
+          "kw": "PDRN",
+          "months": [
+            20,
+            25,
+            30,
+            38,
+            45,
+            52,
+            60,
+            68,
+            75,
+            80,
+            72,
+            65
+          ],
+          "peak": "Sep-Oct"
+        }
+      ],
+      "season_insight": "☀️ Korean Sunscreen 4~5월 피크. 🍂 Glass Skin 연말 최고조. 🌿 Snail Mucin 연중 꾸준."
+    },
+    "europe": {
+      "metrics": [
+        {
+          "label": "Lookfantastic K-beauty",
+          "value": "+174%",
+          "delta": "YoY 2025",
+          "tooltip": "Lookfantastic 2025 Trend Report. 유럽 K-beauty 매출 +174% YoY."
+        },
+        {
+          "label": "K-beauty 검색량",
+          "value": "+167.7%",
+          "delta": "2025 vs 2024",
+          "tooltip": "Lookfantastic 플랫폼 K-beauty 검색 +167.7%."
+        },
+        {
+          "label": "Boots 판매 속도",
+          "value": "1개/15초",
+          "delta": "Beauty of Joseon 1위",
+          "tooltip": "Boots 2025 Annual Beauty Report."
+        },
+        {
+          "label": "EU 시장 점유율",
+          "value": "11%",
+          "delta": "2022년 3%에서 급성장",
+          "tooltip": "Euromonitor 2025. 2022년 3%→2025년 11%."
+        }
+      ],
+      "sellers": [
+        {
+          "name": "Beauty of Joseon Relief Sun SPF50+",
+          "brand": "Boots 2025 베스트셀러",
+          "score": 100
+        },
+        {
+          "name": "Laneige Water Sleeping Mask",
+          "brand": "Lookfantastic Top",
+          "score": 86
+        },
+        {
+          "name": "Biodance Bio-Collagen Mask",
+          "brand": "Lookfantastic 급성장",
+          "score": 78
+        },
+        {
+          "name": "Anua Heartleaf Serum",
+          "brand": "UK TikTok 바이럴",
+          "score": 70
+        },
+        {
+          "name": "Medicube Zero Pore Pads",
+          "brand": "Boots & Lookfantastic 신규",
+          "score": 62
+        }
+      ],
+      "sellers_src": "출처: Marie Claire UK Dec 2025 · Boots 2025 · Lookfantastic 2025 Trend Report",
+      "channels": [
+        {
+          "name": "Lookfantastic",
+          "pct": 38,
+          "tooltip": "영국 최대 온라인 뷰티 리테일러."
+        },
+        {
+          "name": "Boots/Superdrug",
+          "pct": 25,
+          "tooltip": "영국 오프라인 체인."
+        },
+        {
+          "name": "Brand DTC",
+          "pct": 22,
+          "tooltip": "재구매율 높은 채널."
+        },
+        {
+          "name": "TikTok Shop EU",
+          "pct": 15,
+          "tooltip": "EU TikTok Shop 2024 오픈 이후 성장."
+        }
+      ],
+      "channels_src": "출처: Euromonitor K-beauty 2.0 Dec 2025",
+      "keywords": [
+        {
+          "kw": "Peptides +79%",
+          "tier": 1
+        },
+        {
+          "kw": "Clean Beauty",
+          "tier": 1
+        },
+        {
+          "kw": "Retinol +49%",
+          "tier": 2
+        },
+        {
+          "kw": "Niacinamide +33%",
+          "tier": 2
+        },
+        {
+          "kw": "LED Mask +96%",
+          "tier": 2
+        },
+        {
+          "kw": "Korean BB Cream",
+          "tier": 3
+        },
+        {
+          "kw": "Centella",
+          "tier": 3
+        },
+        {
+          "kw": "Bakuchiol",
+          "tier": 4
+        }
+      ],
+      "kw_ranking": [
+        {
+          "kw": "Peptides",
+          "score": 99
+        },
+        {
+          "kw": "LED Mask",
+          "score": 95
+        },
+        {
+          "kw": "Retinol",
+          "score": 89
+        },
+        {
+          "kw": "Clean Beauty",
+          "score": 84
+        },
+        {
+          "kw": "Niacinamide",
+          "score": 78
+        }
+      ],
+      "kw_src": "출처: Lookfantastic 2025 Trend Report",
+      "trend_12w": [
+        145,
+        155,
+        165,
+        162,
+        175,
+        185,
+        190,
+        198,
+        193,
+        208,
+        218,
+        230
+      ],
+      "trend_12w_2": [
+        50,
+        55,
+        60,
+        63,
+        68,
+        72,
+        76,
+        80,
+        77,
+        85,
+        90,
+        96
+      ],
+      "trend_tooltip": "Peptides·Retinol 겨울 집중. 안티에이징 성분 중심 성장 주도.",
+      "src_all": "Lookfantastic 2025 Trend Report · Marie Claire UK Dec 2025 · Boots 2025 · Euromonitor K-beauty 2.0 Dec 2025",
+      "top_keywords": [
+        {
+          "kw": "Peptides",
+          "score": 96,
+          "growth": "+79%",
+          "badge": "SURGING"
+        },
+        {
+          "kw": "LED Mask",
+          "score": 84,
+          "growth": "+96.7%",
+          "badge": "NEW"
+        },
+        {
+          "kw": "Retinol",
+          "score": 88,
+          "growth": "+49.6%",
+          "badge": "RISING"
+        },
+        {
+          "kw": "Niacinamide",
+          "score": 78,
+          "growth": "+33.7%",
+          "badge": "STABLE"
+        },
+        {
+          "kw": "Clean Beauty",
+          "score": 82,
+          "growth": "+28%",
+          "badge": "PEAK"
+        }
+      ],
+      "kw_src_deep": "Lookfantastic 2025 Trend Report · Google Trends EU",
+      "trend_monthly": [
+        50,
+        55,
+        62,
+        70,
+        75,
+        72,
+        68,
+        72,
+        80,
+        88,
+        92,
+        95
+      ],
+      "trend_monthly_2": [
+        30,
+        35,
+        45,
+        52,
+        48,
+        42,
+        45,
+        55,
+        68,
+        85,
+        92,
+        99
+      ],
+      "trend_insight": "Lookfantastic 2025: LED Mask +96.7% 유럽 최고 성장률. Peptides +79%.",
+      "kw_map": {
+        "Peptides": [
+          "Benton\nPropolis Ampoule",
+          "Anua\nHeartleaf Serum",
+          "Biodance\nCollagen Mask"
+        ],
+        "LED Mask": [
+          "Medicube\nAge-R Booster",
+          "CurrentBody\nSkin LED",
+          "Dr.Dennis Gross\nLED"
+        ],
+        "Retinol": [
+          "BoJ Retinal\nEye Cream",
+          "Medicube\nRetinol Cream",
+          "Neogen\nRetinol Pad"
+        ],
+        "Niacinamide": [
+          "COSRX\nNiacinamide",
+          "SBM\nGlutathione",
+          "Klairs\nVit C Serum"
+        ],
+        "Clean Beauty": [
+          "Anua\nHeartleaf Serum",
+          "I'm From\nRice Toner",
+          "Skin1004\nCentella"
+        ]
+      },
+      "seasonality": [
+        {
+          "kw": "Peptides",
+          "months": [
+            50,
+            55,
+            62,
+            70,
+            75,
+            72,
+            68,
+            72,
+            80,
+            88,
+            92,
+            95
+          ],
+          "peak": "Oct-Dec"
+        },
+        {
+          "kw": "LED Mask",
+          "months": [
+            30,
+            35,
+            45,
+            52,
+            48,
+            42,
+            45,
+            55,
+            68,
+            85,
+            92,
+            99
+          ],
+          "peak": "Nov-Dec"
+        },
+        {
+          "kw": "Retinol",
+          "months": [
+            65,
+            68,
+            72,
+            70,
+            65,
+            58,
+            55,
+            60,
+            72,
+            82,
+            88,
+            90
+          ],
+          "peak": "Oct-Dec"
+        },
+        {
+          "kw": "Niacinamide",
+          "months": [
+            70,
+            72,
+            75,
+            78,
+            80,
+            78,
+            75,
+            76,
+            78,
+            80,
+            82,
+            80
+          ],
+          "peak": "Apr-May"
+        },
+        {
+          "kw": "Clean Beauty",
+          "months": [
+            55,
+            58,
+            65,
+            72,
+            75,
+            70,
+            68,
+            72,
+            78,
+            80,
+            75,
+            70
+          ],
+          "peak": "Mar-May"
+        }
+      ],
+      "season_insight": "❄️ Peptides·Retinol 10~12월 겨울 피크. 🎁 LED Mask 크리스마스 선물 시즌 급등."
+    },
+    "sea": {
+      "metrics": [
+        {
+          "label": "Shopee 뷰티 점유",
+          "value": "73%",
+          "delta": "동남아 온라인 뷰티 전체",
+          "tooltip": "Shopee 뷰티 카테고리 K-beauty 매출 비중 73%."
+        },
+        {
+          "label": "베트남 K-beauty 주문",
+          "value": "+191%",
+          "delta": "Shopee 2024 YoY",
+          "tooltip": "베트남 Shopee K-beauty 주문 +191%."
+        },
+        {
+          "label": "TikTok 인플루언서",
+          "value": "20명",
+          "delta": "인도네시아 월 $1M+",
+          "tooltip": "Tuke Marketing Jun 2025. 인도네시아 20명 월 $1M+ 판매."
+        },
+        {
+          "label": "TikTok Shop SEA",
+          "value": "뷰티 #1",
+          "delta": "GMV 최대 카테고리",
+          "tooltip": "TikTok Shop SEA GMV 기준 뷰티 1위."
+        }
+      ],
+      "sellers": [
+        {
+          "name": "Banila Co Tone-Up Sun Stick",
+          "brand": "Shopee 선케어 1위",
+          "score": 100
+        },
+        {
+          "name": "Laneige Water Bank Essence",
+          "brand": "Lazada & Shopee 스킨케어 1위",
+          "score": 86
+        },
+        {
+          "name": "Some By Mi Toner",
+          "brand": "TikTok Shop SEA 급성장",
+          "score": 78
+        },
+        {
+          "name": "COSRX Snail Mucin Essence",
+          "brand": "동남아 전역 베스트셀러",
+          "score": 70
+        },
+        {
+          "name": "Mediheal Sheet Mask",
+          "brand": "고빈도 재구매 상품",
+          "score": 62
+        }
+      ],
+      "sellers_src": "출처: Tuke Marketing TikTok Shop SEA Jun 2025 · BeautySummit.ai SEA 2025",
+      "channels": [
+        {
+          "name": "Shopee",
+          "pct": 48,
+          "tooltip": "동남아 최대 이커머스. 메가세일 시즌 연동."
+        },
+        {
+          "name": "Lazada",
+          "pct": 24,
+          "tooltip": "말레이시아·태국 집중."
+        },
+        {
+          "name": "TikTok Shop",
+          "pct": 20,
+          "tooltip": "인도네시아 중심 라이브커머스."
+        },
+        {
+          "name": "DTC",
+          "pct": 8,
+          "tooltip": "가격 경쟁 채널 선호로 낮은 비중."
+        }
+      ],
+      "channels_src": "출처: supermombusiness.com · Tuke Marketing Jun 2025",
+      "keywords": [
+        {
+          "kw": "Tone Up",
+          "tier": 1
+        },
+        {
+          "kw": "Whitening",
+          "tier": 1
+        },
+        {
+          "kw": "Glass Skin",
+          "tier": 2
+        },
+        {
+          "kw": "SPF Stick",
+          "tier": 2
+        },
+        {
+          "kw": "Vitamin C",
+          "tier": 2
+        },
+        {
+          "kw": "Brightening",
+          "tier": 3
+        },
+        {
+          "kw": "Pore Care",
+          "tier": 3
+        },
+        {
+          "kw": "Cica",
+          "tier": 4
+        }
+      ],
+      "kw_ranking": [
+        {
+          "kw": "Tone Up",
+          "score": 99
+        },
+        {
+          "kw": "Whitening",
+          "score": 94
+        },
+        {
+          "kw": "Glass Skin",
+          "score": 88
+        },
+        {
+          "kw": "SPF Stick",
+          "score": 82
+        },
+        {
+          "kw": "Vitamin C",
+          "score": 76
+        }
+      ],
+      "kw_src": "출처: Shopee 검색 트렌드 · TikTok SEA Creator Center",
+      "trend_12w": [
+        85,
+        98,
+        105,
+        112,
+        118,
+        128,
+        126,
+        142,
+        152,
+        165,
+        180,
+        196
+      ],
+      "trend_12w_2": [
+        38,
+        45,
+        50,
+        55,
+        60,
+        68,
+        66,
+        76,
+        82,
+        90,
+        98,
+        110
+      ],
+      "trend_tooltip": "선케어 연중 높은 수준. 스킨케어 메가세일 시즌 스파이크.",
+      "src_all": "Tuke Marketing TikTok Shop SEA Jun 2025 · BeautySummit.ai SEA 2025 · supermombusiness.com",
+      "top_keywords": [
+        {
+          "kw": "Tone Up",
+          "score": 99,
+          "growth": "+기준",
+          "badge": "PEAK"
+        },
+        {
+          "kw": "Whitening",
+          "score": 94,
+          "growth": "+38%",
+          "badge": "SURGING"
+        },
+        {
+          "kw": "SPF Stick",
+          "score": 82,
+          "growth": "+62%",
+          "badge": "NEW"
+        },
+        {
+          "kw": "Glass Skin",
+          "score": 88,
+          "growth": "+45%",
+          "badge": "RISING"
+        },
+        {
+          "kw": "Brightening",
+          "score": 76,
+          "growth": "+29%",
+          "badge": "STABLE"
+        }
+      ],
+      "kw_src_deep": "Shopee 검색 트렌드 · TikTok SEA Creator Center · BeautySummit.ai 2025",
+      "trend_monthly": [
+        65,
+        68,
+        75,
+        85,
+        95,
+        92,
+        88,
+        85,
+        82,
+        95,
+        99,
+        90
+      ],
+      "trend_monthly_2": [
+        45,
+        50,
+        65,
+        82,
+        95,
+        92,
+        85,
+        80,
+        72,
+        68,
+        62,
+        55
+      ],
+      "trend_insight": "TikTok Shop SEA 인도네시아 Oct 2025 피크. Shopee 메가세일 시즌 연동 급등.",
+      "kw_map": {
+        "Tone Up": [
+          "Banila Co\nTone Up Sun Stick",
+          "Innisfree\nTone Up Sunscreen",
+          "Etude\nSun Cushion"
+        ],
+        "Whitening": [
+          "SBM Vit C\nSerum",
+          "Klairs\nBright Serum",
+          "BoJ\nGlow Serum"
+        ],
+        "SPF Stick": [
+          "Banila Co\nSun Stick SPF50+",
+          "Isntree\nSun Serum",
+          "Round Lab\nSun Cream"
+        ],
+        "Glass Skin": [
+          "Laneige\nWater Bank",
+          "COSRX\nSnail Mucin",
+          "Mediheal\nGlass Mask"
+        ],
+        "Brightening": [
+          "Innisfree\nVit C Toner",
+          "SBM\nGlutathione",
+          "Klairs\nBright Eye"
+        ]
+      },
+      "seasonality": [
+        {
+          "kw": "Tone Up",
+          "months": [
+            65,
+            68,
+            75,
+            85,
+            95,
+            92,
+            88,
+            85,
+            82,
+            95,
+            99,
+            90
+          ],
+          "peak": "May·Nov"
+        },
+        {
+          "kw": "Whitening",
+          "months": [
+            55,
+            60,
+            70,
+            82,
+            90,
+            88,
+            80,
+            78,
+            75,
+            88,
+            92,
+            85
+          ],
+          "peak": "Apr-May"
+        },
+        {
+          "kw": "SPF Stick",
+          "months": [
+            45,
+            50,
+            65,
+            82,
+            95,
+            92,
+            85,
+            80,
+            72,
+            68,
+            62,
+            55
+          ],
+          "peak": "Apr-Jun"
+        },
+        {
+          "kw": "Glass Skin",
+          "months": [
+            60,
+            62,
+            68,
+            72,
+            75,
+            72,
+            70,
+            72,
+            78,
+            85,
+            90,
+            88
+          ],
+          "peak": "Oct-Nov"
+        },
+        {
+          "kw": "Brightening",
+          "months": [
+            50,
+            52,
+            60,
+            72,
+            80,
+            78,
+            72,
+            68,
+            65,
+            75,
+            80,
+            72
+          ],
+          "peak": "Apr-May"
+        }
+      ],
+      "season_insight": "☀️ SPF Stick 4~6월 피크. 🛒 Shopee 9.9/11.11 메가세일 연동. 🌟 Whitening 연중 유지."
+    },
+    "mideast": {
+      "metrics": [
+        {
+          "label": "사우디 뷰티 시장",
+          "value": "$7.6B",
+          "delta": "2026년 예상 Euromonitor",
+          "tooltip": "Euromonitor 2026 예측. 사우디 뷰티·퍼스널케어 시장."
+        },
+        {
+          "label": "UAE 1인당 소비",
+          "value": "2.5x",
+          "delta": "글로벌 평균 대비",
+          "tooltip": "UAE 1인당 뷰티 소비 글로벌 평균 2.5배."
+        },
+        {
+          "label": "Noon K-beauty 1위",
+          "value": "BoJ Relief Sun",
+          "delta": "퀵커머스 베스트셀러",
+          "tooltip": "Noon 퀵커머스 K-beauty 1위."
+        },
+        {
+          "label": "온라인 성장률",
+          "value": "CAGR 8%",
+          "delta": "GCC 이커머스 뷰티",
+          "tooltip": "GCC 이커머스 뷰티 CAGR 8%."
+        }
+      ],
+      "sellers": [
+        {
+          "name": "Beauty of Joseon Relief Sun Cream",
+          "brand": "Noon 퀵커머스 K-beauty 최고 판매",
+          "score": 100
+        },
+        {
+          "name": "Laneige Lip Sleeping Mask",
+          "brand": "Sephora ME 스테디셀러",
+          "score": 84
+        },
+        {
+          "name": "Dr.Jart+ Cicapair Tiger Grass",
+          "brand": "Sephora ME 스킨케어 Top",
+          "score": 76
+        },
+        {
+          "name": "COSRX Advanced Snail Cream",
+          "brand": "Amazon.ae & Noon 상위",
+          "score": 68
+        },
+        {
+          "name": "Medicube Collagen Lifting Cream",
+          "brand": "프리미엄 안티에이징 수요",
+          "score": 60
+        }
+      ],
+      "sellers_src": "출처: BeautyMatter BWME Nov 2025 · Evolut Agency Report Nov 2025",
+      "channels": [
+        {
+          "name": "Sephora ME/Faces",
+          "pct": 35,
+          "tooltip": "중동 최대 프리미엄 뷰티 리테일러."
+        },
+        {
+          "name": "Noon/Amazon.ae",
+          "pct": 32,
+          "tooltip": "중동 최대 이커머스. 당일 배송."
+        },
+        {
+          "name": "Brand DTC",
+          "pct": 20,
+          "tooltip": "성분 지식 높은 소비자 직접 구매."
+        },
+        {
+          "name": "Instagram Shop",
+          "pct": 13,
+          "tooltip": "인플루언서 마케팅 핵심 플랫폼."
+        }
+      ],
+      "channels_src": "출처: Beautyworld ME 2025 · Mordor Intelligence",
+      "keywords": [
+        {
+          "kw": "Anti-Aging",
+          "tier": 1
+        },
+        {
+          "kw": "Clean Beauty",
+          "tier": 1
+        },
+        {
+          "kw": "PDRN",
+          "tier": 2
+        },
+        {
+          "kw": "Peptides",
+          "tier": 2
+        },
+        {
+          "kw": "Halal Beauty",
+          "tier": 2
+        },
+        {
+          "kw": "Ginseng",
+          "tier": 3
+        },
+        {
+          "kw": "Ceramide",
+          "tier": 3
+        },
+        {
+          "kw": "EGF",
+          "tier": 4
+        }
+      ],
+      "kw_ranking": [
+        {
+          "kw": "Anti-Aging",
+          "score": 97
+        },
+        {
+          "kw": "Clean Beauty",
+          "score": 93
+        },
+        {
+          "kw": "PDRN",
+          "score": 87
+        },
+        {
+          "kw": "Peptides",
+          "score": 82
+        },
+        {
+          "kw": "Halal Beauty",
+          "score": 77
+        }
+      ],
+      "kw_src": "출처: Beautyworld ME 2025 · Sephora ME Clean Beauty Arabia 2026",
+      "trend_12w": [
+        58,
+        62,
+        68,
+        70,
+        76,
+        80,
+        86,
+        90,
+        96,
+        104,
+        112,
+        120
+      ],
+      "trend_12w_2": [
+        20,
+        23,
+        26,
+        28,
+        31,
+        34,
+        38,
+        42,
+        46,
+        51,
+        56,
+        62
+      ],
+      "trend_tooltip": "Anti-Aging 전 기간 주도. 10~12월 스킨케어 수요 증가.",
+      "src_all": "Beautyworld ME 2025 Evolut Agency Report · BeautyMatter BWME Nov 2025 · Sephora ME Dec 2025",
+      "top_keywords": [
+        {
+          "kw": "Anti-Aging",
+          "score": 97,
+          "growth": "+35%",
+          "badge": "SURGING"
+        },
+        {
+          "kw": "Halal Beauty",
+          "score": 80,
+          "growth": "+52%",
+          "badge": "NEW"
+        },
+        {
+          "kw": "PDRN",
+          "score": 75,
+          "growth": "+68%",
+          "badge": "RISING"
+        },
+        {
+          "kw": "Ginseng",
+          "score": 82,
+          "growth": "+28%",
+          "badge": "PEAK"
+        },
+        {
+          "kw": "Clean Beauty",
+          "score": 78,
+          "growth": "+40%",
+          "badge": "SURGING"
+        }
+      ],
+      "kw_src_deep": "Beautyworld ME 2025 · Sephora ME · Evolut Agency",
+      "trend_monthly": [
+        55,
+        58,
+        62,
+        68,
+        72,
+        65,
+        60,
+        65,
+        75,
+        88,
+        92,
+        85
+      ],
+      "trend_monthly_2": [
+        80,
+        75,
+        95,
+        70,
+        65,
+        60,
+        65,
+        72,
+        78,
+        82,
+        85,
+        88
+      ],
+      "trend_insight": "Beautyworld ME 2025: Halal Beauty +52%. PDRN·Peptides 검색 급증. 라마단 전후 2주 최대 피크.",
+      "kw_map": {
+        "Anti-Aging": [
+          "BoJ Ginseng\nRepair Serum",
+          "Dr.Jart+\nCicapair Cream",
+          "Medicube\nCollagen Cream"
+        ],
+        "Halal Beauty": [
+          "SBM\nHalal Toner",
+          "COSRX\nSnail Cream",
+          "Laneige\nSleeping Mask"
+        ],
+        "PDRN": [
+          "VT PDRN\nEssence",
+          "Rael PDRN\nHydrogel Mask",
+          "Medicube\nPDRN Ampoule"
+        ],
+        "Ginseng": [
+          "BoJ Relief\nSun",
+          "Dynasty\nGinseng Serum",
+          "Sulwhasoo\nConcentrate"
+        ],
+        "Clean Beauty": [
+          "Anua\nHeartleaf Serum",
+          "Skin1004\nCentella",
+          "I'm From\nRice Toner"
+        ]
+      },
+      "seasonality": [
+        {
+          "kw": "Anti-Aging",
+          "months": [
+            55,
+            58,
+            62,
+            68,
+            72,
+            65,
+            60,
+            65,
+            75,
+            88,
+            92,
+            85
+          ],
+          "peak": "Oct-Nov"
+        },
+        {
+          "kw": "Halal Beauty",
+          "months": [
+            80,
+            75,
+            95,
+            70,
+            65,
+            60,
+            65,
+            72,
+            78,
+            82,
+            85,
+            88
+          ],
+          "peak": "Mar(라마단)"
+        },
+        {
+          "kw": "PDRN",
+          "months": [
+            25,
+            30,
+            38,
+            45,
+            50,
+            55,
+            60,
+            68,
+            72,
+            80,
+            78,
+            70
+          ],
+          "peak": "Sep-Oct"
+        },
+        {
+          "kw": "Ginseng",
+          "months": [
+            55,
+            58,
+            65,
+            70,
+            68,
+            62,
+            58,
+            62,
+            70,
+            80,
+            85,
+            88
+          ],
+          "peak": "Oct-Dec"
+        },
+        {
+          "kw": "Clean Beauty",
+          "months": [
+            50,
+            55,
+            60,
+            65,
+            68,
+            62,
+            58,
+            65,
+            72,
+            78,
+            82,
+            80
+          ],
+          "peak": "Oct-Nov"
+        }
+      ],
+      "season_insight": "🌙 Halal Beauty 라마단(3월) 피크. ❄️ Anti-Aging·Ginseng 겨울 집중. 🔬 PDRN 하반기 급성장."
+    },
+    "india": {
+      "metrics": [
+        {
+          "label": "Nykaa 커뮤니티",
+          "value": "4,500만",
+          "delta": "19,000+ 핀코드",
+          "tooltip": "Nykaa Beauty Rewind 2025. 4,500만 커뮤니티."
+        },
+        {
+          "label": "K-beauty 전환",
+          "value": "습관화",
+          "delta": "Trend→Habit 2025",
+          "tooltip": "K-beauty가 일상 루틴으로 정착."
+        },
+        {
+          "label": "보습제 판매 속도",
+          "value": "25개/분",
+          "delta": "Hydration 루틴 1위",
+          "tooltip": "Nykaa 플랫폼 보습제 판매 속도."
+        },
+        {
+          "label": "인도 K-beauty CAGR",
+          "value": "12.1%",
+          "delta": "~2032 PMR",
+          "tooltip": "Persistence Market Research. CAGR 12.1%."
+        }
+      ],
+      "sellers": [
+        {
+          "name": "Beauty of Joseon Relief Sunscreen",
+          "brand": "Nykaa 재구매율 1위 K-beauty",
+          "score": 100
+        },
+        {
+          "name": "COSRX Snail Mucin 96 Essence",
+          "brand": "Myntra & Nykaa 스테디셀러",
+          "score": 88
+        },
+        {
+          "name": "Minimalist Niacinamide 10%",
+          "brand": "Nykaa 글로우 세럼 1위",
+          "score": 80
+        },
+        {
+          "name": "The Ordinary Niacinamide+Zinc",
+          "brand": "성분 리터러시 수요",
+          "score": 73
+        },
+        {
+          "name": "Innisfree Green Tea Serum",
+          "brand": "Nykaa K-beauty 상위",
+          "score": 65
+        }
+      ],
+      "sellers_src": "출처: Nykaa Beauty Rewind 2025 (Dec 30) · Nykaa Best in Beauty Awards 2025",
+      "channels": [
+        {
+          "name": "Myntra/Nykaa",
+          "pct": 45,
+          "tooltip": "인도 최대 뷰티 버티컬. K-beauty 전용 카테고리."
+        },
+        {
+          "name": "Amazon.in",
+          "pct": 30,
+          "tooltip": "Prime 멤버십 기반 편의 구매."
+        },
+        {
+          "name": "Brand DTC",
+          "pct": 15,
+          "tooltip": "성분 리터러시 높은 소비자 직접 구매."
+        },
+        {
+          "name": "Instagram/Reels",
+          "pct": 10,
+          "tooltip": "인플루언서·Reels 기반 발견 채널."
+        }
+      ],
+      "channels_src": "출처: Nykaa Beauty Rewind 2025 · Persistence Market Research",
+      "keywords": [
+        {
+          "kw": "Niacinamide",
+          "tier": 1
+        },
+        {
+          "kw": "Barrier Care",
+          "tier": 1
+        },
+        {
+          "kw": "Vitamin C",
+          "tier": 2
+        },
+        {
+          "kw": "Ceramide",
+          "tier": 2
+        },
+        {
+          "kw": "Ingredient Literacy",
+          "tier": 2
+        },
+        {
+          "kw": "Tea Tree",
+          "tier": 3
+        },
+        {
+          "kw": "SPF Routine",
+          "tier": 3
+        },
+        {
+          "kw": "Peptide",
+          "tier": 4
+        }
+      ],
+      "kw_ranking": [
+        {
+          "kw": "Niacinamide",
+          "score": 98
+        },
+        {
+          "kw": "Barrier Care",
+          "score": 94
+        },
+        {
+          "kw": "Vitamin C",
+          "score": 88
+        },
+        {
+          "kw": "Ceramide",
+          "score": 83
+        },
+        {
+          "kw": "Tea Tree",
+          "score": 77
+        }
+      ],
+      "kw_src": "출처: Nykaa Beauty Rewind 2025 · Dot & Key 검색 +63% YoY",
+      "trend_12w": [
+        38,
+        46,
+        50,
+        56,
+        63,
+        70,
+        76,
+        86,
+        94,
+        106,
+        120,
+        136
+      ],
+      "trend_12w_2": [
+        14,
+        17,
+        20,
+        24,
+        28,
+        32,
+        36,
+        42,
+        48,
+        56,
+        64,
+        74
+      ],
+      "trend_tooltip": "Niacinamide·Barrier Care 연중 안정 성장. SPF 4~6월 집중. Nykaa 빅세일 스파이크.",
+      "src_all": "Nykaa Beauty Rewind 2025 (Dec 30) · Nykaa Best in Beauty Awards 2025 · Persistence Market Research India K-beauty",
+      "top_keywords": [
+        {
+          "kw": "Niacinamide",
+          "score": 98,
+          "growth": "+Peak",
+          "badge": "PEAK"
+        },
+        {
+          "kw": "Barrier Care",
+          "score": 88,
+          "growth": "+42%",
+          "badge": "SURGING"
+        },
+        {
+          "kw": "Vitamin C",
+          "score": 84,
+          "growth": "+35%",
+          "badge": "RISING"
+        },
+        {
+          "kw": "SPF Routine",
+          "score": 76,
+          "growth": "+55%",
+          "badge": "NEW"
+        },
+        {
+          "kw": "Ingredient Literacy",
+          "score": 72,
+          "growth": "+63%",
+          "badge": "NEW"
+        }
+      ],
+      "kw_src_deep": "Nykaa Beauty Rewind 2025 · Google Trends IN · Persistence Market Research",
+      "trend_monthly": [
+        75,
+        78,
+        82,
+        88,
+        90,
+        85,
+        82,
+        84,
+        88,
+        92,
+        95,
+        90
+      ],
+      "trend_monthly_2": [
+        35,
+        40,
+        55,
+        75,
+        88,
+        85,
+        78,
+        72,
+        65,
+        55,
+        42,
+        38
+      ],
+      "trend_insight": "Nykaa 2025: Dot & Key +63% YoY. 성분명 직접 검색 증가. K-beauty CAGR 12.1%.",
+      "kw_map": {
+        "Niacinamide": [
+          "COSRX\nNiacinamide Serum",
+          "Minimalist\nNiacinamide 10%",
+          "The Ordinary\nNiacinamide+Zinc"
+        ],
+        "Barrier Care": [
+          "BoJ\nRelief Sun",
+          "COSRX\nSnail Cream",
+          "Dr.Jart+\nCeramidin"
+        ],
+        "Vitamin C": [
+          "Klairs\nBright Serum",
+          "SBM\nVit C Serum",
+          "Innisfree\nVit C"
+        ],
+        "SPF Routine": [
+          "BoJ Relief\nSun",
+          "Etude\nSunprise Mist",
+          "ISNTREE\nSun Serum"
+        ],
+        "Ingredient Literacy": [
+          "Minimalist\nSkincare",
+          "The Ordinary\nActives",
+          "COSRX\nActives Line"
+        ]
+      },
+      "seasonality": [
+        {
+          "kw": "Niacinamide",
+          "months": [
+            75,
+            78,
+            82,
+            88,
+            90,
+            85,
+            82,
+            84,
+            88,
+            92,
+            95,
+            90
+          ],
+          "peak": "Oct-Nov"
+        },
+        {
+          "kw": "Barrier Care",
+          "months": [
+            45,
+            50,
+            58,
+            65,
+            68,
+            62,
+            58,
+            62,
+            70,
+            78,
+            82,
+            80
+          ],
+          "peak": "Oct-Nov"
+        },
+        {
+          "kw": "Vitamin C",
+          "months": [
+            50,
+            55,
+            65,
+            75,
+            80,
+            72,
+            65,
+            68,
+            75,
+            80,
+            78,
+            70
+          ],
+          "peak": "Apr-May"
+        },
+        {
+          "kw": "SPF Routine",
+          "months": [
+            35,
+            40,
+            55,
+            75,
+            88,
+            85,
+            78,
+            72,
+            65,
+            55,
+            42,
+            38
+          ],
+          "peak": "Apr-Jun"
+        },
+        {
+          "kw": "Ingredient Literacy",
+          "months": [
+            40,
+            45,
+            52,
+            60,
+            65,
+            62,
+            60,
+            65,
+            72,
+            80,
+            82,
+            78
+          ],
+          "peak": "Oct-Nov"
+        }
+      ],
+      "season_insight": "☀️ SPF Routine 4~6월 혹서기 급등. 🛒 Nykaa 빅세일(10~11월) 연동. 📚 Ingredient Literacy 연중 성장."
+    }
+  }
+}
