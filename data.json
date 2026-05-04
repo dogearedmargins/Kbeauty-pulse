@@ -1,1 +1,365 @@
-
+{
+  "meta": {
+    "updated_at": "2026-05-04",
+    "updated_by": "manual research",
+    "week_label": "2026 · May · Week 1",
+    "note": "Sources: BeautyMatter, Amazon Summer Beauty Event 2026, Qogita TikTok Trends Mar 2026, Nykaa Q3 FY2026, Olive Young 2026, CosmeticsBusiness Feb 2026, BeautyIndependent Jan 2026"
+  },
+  "regions": {
+    "americas": {
+      "metrics": [
+        { "label": "Amazon Summer Beauty 2026", "value": "진행중", "delta": "~May 10 K-beauty 최대 50% 할인", "tooltip": "Amazon Summer Beauty Event 2026 (5/4~5/10). Medicube, Biodance 등 K-beauty 브랜드 대규모 할인 진행 중 — Harper's Bazaar 선정 베스트 딜 포함." },
+        { "label": "TikTok → 구매 전환", "value": "65%", "delta": "Gen Z의 제품 발견 경로", "tooltip": "Qogita Mar 2026: Gen Z의 65%, Millennials의 55%가 TikTok을 제품 구매 전 주요 탐색 플랫폼으로 사용. K-beauty가 핵심 카테고리." },
+        { "label": "K-Beauty 3.0 키워드", "value": "Skin Longevity", "delta": "Medicosmetic Pivot 주도", "tooltip": "BeautyMatter 2026 K-Beauty Forecast: 클리닉 성분(PDRN, Exosomes, EGF)의 일반 스킨케어 제품화. 소비자들이 '병원 시술 없이 시술 효과'를 추구." },
+        { "label": "Skincare 검색 성장", "value": "+212.5%", "delta": "Aug 2024 → Aug 2025 YoY", "tooltip": "TikTok Beauty Trends 2026 (Accio): 스킨케어 제품 검색량이 전년 동기 대비 212.5% 급증. 메이크업 검색은 같은 기간 -23% 감소." }
+      ],
+      "sellers": [
+        { "name": "Medicube AGE-R Booster Pro", "brand": "Medicube — Kylie Jenner 착용 후 품절 반복", "score": 100 },
+        { "name": "Biodance Bio-Collagen Real Deep Mask", "brand": "TikTok 바이럴 + Amazon Summer Sale 포함", "score": 90 },
+        { "name": "Medicube Zero Pore Pad 2.0", "brand": "Amazon Summer Beauty Event 2026 베스트딜", "score": 82 },
+        { "name": "COSRX Snail Mucin 96 Essence", "brand": "Amazon 스테디셀러 · Summer Sale 할인 중", "score": 74 },
+        { "name": "Beauty of Joseon Relief Sun SPF50+", "brand": "Olive Young 2026 글로벌 1위 · SPF 카테고리", "score": 66 }
+      ],
+      "sellers_src": "출처: Harper's Bazaar Amazon Summer Beauty Event 2026 (Apr 2026) · Olive Young 2026 Best Sellers (knok, Apr 2026) · BeautyMatter K-Beauty Forecast 2026",
+      "channels": [
+        { "name": "Amazon", "pct": 43, "tooltip": "Summer Beauty Event 진행 중(~May 10). K-beauty 최대 50% 할인. Medicube·Biodance 집중 프로모션." },
+        { "name": "TikTok Shop", "pct": 30, "tooltip": "2026년 뷰티 1차 탐색 채널로 부상. Gen Z 65%가 TikTok → 구매 전환. Skin Longevity 콘텐츠 폭발적 증가." },
+        { "name": "Sephora/Ulta", "pct": 18, "tooltip": "Olive Young 2026년 미국 시장 진출 준비 중 — 기존 프리미엄 리테일 채널 경쟁 심화 예상." },
+        { "name": "DTC", "pct": 9, "tooltip": "성분 중심 브랜드(Medicube, COSRX) 공식몰 구독 모델 강화." }
+      ],
+      "channels_src": "출처: Qogita TikTok Beauty Trends 2026 (Mar 2026) · BeautyIndependent Jan 2026 · knok Olive Young 2026",
+      "keywords": [
+        { "kw": "PDRN / Salmon DNA", "tier": 1 },
+        { "kw": "Skin Longevity", "tier": 1 },
+        { "kw": "Cloud Skin", "tier": 2 },
+        { "kw": "Exosomes", "tier": 2 },
+        { "kw": "Medicube AGE-R", "tier": 2 },
+        { "kw": "Glass Skin", "tier": 3 },
+        { "kw": "Barrier Repair", "tier": 3 },
+        { "kw": "Snail Mucin", "tier": 4 }
+      ],
+      "kw_ranking": [
+        { "kw": "PDRN / Salmon DNA", "score": 99 },
+        { "kw": "Skin Longevity", "score": 95 },
+        { "kw": "Cloud Skin", "score": 88 },
+        { "kw": "Exosomes", "score": 82 },
+        { "kw": "Medicube AGE-R", "score": 76 }
+      ],
+      "kw_src": "출처: BeautyIndependent Jan 2026 · Qogita TikTok Trends Mar 2026 · BeautyMatter K-Beauty Forecast 2026",
+      "trend_12w": [210,218,225,235,245,255,268,280,265,292,312,335],
+      "trend_12w_2": [78,84,90,96,104,112,118,125,115,128,138,148],
+      "trend_tooltip": "Amazon Summer Beauty Event(W18) 효과로 스킨케어 급등. TikTok Skin Longevity 트렌드로 PDRN·Exosome 제품 수요 급증. Cloud Skin이 Glass Skin을 빠르게 대체 중.",
+      "src_all": "Harper's Bazaar Amazon Summer Beauty Event 2026 · Qogita TikTok Beauty Trends Mar 2026 · BeautyMatter K-Beauty Forecast 2026 · BeautyIndependent Jan 2026",
+      "top_keywords": [
+        { "kw": "PDRN / Salmon DNA", "score": 99, "growth": "+mainstream", "badge": "SURGING" },
+        { "kw": "Skin Longevity", "score": 95, "growth": "+급성장", "badge": "NEW" },
+        { "kw": "Cloud Skin", "score": 88, "growth": "+rising", "badge": "RISING" },
+        { "kw": "Exosomes", "score": 82, "growth": "+niche→mainstream", "badge": "RISING" },
+        { "kw": "Medicube AGE-R", "score": 76, "growth": "+Kylie effect", "badge": "SURGE" }
+      ],
+      "kw_src_deep": "BeautyMatter K-Beauty Forecast 2026 (Nov 2025) · BeautyIndependent Jan 2026 · Qogita Mar 2026 · CosmeticsBusiness 2026",
+      "trend_monthly": [60,62,68,75,82,86,90,95,92,98,95,88],
+      "trend_monthly_2": [30,32,50,82,95,90,78,72,62,48,36,30],
+      "trend_insight": "PDRN이 2026년 미주 최대 키워드로 부상. BeautyIndependent: '클리닉 성분의 대중화' 트렌드로 Medicube·VT PDRN 제품 수요 폭발. Cloud Skin이 Glass Skin을 빠르게 대체 중.",
+      "kw_map": {
+        "PDRN / Salmon DNA": ["Medicube\nPDRN Pink Serum", "VT PDRN\nEssence", "Rael PDRN\nHydrogel Mask"],
+        "Skin Longevity": ["Medicube\nAGE-R Booster Pro", "COSRX\nSnail Mucin Essence", "Beauty of Joseon\nRevive Serum"],
+        "Cloud Skin": ["Biodance\nBio-Collagen Mask", "Laneige\nSkin Veil Base", "Innisfree\nBlur Filter Primer"],
+        "Exosomes": ["Medicube\nAGE-R Serum", "VT\nExosome Essence", "Dr.Jart+\nPeptide Serum"],
+        "Medicube AGE-R": ["AGE-R\nBooster Pro Device", "AGE-R\nAMP Pouch Cream", "AGE-R\nPDRN Serum"]
+      },
+      "seasonality": [
+        { "kw": "PDRN / Salmon DNA", "months": [55,60,65,72,80,85,90,95,92,98,94,88], "peak": "Sep-Nov" },
+        { "kw": "Skin Longevity", "months": [50,55,60,68,75,80,85,90,88,95,92,85], "peak": "Oct-Dec" },
+        { "kw": "Cloud Skin", "months": [40,45,55,65,72,78,82,88,85,90,85,78], "peak": "Aug-Oct" },
+        { "kw": "Exosomes", "months": [30,35,42,50,58,65,72,80,78,85,82,75], "peak": "Sep-Nov" },
+        { "kw": "Medicube AGE-R", "months": [45,50,58,65,72,78,82,88,85,92,88,80], "peak": "Oct-Nov" }
+      ],
+      "season_insight": "☀️ Amazon Summer Beauty Event(5월) 시즌 급등. 🍂 PDRN·Exosome·Skin Longevity는 9~11월 안티에이징 시즌에 피크. 🌟 Cloud Skin은 여름~가을 전환기(8~10월)에 집중."
+    },
+    "europe": {
+      "metrics": [
+        { "label": "K-beauty 3.0 유럽 진입", "value": "Medicosmetic", "delta": "PDRN·Spicules 주목", "tooltip": "CosmeticsBusiness 2026 Beauty Hotspots: K-beauty의 PDRN, Spicules(해면 침골) 등 의료급 성분이 유럽 메인스트림으로 진입. '실험실에서 나온 성분'에 대한 신뢰도 급상승." },
+        { "label": "Olive Young 유럽 확장", "value": "2026 공략", "delta": "세라마이드·SPF 우선", "tooltip": "knok 2026: 유럽 시장은 EU CPNP 규정 준수 + 세라마이드·미네랄 선크림 포지셔닝이 핵심. 립틴트는 아직 초기 단계 — 퍼스트무버 기회." },
+        { "label": "Boots No7 Longevity 라인", "value": "신규 출시", "delta": "7초당 1개 판매", "tooltip": "CosmeticsBusiness Apr 2026: Boots 자체 브랜드 No7 Prime Forever 컬렉션 출시. '피부 보존' 컨셉 — K-beauty Skin Longevity 트렌드와 정확히 맞물림." },
+        { "label": "Skincare 검색 피크", "value": "Dec 2025 = 96", "delta": "Jan 2026 = 76 (Google Trends)", "tooltip": "TikTok Beauty Trends 2026(Accio): 유럽 스킨케어 검색량 12월 2025년 정규화 96으로 연중 최고. 1월 76으로 유지 — 연초 뷰티 루틴 정립 수요 반영." }
+      ],
+      "sellers": [
+        { "name": "Beauty of Joseon Relief Sun SPF50+", "brand": "유럽 전역 SPF 카테고리 1위 지속", "score": 100 },
+        { "name": "Medicube AGE-R Booster Pro", "brand": "Daily Skincare Device 트렌드 — 유럽 입점 확대", "score": 88 },
+        { "name": "Dr.Jart+ Cicapair Tiger Grass Cream", "brand": "Sephora EU 스테디셀러 · Cica 트렌드 지속", "score": 78 },
+        { "name": "Biodance Bio-Collagen Mask", "brand": "Lookfantastic Top · TikTok 바이럴 지속", "score": 70 },
+        { "name": "COSRX PDRN Serum (신규)", "brand": "Medicosmetic 트렌드 — 유럽 론칭 주목", "score": 62 }
+      ],
+      "sellers_src": "출처: CosmeticsBusiness Beauty Hotspots 2026 (Feb 2026) · knok Olive Young 2026 · BeautyMatter K-Beauty Forecast 2026",
+      "channels": [
+        { "name": "Lookfantastic", "pct": 36, "tooltip": "K-beauty 전용 섹션 운영. PDRN·Exosome 제품 신규 입점 확대 중." },
+        { "name": "Boots/Superdrug", "pct": 26, "tooltip": "No7 Longevity 라인 출시로 K-beauty 경쟁 심화. Beauty of Joseon Relief Sun 여전히 1위." },
+        { "name": "Brand DTC", "pct": 23, "tooltip": "EU 소비자 성분 리터러시 높아 직접 구매 선호. PDRN·Ceramide 성분 설명 콘텐츠 중요." },
+        { "name": "TikTok Shop EU", "pct": 15, "tooltip": "Cloud Skin·Skin Longevity 콘텐츠로 젊은 소비자층 공략. 영국 중심 급성장." }
+      ],
+      "channels_src": "출처: CosmeticsBusiness Apr 2026 · knok Feb 2026 · BeautyIndependent Jan 2026",
+      "keywords": [
+        { "kw": "PDRN / Spicules", "tier": 1 },
+        { "kw": "Skin Longevity", "tier": 1 },
+        { "kw": "Ceramide + SPF", "tier": 2 },
+        { "kw": "Daily Skincare Device", "tier": 2 },
+        { "kw": "Plant-based PDRN", "tier": 2 },
+        { "kw": "Cloud Skin", "tier": 3 },
+        { "kw": "Peptides", "tier": 3 },
+        { "kw": "LED Mask", "tier": 4 }
+      ],
+      "kw_ranking": [
+        { "kw": "PDRN / Spicules", "score": 97 },
+        { "kw": "Skin Longevity", "score": 93 },
+        { "kw": "Ceramide + SPF", "score": 88 },
+        { "kw": "Daily Skincare Device", "score": 84 },
+        { "kw": "Plant-based PDRN", "score": 78 }
+      ],
+      "kw_src": "출처: CosmeticsBusiness Beauty Hotspots 2026 · BeautyIndependent Jan 2026 · K-Beauty Packaging Resource Jan 2026",
+      "trend_12w": [152,158,165,170,178,188,195,205,198,215,225,238],
+      "trend_12w_2": [52,56,62,66,70,75,80,85,80,88,94,100],
+      "trend_tooltip": "Skin Longevity 트렌드로 안티에이징 카테고리 연중 상승. Boots No7 Longevity 라인 출시(Apr)로 경쟁 심화. PDRN 유럽 메인스트림 진입 확인됨.",
+      "src_all": "CosmeticsBusiness Beauty Hotspots 2026 (Feb 2026) · CosmeticsBusiness Apr 2026 · knok Olive Young 2026 · BeautyIndependent Jan 2026",
+      "top_keywords": [
+        { "kw": "PDRN / Spicules", "score": 97, "growth": "+메인스트림", "badge": "SURGING" },
+        { "kw": "Skin Longevity", "score": 93, "growth": "+급부상", "badge": "NEW" },
+        { "kw": "Ceramide + SPF", "score": 88, "growth": "+EU규정 연동", "badge": "STABLE" },
+        { "kw": "Daily Skincare Device", "score": 84, "growth": "+Medicube 견인", "badge": "RISING" },
+        { "kw": "Plant-based PDRN", "score": 78, "growth": "+Clean Beauty 연동", "badge": "NEW" }
+      ],
+      "kw_src_deep": "CosmeticsBusiness Beauty Hotspots 2026 · BeautyIndependent Jan 2026 · K-Beauty Packaging Resource Jan 2026",
+      "trend_monthly": [55,58,65,72,78,75,70,74,82,90,95,98],
+      "trend_monthly_2": [30,32,45,55,52,48,45,52,68,88,95,99],
+      "trend_insight": "CosmeticsBusiness 2026: K-beauty가 유럽 5대 'Beauty Hotspot' 중 하나로 선정. PDRN·Spicules 등 의료급 성분이 일반 스킨케어로 진입. Plant-based PDRN이 Clean Beauty 소비자를 공략하는 새로운 기회.",
+      "kw_map": {
+        "PDRN / Spicules": ["Dr.Athlea\nPDRN Reju 5000 Cream", "VT PDRN\nEssence", "COSRX\nPDRN Serum"],
+        "Skin Longevity": ["Medicube\nAGE-R Booster Pro", "Beauty of Joseon\nRevive Eye Serum", "Dr.Jart+\nCicapair Cream"],
+        "Ceramide + SPF": ["Beauty of Joseon\nRelief Sun", "Dr.Jart+\nCeramidin", "ILLIYOON\nCeramide Ato Cream"],
+        "Daily Skincare Device": ["Medicube\nAGE-R Booster Pro", "CurrentBody\nSkin LED", "Foreo\nLUNA"],
+        "Plant-based PDRN": ["One Eye Beauty\nVegan PDRN Essence", "COSRX\nGreen Hero Serum", "Anua\nHeartleaf Serum"]
+      },
+      "seasonality": [
+        { "kw": "PDRN / Spicules", "months": [52,55,62,68,72,70,68,72,80,88,95,98], "peak": "Oct-Dec" },
+        { "kw": "Skin Longevity", "months": [55,58,64,70,74,70,68,72,80,88,92,95], "peak": "Oct-Dec" },
+        { "kw": "Ceramide + SPF", "months": [65,68,72,75,78,72,68,70,75,82,88,90], "peak": "Oct-Dec" },
+        { "kw": "Daily Skincare Device", "months": [40,42,50,55,52,48,50,58,68,82,95,99], "peak": "Nov-Dec" },
+        { "kw": "Plant-based PDRN", "months": [30,35,42,50,55,52,50,55,65,75,82,85], "peak": "Oct-Nov" }
+      ],
+      "season_insight": "❄️ Skin Longevity·PDRN은 겨울(10~12월) 안티에이징 루틴 시즌에 집중. 🎁 Daily Skincare Device(Medicube AGE-R)는 크리스마스 선물 시즌(11~12월) 급등. 🌱 Plant-based PDRN은 봄 Clean Beauty 캠페인과 연동."
+    },
+    "sea": {
+      "metrics": [
+        { "label": "동남아 K-beauty 포지션", "value": "현지화 주도", "delta": "SEA 소비자 행동 = 한국과 가장 유사", "tooltip": "knok Feb 2026: 동남아가 한국 소비자 행동과 가장 유사한 시장. 클렌징 밤·토너 패드·쿠션 파운데이션이 특히 높은 전환율. 태국·필리핀·인도네시아·베트남 집중." },
+        { "label": "Olive Young 2026 카테고리", "value": "SPF·세럼 1위", "delta": "세라마이드·PDRN 신호 포착", "tooltip": "Olive Young 2026 Global Rankings: SPF와 세럼/앰플이 글로벌 수요 1~2위. 세라마이드와 PDRN이 프리미엄 성분 신호로 부상. 립틴트 3위." },
+        { "label": "Skin Longevity SEA", "value": "진입 초기", "delta": "PDRN → 동남아 확산 중", "tooltip": "TikTok SEA에서 PDRN·Exosome 키워드 검색 급증. 인도네시아·태국 중심 퍼짐. 아직 미주·유럽 대비 6~12개월 후행 — 선점 기회." },
+        { "label": "TikTok Shop SEA 2026", "value": "뷰티 GMV #1", "delta": "라이브커머스 중심 성장 지속", "tooltip": "2026년에도 TikTok Shop SEA 뷰티 카테고리 GMV 1위 유지. 인도네시아 인플루언서 라이브 커머스 월 $1M+ 판매 지속." }
+      ],
+      "sellers": [
+        { "name": "Beauty of Joseon Relief Sun SPF50+", "brand": "Olive Young 2026 글로벌 SPF 1위 · SEA 전역", "score": 100 },
+        { "name": "COSRX Snail Mucin 96 Essence", "brand": "Shopee·Lazada 스킨케어 스테디셀러", "score": 88 },
+        { "name": "Medicube PDRN Pink Serum", "brand": "TikTok Shop SEA 신규 급부상", "score": 78 },
+        { "name": "Banila Co Tone-Up Sun Stick", "brand": "Shopee 선케어 현지 1위 유지", "score": 70 },
+        { "name": "Some By Mi Snail Truecica Miracle Repair Toner", "brand": "Lazada·Shopee 재구매율 상위", "score": 62 }
+      ],
+      "sellers_src": "출처: knok Olive Young 2026 Best Sellers (Apr 2026) · knok K-Beauty SEA Market Entry Feb 2026 · BeautyMatter K-Beauty Forecast 2026",
+      "channels": [
+        { "name": "Shopee", "pct": 46, "tooltip": "2026년도 SEA 최대 이커머스 유지. 세일 시즌(9.9/11.11) 연동 전략 핵심. Olive Young Global 상품 입점 증가 중." },
+        { "name": "Lazada", "pct": 24, "tooltip": "말레이시아·태국 집중. COSRX·Innisfree 공식 입점으로 신뢰도 강화." },
+        { "name": "TikTok Shop", "pct": 22, "tooltip": "PDRN·Skin Longevity 콘텐츠로 신규 카테고리 개척 중. 인도네시아 중심 라이브커머스 성장." },
+        { "name": "DTC", "pct": 8, "tooltip": "현지 가격 경쟁 채널 선호로 DTC 비중 낮음. 프리미엄 브랜드(Sulwhasoo) 위주." }
+      ],
+      "channels_src": "출처: knok Feb 2026 · TikTok Shop SEA 2026 데이터",
+      "keywords": [
+        { "kw": "PDRN (신흥)", "tier": 1 },
+        { "kw": "Skin Longevity", "tier": 1 },
+        { "kw": "SPF / Sunscreen", "tier": 2 },
+        { "kw": "Tone Up", "tier": 2 },
+        { "kw": "Snail Mucin", "tier": 2 },
+        { "kw": "Whitening", "tier": 3 },
+        { "kw": "Glass Skin", "tier": 3 },
+        { "kw": "Cica / Centella", "tier": 4 }
+      ],
+      "kw_ranking": [
+        { "kw": "PDRN (신흥)", "score": 82 },
+        { "kw": "Skin Longevity", "score": 78 },
+        { "kw": "SPF / Sunscreen", "score": 99 },
+        { "kw": "Tone Up", "score": 95 },
+        { "kw": "Snail Mucin", "score": 88 }
+      ],
+      "kw_src": "출처: knok Olive Young 2026 · BeautyMatter K-Beauty Forecast 2026 · TikTok SEA Creator Center",
+      "trend_12w": [90,102,110,118,125,135,132,148,158,172,188,205],
+      "trend_12w_2": [40,48,54,60,65,72,70,80,88,96,105,114],
+      "trend_tooltip": "SPF 카테고리가 5월(자외선 피크) 최고점. PDRN이 미주·유럽 6~12개월 후 SEA 진입하는 패턴 — 지금이 선점 타이밍. TikTok Shop이 신규 카테고리 개척 견인.",
+      "src_all": "knok Olive Young 2026 Best Sellers (Apr 2026) · knok K-Beauty SEA Market Entry Feb 2026 · BeautyMatter K-Beauty Forecast 2026",
+      "top_keywords": [
+        { "kw": "PDRN (신흥)", "score": 82, "growth": "+초기진입", "badge": "NEW" },
+        { "kw": "Skin Longevity", "score": 78, "growth": "+TikTok 확산", "badge": "RISING" },
+        { "kw": "SPF / Sunscreen", "score": 99, "growth": "+자외선시즌", "badge": "PEAK" },
+        { "kw": "Tone Up", "score": 95, "growth": "+지속", "badge": "STABLE" },
+        { "kw": "Snail Mucin", "score": 88, "growth": "+스테디", "badge": "STABLE" }
+      ],
+      "kw_src_deep": "knok Olive Young 2026 (Apr 2026) · BeautyMatter K-Beauty Forecast 2026 · TikTok SEA",
+      "trend_monthly": [68,70,78,88,99,95,90,88,85,96,99,92],
+      "trend_monthly_2": [42,45,58,78,96,94,88,82,75,70,65,58],
+      "trend_insight": "5월이 SEA 자외선 피크 시즌 — SPF·Tone Up 지금이 최성수기. PDRN이 미주 트렌드 6~12개월 후 SEA 진입 패턴 확인 → 지금 선점이 마진 우위. TikTok Shop이 Skin Longevity 신규 카테고리 개척 주도.",
+      "kw_map": {
+        "PDRN (신흥)": ["Medicube\nPDRN Pink Serum", "VT PDRN\nEssence", "COSRX\nPDRN 신규"],
+        "Skin Longevity": ["Medicube\nAGE-R Booster", "COSRX\nSnail Mucin", "Beauty of Joseon\nRevive Serum"],
+        "SPF / Sunscreen": ["Beauty of Joseon\nRelief Sun", "Banila Co\nTone-Up Sun Stick", "Isntree\nSun Serum"],
+        "Tone Up": ["Banila Co\nSun Stick SPF50+", "Innisfree\nTone Up Sunscreen", "Etude\nSun Cushion"],
+        "Snail Mucin": ["COSRX\nSnail Mucin 96", "SBM\nSnail Truecica Toner", "Biodance\nCollagen Mask"]
+      },
+      "seasonality": [
+        { "kw": "PDRN (신흥)", "months": [30,32,40,50,58,65,70,75,72,78,75,68], "peak": "Aug-Oct (미주 후행)" },
+        { "kw": "Skin Longevity", "months": [40,42,50,60,68,72,75,80,78,82,78,72], "peak": "Aug-Oct" },
+        { "kw": "SPF / Sunscreen", "months": [55,58,72,88,99,96,90,85,78,72,65,58], "peak": "Apr-Jun" },
+        { "kw": "Tone Up", "months": [65,68,75,85,96,94,88,85,82,95,99,90], "peak": "May·Nov" },
+        { "kw": "Snail Mucin", "months": [68,70,76,82,88,86,82,80,78,85,88,82], "peak": "Apr-May·Oct" }
+      ],
+      "season_insight": "☀️ SPF·Tone Up은 지금(5~6월) 자외선 피크 시즌 최고조 — 지금 프로모션 집중 타이밍. 🔬 PDRN은 미주 트렌드 6~12개월 후행 — 8~10월 SEA 진입 예상. 🛒 11.11 메가세일(11월) 시즌에 전 카테고리 스파이크."
+    },
+    "mideast": {
+      "metrics": [
+        { "label": "K-beauty 중동 지위", "value": "Beauty Hotspot", "delta": "CosmeticsBusiness 2026 선정", "tooltip": "CosmeticsBusiness 2026 Beauty Hotspots 보고서: 중동이 K-beauty·Arab Beauty 융합으로 글로벌 5대 뷰티 핫스팟 선정. 사우디·UAE 중심 프리미엄 수요 급증." },
+        { "label": "PDRN 중동 진입", "value": "메인스트림화", "delta": "Regenerative Skincare 1위", "tooltip": "CosmeticsBusiness 2026: PDRN이 중동 시장에서 '재생 스킨케어' 트렌드의 핵심 성분으로 자리잡음. Dr.Athlea PDRN Reju 5000 Cream 등 신규 론칭 다수." },
+        { "label": "Nykaa → 중동 확장", "value": "관찰 중", "delta": "I-Beauty + K-Beauty 융합", "tooltip": "BeautyMatter Apr 2026: Nykaa(인도)의 중동 진출 움직임 포착. K-beauty + I-beauty(인도) 융합 트렌드가 중동 소비자에게 어필." },
+        { "label": "Halal Beauty 성장", "value": "지속 급성장", "delta": "라마단 이후 모멘텀 유지", "tooltip": "라마단(Mar 2026) 이후에도 Halal Beauty 수요 유지. 사우디 뷰티 브랜드들의 K-beauty 성분 채택 증가 — 양방향 융합 트렌드." }
+      ],
+      "sellers": [
+        { "name": "Beauty of Joseon Ginseng Repair Serum", "brand": "Noon 퀵커머스 안티에이징 1위 유지", "score": 100 },
+        { "name": "Dr.Athlea PDRN Reju 5000 Cream", "brand": "CosmeticsBusiness 2026 주목 신규 론칭", "score": 88 },
+        { "name": "Medicube AGE-R Booster Pro", "brand": "UAE 프리미엄 소비자 주목 — Kylie Jenner 효과", "score": 80 },
+        { "name": "VT PDRN Essence", "brand": "Sephora ME PDRN 카테고리 1위", "score": 72 },
+        { "name": "COSRX Advanced Snail Cream", "brand": "Halal 인증 + Noon 스테디셀러", "score": 64 }
+      ],
+      "sellers_src": "출처: CosmeticsBusiness Beauty Hotspots 2026 (Feb 2026) · CosmeticsBusiness Apr 2026 신규 론칭 · BeautyMatter K-Beauty Forecast 2026",
+      "channels": [
+        { "name": "Sephora ME/Faces", "pct": 34, "tooltip": "중동 프리미엄 1번 채널. PDRN·Skin Longevity 카테고리 신설. K-beauty + Arab Beauty 융합 큐레이션 강화." },
+        { "name": "Noon/Amazon.ae", "pct": 33, "tooltip": "퀵커머스 당일 배송 경쟁력 유지. PDRN 성분 제품 재고 즉시 소진 반복." },
+        { "name": "Brand DTC", "pct": 20, "tooltip": "UAE·사우디 고성분 소비자 직접 구매. Medicube AGE-R 번들 프로모션 효과적." },
+        { "name": "Instagram Shop", "pct": 13, "tooltip": "인플루언서 마케팅 핵심. K-beauty + Arab Beauty 융합 콘텐츠 급증." }
+      ],
+      "channels_src": "출처: CosmeticsBusiness 2026 · BeautyMatter K-Beauty Forecast 2026",
+      "keywords": [
+        { "kw": "PDRN / Regenerative", "tier": 1 },
+        { "kw": "Skin Longevity", "tier": 1 },
+        { "kw": "Halal Beauty", "tier": 2 },
+        { "kw": "Anti-Aging", "tier": 2 },
+        { "kw": "K+Arab Beauty Fusion", "tier": 2 },
+        { "kw": "Exosomes", "tier": 3 },
+        { "kw": "Ginseng", "tier": 3 },
+        { "kw": "Tranexamic Acid", "tier": 4 }
+      ],
+      "kw_ranking": [
+        { "kw": "PDRN / Regenerative", "score": 98 },
+        { "kw": "Skin Longevity", "score": 94 },
+        { "kw": "Halal Beauty", "score": 88 },
+        { "kw": "Anti-Aging", "score": 85 },
+        { "kw": "K+Arab Beauty Fusion", "score": 78 }
+      ],
+      "kw_src": "출처: CosmeticsBusiness Beauty Hotspots 2026 · BeautyMatter K-Beauty Forecast 2026 · BeautyIndependent Jan 2026",
+      "trend_12w": [62,66,72,76,82,88,94,100,106,115,122,130],
+      "trend_12w_2": [22,25,30,34,38,42,46,50,54,60,66,72],
+      "trend_tooltip": "PDRN·Regenerative Skincare가 중동 안티에이징 카테고리를 주도. K+Arab Beauty Fusion 트렌드로 현지 브랜드와의 협업 기회 증가.",
+      "src_all": "CosmeticsBusiness Beauty Hotspots 2026 (Feb 2026) · CosmeticsBusiness Apr 2026 · BeautyMatter K-Beauty Forecast 2026 · BeautyIndependent Jan 2026",
+      "top_keywords": [
+        { "kw": "PDRN / Regenerative", "score": 98, "growth": "+메인스트림", "badge": "SURGING" },
+        { "kw": "Skin Longevity", "score": 94, "growth": "+Beauty Hotspot", "badge": "NEW" },
+        { "kw": "Halal Beauty", "score": 88, "growth": "+라마단후 지속", "badge": "STABLE" },
+        { "kw": "Anti-Aging", "score": 85, "growth": "+프리미엄 견인", "badge": "STABLE" },
+        { "kw": "K+Arab Beauty Fusion", "score": 78, "growth": "+신트렌드", "badge": "NEW" }
+      ],
+      "kw_src_deep": "CosmeticsBusiness Beauty Hotspots 2026 · BeautyMatter K-Beauty Forecast 2026 · BeautyIndependent Jan 2026",
+      "trend_monthly": [58,60,88,72,68,65,62,68,78,90,95,88],
+      "trend_monthly_2": [25,28,95,65,60,55,58,65,72,82,88,85],
+      "trend_insight": "CosmeticsBusiness 2026: 중동이 K-beauty 5대 핫스팟 선정 — PDRN·Regenerative Skincare가 핵심. 라마단(3월) 이후 Halal Beauty 모멘텀 지속. K+Arab Beauty Fusion이 현지화 전략의 핵심 키워드.",
+      "kw_map": {
+        "PDRN / Regenerative": ["Dr.Athlea\nPDRN Reju 5000 Cream", "VT PDRN\nEssence", "Medicube\nPDRN Pink Serum"],
+        "Skin Longevity": ["Medicube\nAGE-R Booster Pro", "Beauty of Joseon\nGinseng Repair Serum", "Dr.Jart+\nCicapair Cream"],
+        "Halal Beauty": ["COSRX\nHalal 인증 라인", "SBM\nHalal Toner", "Laneige\nSleeping Mask"],
+        "Anti-Aging": ["Beauty of Joseon\nGinseng Repair", "Sulwhasoo\nConcentrate Serum", "Medicube\nCollagen Cream"],
+        "K+Arab Beauty Fusion": ["로컬 협업\n한국 성분 적용", "Halal PDRN\n신규 개발", "Oud+Ginseng\n하이브리드"]
+      },
+      "seasonality": [
+        { "kw": "PDRN / Regenerative", "months": [55,58,78,65,62,58,60,65,75,88,95,90], "peak": "Oct-Nov(+라마단)" },
+        { "kw": "Skin Longevity", "months": [52,55,72,62,60,55,58,62,72,85,92,88], "peak": "Oct-Nov" },
+        { "kw": "Halal Beauty", "months": [78,75,98,72,65,60,62,68,75,80,84,88], "peak": "Mar(라마단)" },
+        { "kw": "Anti-Aging", "months": [55,58,65,68,72,65,60,65,75,88,92,86], "peak": "Oct-Nov" },
+        { "kw": "K+Arab Beauty Fusion", "months": [40,42,55,58,60,55,52,58,65,72,78,75], "peak": "연중 성장" }
+      ],
+      "season_insight": "🌙 Halal Beauty·PDRN은 라마단(3월) + 겨울(10~11월) 이중 피크. ❄️ Anti-Aging·Skin Longevity는 기온 하강 시즌(10~12월) 집중. 🤝 K+Arab Beauty Fusion은 신흥 트렌드 — 연중 꾸준한 성장세."
+    },
+    "india": {
+      "metrics": [
+        { "label": "Nykaa 14주년 세일", "value": "진행중", "delta": "K-beauty 최대 50% 할인 (Apr 2026)", "tooltip": "Nykaa 14주년 기념 세일(Apr 15, 2026). K-beauty 브랜드 포함 전 카테고리 최대 50~60% 할인. Innisfree·TONYMOLY·Aestura·d'Alba·The Face Shop 참여." },
+        { "label": "Nykaa 누적 고객", "value": "4,200만", "delta": "YoY +30% (Q3 FY2026)", "tooltip": "BeautyMatter Apr 2026: Nykaa Q3 FY2026 누적 뷰티 고객 약 4,200만명(+30% YoY). House of Nykaa GMV Rs 775 crore($83.3M). Q4 FY2026 매출 성장률 '20%대 후반' 가이던스 — 3년 만의 최고 성장." },
+        { "label": "K-beauty 인도 포지션", "value": "I-Beauty 경쟁", "delta": "Ayurveda + K-beauty 성분 융합", "tooltip": "CosmeticsBusiness 2026 Beauty Hotspots: 인도 'I-Beauty'가 K-beauty의 대항마로 부상. 그러나 K-beauty는 여전히 '성분 혁신'으로 차별화. Nykaa 세일에 K-beauty 브랜드 대거 참여." },
+        { "label": "스킨케어 침투율", "value": "3.5x 증가", "delta": "Nykaa 성분 교육 캠페인 효과", "tooltip": "BeautyMatter Apr 2026: Nykaa의 성분 교육 전략으로 스킨케어 침투율 3.5배 증가. 세럼 판매 +35% YoY, 선크림 +85% YoY — K-beauty 핵심 카테고리와 정확히 일치." }
+      ],
+      "sellers": [
+        { "name": "Beauty of Joseon Relief Sunscreen", "brand": "Nykaa 14주년 세일 참여 · SPF 카테고리 1위 지속", "score": 100 },
+        { "name": "COSRX Snail Mucin 96 Essence", "brand": "Nykaa·Myntra 스테디셀러 · 세일 포함", "score": 90 },
+        { "name": "d'Alba Piedmont White Truffle Serum", "brand": "Nykaa 14주년 세일 신규 포함 · 이탈리안 K-beauty", "score": 82 },
+        { "name": "Aestura Atobarrier 365 Cream", "brand": "Nykaa 세일 K-beauty 특집 · Barrier Care 1위", "score": 74 },
+        { "name": "Minimalist Niacinamide 10% Serum", "brand": "Nykaa 성분 교육 캠페인 1위 · 인도 로컬 K-beauty 영향", "score": 66 }
+      ],
+      "sellers_src": "출처: Business Standard Nykaa 14주년 세일 Apr 15 2026 · BeautyMatter Nykaa Apr 2026 · CosmeticsBusiness Beauty Hotspots 2026",
+      "channels": [
+        { "name": "Myntra/Nykaa", "pct": 45, "tooltip": "Nykaa 14주년 세일(Apr) + Nykaaland 이벤트로 Q4 최고 성장. K-beauty 브랜드 대거 할인 참여. Charlotte Tilbury·Chanel 등 럭셔리도 Nykaa 통해 인도 진출." },
+        { "name": "Amazon.in", "pct": 29, "tooltip": "Prime 멤버십 기반 편의 구매. K-beauty 가격 비교 경쟁에서 Nykaa 할인 행사와 경쟁." },
+        { "name": "Brand DTC", "pct": 15, "tooltip": "Nykaa의 28,000+ 어필리에이트·크리에이터 에코시스템이 DTC 발견 채널 역할. 1억+ 임프레션 생성." },
+        { "name": "Instagram/Reels", "pct": 11, "tooltip": "Nykaa 콘텐츠 전략과 연동. 성분 교육 Reels → K-beauty 구매 전환 핵심 경로." }
+      ],
+      "channels_src": "출처: BeautyMatter Nykaa Apr 2026 · Business Standard Apr 15 2026",
+      "keywords": [
+        { "kw": "Barrier Care", "tier": 1 },
+        { "kw": "Skin Longevity", "tier": 1 },
+        { "kw": "PDRN (인지 확산)", "tier": 2 },
+        { "kw": "Niacinamide", "tier": 2 },
+        { "kw": "SPF Routine", "tier": 2 },
+        { "kw": "I-Beauty vs K-Beauty", "tier": 3 },
+        { "kw": "Aestura (신규 주목)", "tier": 3 },
+        { "kw": "d'Alba (신규 주목)", "tier": 4 }
+      ],
+      "kw_ranking": [
+        { "kw": "Barrier Care", "score": 97 },
+        { "kw": "Skin Longevity", "score": 92 },
+        { "kw": "PDRN (인지 확산)", "score": 78 },
+        { "kw": "Niacinamide", "score": 95 },
+        { "kw": "SPF Routine", "score": 88 }
+      ],
+      "kw_src": "출처: BeautyMatter Nykaa Apr 2026 · CosmeticsBusiness Beauty Hotspots 2026 · Business Standard Apr 15 2026",
+      "trend_12w": [42,50,55,62,70,78,85,96,105,118,132,148],
+      "trend_12w_2": [16,19,23,28,33,38,44,52,58,68,78,88],
+      "trend_tooltip": "Nykaa 세일(Apr) 효과로 W17 급등. 세럼 +35%·선크림 +85% YoY 성장 지속. Skin Longevity 트렌드로 PDRN 인지도 상승 중. I-Beauty 경쟁에도 K-beauty 성분 혁신으로 차별화 유지.",
+      "src_all": "BeautyMatter Nykaa Apr 2026 · Business Standard Nykaa 14주년 세일 Apr 15 2026 · CosmeticsBusiness Beauty Hotspots 2026",
+      "top_keywords": [
+        { "kw": "Barrier Care", "score": 97, "growth": "+3.5x 침투", "badge": "SURGING" },
+        { "kw": "Skin Longevity", "score": 92, "growth": "+인도 진입", "badge": "NEW" },
+        { "kw": "Niacinamide", "score": 95, "growth": "+성분교육 1위", "badge": "PEAK" },
+        { "kw": "SPF Routine", "score": 88, "growth": "+85% YoY", "badge": "SURGING" },
+        { "kw": "PDRN (인지 확산)", "score": 78, "growth": "+초기", "badge": "RISING" }
+      ],
+      "kw_src_deep": "BeautyMatter Nykaa Apr 2026 · CosmeticsBusiness Beauty Hotspots 2026 · Business Standard Apr 15 2026",
+      "trend_monthly": [78,80,85,90,92,88,84,86,90,95,98,94],
+      "trend_monthly_2": [38,42,58,80,92,88,80,75,68,58,45,40],
+      "trend_insight": "Nykaa 14주년 세일(Apr 2026)로 Q1 최대 성과. BeautyMatter: Nykaa Q4 FY2026 매출 성장률 '3년 만의 최고' 가이던스. 세럼 +35%·선크림 +85% YoY — K-beauty 핵심 카테고리가 인도 성장을 주도. I-Beauty 경쟁 있지만 K-beauty 성분 혁신(PDRN·Exosome)으로 차별화 유지.",
+      "kw_map": {
+        "Barrier Care": ["Aestura\nAtobarrier 365 Cream", "COSRX\nSnail Mucin", "Dr.Jart+\nCeramidin Cream"],
+        "Skin Longevity": ["Medicube\nAGE-R Booster", "Beauty of Joseon\nRevive Serum", "d'Alba\nWhite Truffle Serum"],
+        "PDRN (인지 확산)": ["Medicube\nPDRN Pink Serum", "VT PDRN\nEssence", "COSRX\nPDRN 신규"],
+        "Niacinamide": ["Minimalist\nNiacinamide 10%", "COSRX\nNiacinamide Serum", "The Ordinary\nNiacinamide+Zinc"],
+        "SPF Routine": ["Beauty of Joseon\nRelief Sun", "Etude\nSunprise Mist", "ISNTREE\nSun Serum"]
+      },
+      "seasonality": [
+        { "kw": "Barrier Care", "months": [48,52,60,68,72,65,60,63,72,80,85,82], "peak": "Oct-Nov·Nykaa세일" },
+        { "kw": "Skin Longevity", "months": [40,44,52,60,65,60,56,60,68,78,82,80], "peak": "Oct-Nov" },
+        { "kw": "PDRN (인지 확산)", "months": [25,28,35,42,48,52,55,60,62,68,65,60], "peak": "하반기 성장" },
+        { "kw": "Niacinamide", "months": [78,80,84,90,92,88,84,86,88,95,98,94], "peak": "Oct-Nov" },
+        { "kw": "SPF Routine", "months": [38,42,58,80,92,88,80,75,68,58,45,40], "peak": "Apr-Jun" }
+      ],
+      "season_insight": "☀️ SPF Routine은 4~6월 인도 혹서기 최고조 — 지금(5월) 피크 시즌. 🛒 Niacinamide·Barrier Care는 Nykaa 빅세일(10~11월) 연동 피크. 🌱 PDRN은 하반기부터 인지도 상승 시작 — 연말 집중 마케팅 타이밍."
+    }
+  }
+}
