@@ -1,4 +1,4 @@
-# K-Beauty Pulse 🌿
+# K-Beauty Pulse
 > 매주 월요일, 글로벌 K-Beauty 트렌드를 자동으로 분석해서 이메일로 발송
 
 **완전 무료 스택**: GitHub Actions + Groq API + Gmail SMTP
@@ -8,7 +8,7 @@
 ## 구조
 
 ```
-main.py          ← 실행 진입점 (이것만 실행하면 끝)
+main.py          ← 실행 진입점 
 scraper.py       ← 데이터 수집 (Google Trends + Reddit + RSS + Amazon)
 analyzer.py      ← Groq AI 분석 (llama3-70b, 무료)
 emailer.py       ← Gmail 자동 발송
@@ -20,7 +20,7 @@ requirements.txt
 
 ---
 
-## 세팅 방법 (한 번만 하면 됨)
+## 세팅 방법
 
 ### Step 1 — API 키 발급
 
