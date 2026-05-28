@@ -113,6 +113,26 @@ nav {
 .tip-above-left::after { top: 100%; left: 14px; border-top-color: #17243F; }
 .has-tip:hover .tip { opacity: 1; }
 
+
+/* HISTORY SELECTOR */
+.history-select {
+  padding: 5px 10px; border-radius: var(--radius);
+  font-size: 11px; cursor: pointer;
+  border: 0.5px solid var(--border);
+  background: var(--card); color: var(--t2);
+  font-family: Helvetica, 'Apple SD 산돌고딕 Neo', sans-serif;
+  outline: none; appearance: none;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='10' height='6' viewBox='0 0 10 6'%3E%3Cpath d='M0 0l5 6 5-6z' fill='%2347585C'/%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: right 8px center;
+  padding-right: 24px;
+}
+.history-select:focus { border-color: var(--navy); }
+.history-label {
+  font-size: 10px; color: var(--mid);
+  font-family: Helvetica, sans-serif;
+}
+
 /* SECTION */
 .section { max-width: 1200px; margin: 0 auto; padding: 0 2rem 2rem; }
 .section-header { display: flex; align-items: center; justify-content: space-between; margin-bottom: 1rem; }
@@ -281,7 +301,13 @@ nav {
     <button class="nav-tab active" onclick="showPage('trend')">트렌드 대시보드</button>
     <button class="nav-tab" onclick="showPage('keyword')">키워드 딥다이브</button>
   </div>
-  <div style="display:flex;align-items:center;gap:8px">
+  <div style="display:flex;align-items:center;gap:10px">
+    <span class="history-label">주차 선택</span>
+    <select class="history-select" id="historySelect" onchange="loadHistoryData(this.value)">
+      <option value="data.json">2026 · May · Week 2 (최신)</option>
+      <option value="history/data_2026-05-04.json">2026 · May · Week 1</option>
+      <option value="history/data_2025-research.json">2025 · Research Baseline</option>
+    </select>
     <span class="nav-badge" id="dateBadge">REAL DATA · 2025</span>
   </div>
 </nav>
@@ -439,10 +465,24 @@ const REGION_COLORS_MAP = {
   india:    { mc: ['mc-1','mc-2','mc-3','mc-4'] },
 };
 
-async function loadData() {
+
+// ── HISTORY LOADER ──────────────────────────────────────────
+async function loadHistoryData(file) {
   try {
-    const res = await fetch('data.json?v=' + Date.now());
+    const res = await fetch(file + '?v=' + Date.now());
     const json = await res.json();
+    await processData(json);
+  } catch(e) {
+    console.error('히스토리 로드 실패:', e);
+  }
+}
+
+async function loadData() {
+  return processData(await (await fetch("data.json?v=" + Date.now())).json());
+}
+
+async function processData(json) {
+  try {
     DATA_META = json.meta;
 
     // Update date badge
@@ -502,7 +542,6 @@ async function loadData() {
 
   } catch(e) {
     console.error('data.json 로드 실패:', e);
-    // fallback: render with empty
     renderTrend('americas');
     renderKeyword('americas');
   }
