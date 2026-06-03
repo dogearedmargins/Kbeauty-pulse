@@ -1,0 +1,20 @@
+{
+  "weeks": [
+    {
+      "label": "2026 · May · Week 3 (최신)",
+      "file": "data.json"
+    },
+    {
+      "label": "2026 · May · Week 2",
+      "file": "history/data_2026-05-11.json"
+    },
+    {
+      "label": "2026 · May · Week 1",
+      "file": "history/data_2026-05-04.json"
+    },
+    {
+      "label": "2025 · Research Baseline",
+      "file": "history/data_2025-research.json"
+    }
+  ]
+}
