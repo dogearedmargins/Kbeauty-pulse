@@ -296,6 +296,38 @@ nav {
 .insight { background: #FAF9F6; border-radius: var(--radius); padding: 0.65rem 0.9rem; margin-top: 0.65rem; font-size: 11px; color: var(--t2); line-height: 1.65; }
 .insight strong { color: var(--t1); }
 
+/* SIGNAL CARDS */
+.signal-section { font-family: Helvetica, sans-serif; }
+.signal-label { font-size: 9px; font-weight: 700; color: #788CE3; text-transform: uppercase; letter-spacing: 0.1em; margin-bottom: 8px; }
+.signal-grid { display: grid; grid-template-columns: repeat(3,1fr); gap: 6px; }
+.signal-card { border-radius: 6px; overflow: hidden; cursor: pointer; border: 0.5px solid rgba(23,36,63,0.1); transition: transform 0.15s; text-decoration: none; display: block; }
+.signal-card:hover { transform: translateY(-2px); }
+.signal-img { height: 110px; position: relative; overflow: hidden; }
+.signal-img img { width: 100%; height: 100%; object-fit: cover; }
+.signal-grad { width: 100%; height: 100%; background: linear-gradient(135deg, #17243F 0%, #788CE3 100%); display: flex; align-items: flex-end; padding: 8px; }
+.signal-grad-num { font-size: 20px; font-weight: 700; color: #DFF478; line-height: 1; }
+.signal-grad-sub { font-size: 8px; color: rgba(255,255,255,0.6); margin-top: 1px; }
+.signal-flat { width: 100%; height: 100%; background: #DFF478; display: flex; align-items: center; justify-content: center; }
+.signal-flat-name { font-size: 16px; font-weight: 700; color: #17243F; text-align: center; line-height: 1.2; }
+.signal-body { background: #fff; padding: 8px 10px; }
+.signal-tag { font-size: 8px; font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase; color: #788CE3; margin-bottom: 3px; }
+.signal-title { font-size: 10px; font-weight: 700; color: #17243F; line-height: 1.35; margin-bottom: 6px; }
+.signal-footer { display: flex; align-items: center; justify-content: space-between; }
+.signal-source { font-size: 8px; color: #788CE3; font-style: italic; }
+.signal-link { font-size: 9px; color: #17243F; font-weight: 700; }
+
+/* KW TOOLTIP */
+.kw-rank-item { position: relative; }
+.kw-rank-item .kw-tip {
+  display: none; position: absolute; z-index: 200;
+  background: #17243F; color: rgba(255,255,255,0.88);
+  font-size: 10px; line-height: 1.5; padding: 7px 10px;
+  border-radius: 4px; width: 220px; left: 0; bottom: calc(100% + 5px);
+  box-shadow: 0 4px 16px rgba(23,36,63,0.18);
+  pointer-events: none;
+}
+.kw-rank-item:hover .kw-tip { display: block; }
+
 /* PAGE */
 .page { display: none; }
 .page.active { display: block; }
@@ -372,10 +404,8 @@ nav {
         <div id="tKwRank"></div>
         <div class="src-tag" id="tKwSrc" style="margin-top:.5rem"></div>
       </div>
-      <div class="card">
-        <div class="card-title">Google Trends — 키워드 검색 지수 (월별)</div>
-        <div class="legend" id="tLegend"></div>
-        <div style="position:relative;height:185px"><canvas id="trendChart"></canvas></div>
+      <div class="card" id="signalCard" style="padding:0;overflow:hidden;background:transparent;border:none">
+        <div id="signalCards"></div>
       </div>
     </div>
     <!-- EXPORT STATS SECTION -->
@@ -391,8 +421,9 @@ nav {
       <div id="exportRegionView">
         <div class="legend" id="exportLegend" style="margin-bottom:.65rem"></div>
         <div style="position:relative;height:180px"><canvas id="exportLineChart"></canvas></div>
-        <div class="insight" style="margin-top:.65rem">
+        <div class="insight" id="exportInsight" style="margin-top:.65rem;cursor:default">
           <strong>관세청 2025년 확정치:</strong> 총 수출 $94.7억(+10.7% YoY). 미국 $17억(+두자릿수 성장), 유럽 $13.3억(+26.6%), UAE +85%, 인도 +100%+ · 출처: 관세청 수출입무역통계, 식품의약품안전처 2025년 화장품 수출실적
+          <div style="margin-top:4px;font-size:9px;color:var(--mid)">💡 지역명 클릭 시 해당 지역 상세 인사이트</div>
         </div>
       </div>
       <!-- Category Bar Chart -->
@@ -565,7 +596,9 @@ async function processData(json) {
         trend2: d.trend_12w_2,
         trendTooltip: d.trend_tooltip,
         srcAll: d.src_all,
-        aiCtx: `${r}: ${d.kw_ranking.map(k=>k.kw).join(', ')} 급상승. ${d.sellers_src}`
+        aiCtx: `${r}: ${d.kw_ranking.map(k=>k.kw).join(', ')} 급상승. ${d.sellers_src}`,
+        signals: d.weekly_signals || null,
+        kwRankTooltips: d.kw_rank_tooltips || {}
       };
 
       KW_DATA[r] = {
@@ -611,13 +644,19 @@ let activeKwBtns=new Set([0,1]);
 const EXPORT_REGION_DATA = {
   labels: ['2021', '2022', '2023', '2024', '2025'],
   datasets: [
-    { label: '미국 (Americas)', data: [8.5, 8.5, 12.1, 17.6, 17.0], color: '#17243F' },
-    { label: '유럽', data: [5.8, 6.2, 11.0, 13.3, 15.0], color: '#788CE3' },
-    { label: '동남아 (SEA)', data: [14.2, 12.8, 13.5, 15.2, 16.8], color: '#92BAD5' },
-    { label: '중동 (UAE 등)', data: [1.2, 1.4, 1.6, 2.8, 4.2], color: '#DFF478' },
-    { label: '인도', data: [0.3, 0.4, 0.5, 0.8, 1.6], color: '#aaaaaa' },
+    { label: '미국 (Americas)', data: [8.5, 8.5, 12.1, 17.6, 17.0], color: '#17243F',
+      insight: '2022→2023 +42%: TikTok K-beauty 바이럴 폭발. COSRX·Beauty of Joseon 알고리즘 급상승. 2024→2025: 미국이 중국 제치고 K-beauty 최대 수출국 등극.' },
+    { label: '유럽', data: [5.8, 6.2, 11.0, 13.3, 15.0], color: '#788CE3',
+      insight: '2022→2023 +77%: Lookfantastic·Boots K-beauty 카테고리 공식 론칭. 영국 중심 유럽 전역 확산. 2026 Goodai Global IPO 추진으로 추가 확장 예상.' },
+    { label: '동남아 (SEA)', data: [14.2, 12.8, 13.5, 15.2, 16.8], color: '#92BAD5',
+      insight: '2021→2022 소폭 하락: 팬데믹 여파. 2023→ 회복세: Shopee·TikTok Shop 채널 확대. 2025 +10.5%: SPF 필수화 트렌드 수혜.' },
+    { label: '중동 (UAE 등)', data: [1.2, 1.4, 1.6, 2.8, 4.2], color: '#DFF478',
+      insight: '2023→2024 +75%: 중국 시장 둔화로 K-beauty 수출 다각화. UAE·사우디 프리미엄 소비자 공략 본격화. 2025 +50%: Arab+K-beauty 융합 트렌드 가속.' },
+    { label: '인도', data: [0.3, 0.4, 0.5, 0.8, 1.6], color: '#888888',
+      insight: '2024→2025 +100%: Nykaa K-beauty 카테고리 급성장. Medicube·Illiyoon 공식 론칭. 인도 뷰티 시장 $28B→$34B 성장 전망.' },
   ]
 };
+let activeExportDataset = null;
 
 const EXPORT_CATEGORY_DATA = {
   labels: ['기초화장품(스킨·로션·세럼)', '기타(선크림·주름스틱)', '색조(파우더·립스틱)', '두발용', '인체세정용'],
@@ -648,7 +687,7 @@ function initExportCharts() {
         label: d.label,
         data: d.data,
         borderColor: d.color,
-        backgroundColor: d.color + '12',
+        backgroundColor: d.color + '25',
         tension: 0.3,
         fill: false,
         pointRadius: 4,
@@ -658,6 +697,28 @@ function initExportCharts() {
     },
     options: {
       responsive: true, maintainAspectRatio: false,
+      onClick: (e, els) => {
+        if(!els.length) return;
+        const idx = els[0].datasetIndex;
+        const ds = EXPORT_REGION_DATA.datasets[idx];
+        activeExportDataset = activeExportDataset === idx ? null : idx;
+        exportLineChartInst.data.datasets.forEach((d, i) => {
+          d.fill = i === activeExportDataset;
+          d.borderWidth = i === activeExportDataset ? 3 : 2;
+          d.borderColor = i === activeExportDataset || activeExportDataset === null
+            ? EXPORT_REGION_DATA.datasets[i].color
+            : EXPORT_REGION_DATA.datasets[i].color + '55';
+        });
+        exportLineChartInst.update();
+        const insightEl = document.getElementById('exportInsight');
+        if(insightEl) {
+          if(activeExportDataset !== null) {
+            insightEl.innerHTML = `<strong>${ds.label}</strong> — ${ds.insight}`;
+          } else {
+            insightEl.innerHTML = '<strong>관세청 2025년 확정치:</strong> 총 수출 $94.7억(+10.7% YoY). 미국 $17억(+두자릿수 성장), 유럽 $13.3억(+26.6%), UAE +85%, 인도 +100%+ · 출처: 관세청 수출입무역통계';
+          }
+        }
+      },
       plugins: { legend: { display: false },
         tooltip: { callbacks: { label: ctx => ` ${ctx.dataset.label}: $${ctx.parsed.y}억` } }
       },
@@ -669,6 +730,20 @@ function initExportCharts() {
       }
     }
   });
+
+  // 클릭 가능 레전드 렌더링
+  const legendEl = document.getElementById('exportLegend');
+  if(legendEl) {
+    legendEl.innerHTML = EXPORT_REGION_DATA.datasets.map((d, i) =>
+      `<span style="cursor:pointer;padding:2px 6px;border-radius:3px;border:1px solid transparent;transition:all 0.15s"
+        id="expLeg${i}"
+        onmouseenter="this.style.borderColor='${d.color}'"
+        onmouseleave="this.style.borderColor='transparent'"
+        onclick="clickExportLegend(${i})">
+        <span class="ldot" style="background:${d.color}"></span>${d.label}
+      </span>`
+    ).join('');
+  }
 
   // Category bar chart
   if(exportCatChartInst) exportCatChartInst.destroy();
@@ -699,6 +774,27 @@ function initExportCharts() {
       }
     }
   });
+}
+
+function clickExportLegend(idx) {
+  activeExportDataset = activeExportDataset === idx ? null : idx;
+  const ds = EXPORT_REGION_DATA.datasets[idx];
+  exportLineChartInst.data.datasets.forEach((d, i) => {
+    d.fill = i === activeExportDataset;
+    d.borderWidth = i === activeExportDataset ? 3 : 2;
+    d.borderColor = i === activeExportDataset || activeExportDataset === null
+      ? EXPORT_REGION_DATA.datasets[i].color
+      : EXPORT_REGION_DATA.datasets[i].color + '55';
+  });
+  exportLineChartInst.update();
+  const insightEl = document.getElementById('exportInsight');
+  if(insightEl) {
+    if(activeExportDataset !== null) {
+      insightEl.innerHTML = `<strong>${ds.label}</strong> — ${ds.insight}<div style="margin-top:4px;font-size:9px;color:var(--mid)">💡 다시 클릭하면 전체 보기</div>`;
+    } else {
+      insightEl.innerHTML = '<strong>관세청 2025년 확정치:</strong> 총 수출 $94.7억(+10.7% YoY). 미국 $17억(+두자릿수 성장), 유럽 $13.3억(+26.6%), UAE +85%, 인도 +100%+<div style="margin-top:4px;font-size:9px;color:var(--mid)">💡 지역명 클릭 시 해당 지역 상세 인사이트</div>';
+    }
+  }
 }
 
 function switchExportTab(tab) {
@@ -772,11 +868,6 @@ function renderTrend(r){
   document.getElementById('tKwSrc').textContent=d.kwSrc;
   const topKws = (d.kwRank||[]).slice(0,3);
   const kwColors = ['#17243F','#788CE3','#92BAD5'];
-  document.getElementById('tLegend').innerHTML=
-    topKws.map((k,i)=>`<span><span class="ldot" style="background:${kwColors[i]}"></span>${k.k}</span>`).join('') +
-    `<span class="has-tip" style="color:var(--mid);font-size:10px;cursor:default">트렌드 해석 ℹ
-      <span class="tip tip-above" style="width:240px">${d.trendTooltip||''}</span>
-    </span>`;
   document.getElementById('tSrcFooter').innerHTML=`<strong>데이터 출처</strong><br>${d.srcAll}`;
 
   if(catChartInst)catChartInst.destroy();
@@ -786,36 +877,83 @@ function renderTrend(r){
     options:{responsive:true,maintainAspectRatio:false,plugins:{legend:{display:false}}}
   });
 
-  if(trendChartInst)trendChartInst.destroy();
-  const trendKws = (d.kwRank||[]).slice(0,3);
-  const trendColors = ['#17243F','#788CE3','#92BAD5'];
-  const kwSeasonData = KW_DATA[r]?.seasonality || [];
-  const trendDatasets = trendKws.map((kw,i) => {
-    const season = kwSeasonData.find(s => s.kw === kw.k);
-    const monthlyData = season ? season.months : Array(12).fill(kw.s || 50);
-    return {
-      label: kw.k,
-      data: monthlyData,
-      borderColor: trendColors[i],
-      backgroundColor: trendColors[i] + '10',
-      tension: .4, fill: false, pointRadius: 2, borderWidth: 2
-    };
-  });
-  trendChartInst=new Chart(document.getElementById('trendChart'),{
-    type:'line',
-    data:{labels:['Jan','Feb','Mar','Apr','May','Jun','Jul','Aug','Sep','Oct','Nov','Dec'],
-      datasets: trendDatasets.length ? trendDatasets : [
-        {label:'스킨케어',data:d.trend,borderColor:'#17243F',backgroundColor:'rgba(23,36,63,0.06)',tension:.4,fill:false,pointRadius:2,borderWidth:2},
-        {label:'선케어',data:d.trend2,borderColor:'#92BAD5',tension:.4,fill:false,pointRadius:2,borderWidth:2}
-      ]
-    },
-    options:{responsive:true,maintainAspectRatio:false,plugins:{legend:{display:false}},
-      scales:{
-        x:{ticks:{font:{family:'Helvetica',size:10}},grid:{display:false}},
-        y:{min:0,max:100,ticks:{font:{family:'Helvetica',size:10},callback:v=>v},grid:{color:'rgba(23,36,63,0.06)'}}
-      }}
-  });
+  // Signal Cards 렌더링
+  renderSignalCards(d.signals, r);
+
+  // Keyword Ranking with tooltips
+  document.getElementById('tKwRank').innerHTML=d.kwRank.map((k,i)=>`
+    <div class="ri kw-rank-item">
+      <div class="ri-num ${i<3?'top':''}">#${i+1}</div>
+      <div class="ri-info"><div class="ri-name">${k.k}</div></div>
+      <div class="ri-bar-wrap"><div class="ri-bar-bg"><div class="ri-bar-fill" style="width:${k.s}%;background:#788CE3"></div></div><div class="ri-val">${k.s}</div></div>
+      ${d.kwRankTooltips[k.k] ? `<div class="kw-tip">${d.kwRankTooltips[k.k]}</div>` : ''}
+    </div>`).join('');
+
   document.getElementById('tAiBody').textContent='지역을 선택하고 Analyze를 눌러주세요.';
+}
+
+// ── RENDER SIGNAL CARDS ─────────────────────────────────────
+const UNSPLASH_KEY = 'CLIENT_KEY_PLACEHOLDER';
+
+async function renderSignalCards(signals, region) {
+  const wrap = document.getElementById('signalCards');
+  if(!wrap) return;
+
+  if(!signals || !signals.length) {
+    wrap.innerHTML = `
+      <div style="padding:1rem;background:var(--card);border-radius:var(--radius);border:0.5px solid var(--border)">
+        <div style="font-size:9px;font-weight:700;color:#788CE3;text-transform:uppercase;letter-spacing:0.1em;margin-bottom:6px">This Week in K-Beauty</div>
+        <div style="font-size:11px;color:var(--mid)">이번 주 data.json에 weekly_signals 데이터를 추가해주세요.</div>
+      </div>`;
+    return;
+  }
+
+  const bgTypes = ['unsplash', 'gradient', 'flat'];
+  const gradColors = [
+    'linear-gradient(135deg, #17243F 0%, #788CE3 100%)',
+    'linear-gradient(135deg, #788CE3 0%, #92BAD5 100%)',
+    'linear-gradient(135deg, #17243F 0%, #92BAD5 100%)'
+  ];
+  const flatColors = ['#DFF478', '#92BAD5', '#ECE9DF'];
+
+  let cardsHTML = `<div class="signal-section"><div class="signal-label">This Week in K-Beauty — ${region}</div><div class="signal-grid">`;
+
+  for(let i = 0; i < Math.min(signals.length, 3); i++) {
+    const s = signals[i];
+    const bg = s.bg || bgTypes[i];
+    let imgHTML = '';
+
+    if(bg === 'gradient') {
+      imgHTML = `<div class="signal-grad" style="background:${gradColors[i%3]}">
+        <div><div class="signal-grad-num">${s.number||''}</div><div class="signal-grad-sub">${s.number_label||''}</div></div>
+      </div>`;
+    } else if(bg === 'flat') {
+      imgHTML = `<div class="signal-flat" style="background:${flatColors[i%3]}">
+        <div class="signal-flat-name">${s.flat_text||s.title.split(' ')[0]}</div>
+      </div>`;
+    } else {
+      const keyword = encodeURIComponent(s.image_keyword || 'korean beauty skincare');
+      imgHTML = `<img src="https://source.unsplash.com/featured/400x220?${keyword}" alt="${s.title}"
+        style="width:100%;height:100%;object-fit:cover"
+        onerror="this.parentElement.style.background='#92BAD5';this.style.display='none'">`;
+    }
+
+    cardsHTML += `
+      <a class="signal-card" href="${s.url||'#'}" target="_blank" rel="noopener">
+        <div class="signal-img">${imgHTML}</div>
+        <div class="signal-body">
+          <div class="signal-tag">${s.type||'Signal'}</div>
+          <div class="signal-title">${s.title}</div>
+          <div class="signal-footer">
+            <span class="signal-source">${s.source||''} · ${s.date||''}</span>
+            <span class="signal-link">↗</span>
+          </div>
+        </div>
+      </a>`;
+  }
+
+  cardsHTML += '</div></div>';
+  wrap.innerHTML = cardsHTML;
 }
 
 // ── RENDER KEYWORD ──────────────────────────────────────────
@@ -962,13 +1100,12 @@ async function runTrendAI(){
   btn.disabled=true;btn.textContent='Analyzing...';
   body.textContent='실제 데이터를 기반으로 AI가 분석 중...';
   try{
-    const res=await fetch('https://api.anthropic.com/v1/messages',{method:'POST',
+    const res=await fetch('/api/analyze',{method:'POST',
       headers:{'Content-Type':'application/json'},
-      body:JSON.stringify({model:'claude-sonnet-4-20250514',max_tokens:600,
-        messages:[{role:'user',content:`K-Beauty B2B 마케팅 전문가로서 아래 데이터 기반으로 3문장 인사이트를 한국어로 작성하세요.\n${d.aiCtx}`}]})});
+      body:JSON.stringify({region:curTrendR, context:d.aiCtx, type:'trend'})});
     const data=await res.json();
-    body.textContent=data.content?.find(c=>c.type==='text')?.text||'분석 실패';
-  }catch(e){body.textContent='API 연결이 필요합니다.';}
+    body.textContent=data.result||'분석 실패';
+  }catch(e){body.textContent='Groq API 연결 오류. /api/analyze 설정을 확인해주세요.';}
   btn.disabled=false;btn.textContent='Analyze ↗';
 }
 
@@ -980,13 +1117,12 @@ async function runKwAI(){
   body.textContent='키워드 데이터 분석 중...';
   const kwList=d.keywords.map(k=>`${k.k}(${k.growth})`).join(', ');
   try{
-    const res=await fetch('https://api.anthropic.com/v1/messages',{method:'POST',
+    const res=await fetch('/api/analyze',{method:'POST',
       headers:{'Content-Type':'application/json'},
-      body:JSON.stringify({model:'claude-sonnet-4-20250514',max_tokens:600,
-        messages:[{role:'user',content:`K-Beauty 키워드 애널리스트로서 아래 트렌딩 키워드 분석해 마케팅 전략 3문장 한국어로.\n지역:${curKwR}\n키워드:${kwList}\n시즌:${d.seasonInsight}`}]})});
+      body:JSON.stringify({region:curKwR, context:`키워드:${kwList}\n시즌:${d.seasonInsight}`, type:'keyword'})});
     const data=await res.json();
-    body.textContent=data.content?.find(c=>c.type==='text')?.text||'분석 실패';
-  }catch(e){body.textContent='API 연결이 필요합니다.';}
+    body.textContent=data.result||'분석 실패';
+  }catch(e){body.textContent='Groq API 연결 오류. /api/analyze 설정을 확인해주세요.';}
   btn.disabled=false;btn.textContent='Analyze ↗';
 }
 
