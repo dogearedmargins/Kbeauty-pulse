@@ -352,7 +352,44 @@
           "peak": "Aug-Oct"
         }
       ],
-      "season_insight": "🌡️ Cooling Care 지금(5~8월) 여름 시즌 핵심 — 쿨링 포뮬러 포지셔닝 지금 시작. 💊 PDRN Clinic-to-Home 가을(9~11월) 피크 — 사전 재고 확보. ✨ Glass Glow 연중 강세 — Medicube 번들 전략 유효."
+      "season_insight": "🌡️ Cooling Care 지금(5~8월) 여름 시즌 핵심 — 쿨링 포뮬러 포지셔닝 지금 시작. 💊 PDRN Clinic-to-Home 가을(9~11월) 피크 — 사전 재고 확보. ✨ Glass Glow 연중 강세 — Medicube 번들 전략 유효.",
+      "weekly_signals": [
+        {
+          "type": "THIS WEEK'S LEAD",
+          "title": "Medicube, TikTok #skincare 해시태그 매출 1위",
+          "source": "WWD/Charm.io",
+          "date": "May 18",
+          "url": "https://wwd.com",
+          "image_keyword": "Korean skincare beauty",
+          "bg": "unsplash"
+        },
+        {
+          "type": "NUMBERS",
+          "title": "TikTok 뷰티 Top 10 해시태그 합산 $670M+",
+          "source": "Charm.io",
+          "date": "Mar 2026",
+          "url": "https://charm.io",
+          "number": "$142M",
+          "number_label": "#skincare 12개월 매출",
+          "bg": "gradient"
+        },
+        {
+          "type": "ON THE RADAR",
+          "title": "Dr.Melaxin, 브랜드 해시태그 Top 2 진입",
+          "source": "BeautyMatter",
+          "date": "May 2026",
+          "url": "https://beautymatter.com",
+          "flat_text": "Dr.\nMelaxin",
+          "bg": "flat"
+        }
+      ],
+      "kw_rank_tooltips": {
+        "Glass Glow": "WWD Mar 2026: Medicube 8피스 Glass Glow Set이 TikTok Shop #skincare·#koreanskincare 해시태그 판매 1위. 브랜드 해시태그 파워가 채널 전략의 핵심.",
+        "Cooling Care": "BeautyMatter 2026: 기후변화로 쿨링 스킨케어 수요 급등. 여름(6~8월) 피크 시즌 — 지금이 포지셔닝 타이밍.",
+        "PDRN Clinic-to-Home": "Qogita Mar 2026: 피부과 시술 성분이 홈케어로 확산. PDRN 피부밀도 개선 효과 임상 검증으로 소비자 신뢰 급상승.",
+        "Sensory Texture": "BeautyMatter Trendier AI 2026: 성분 효능+사용 감촉(After Feel)을 동시에 소구해야 하는 시대. 캡슐 텍스처·콜라겐 마스크 성장.",
+        "Dr.Melaxin": "WWD/Charm.io Mar 2026: TikTok Shop 브랜드 해시태그 Top 2 진입. Medicube와 K-beauty 양강 구도 형성 중인 신흥 브랜드."
+      }
     },
     "europe": {
       "metrics": [
@@ -700,7 +737,15 @@
           "peak": "Oct-Dec"
         }
       ],
-      "season_insight": "🌿 Hanbang 현대화·AI 개인화는 겨울(10~12월) 프리미엄 시즌 집중. 💊 NAD+·PLLA·Microbiome 성분 연말 안티에이징 루틴 수요. 🏢 Goodai Global IPO 연내 예정 — 유통 파트너십 조기 확보 권장."
+      "season_insight": "🌿 Hanbang 현대화·AI 개인화는 겨울(10~12월) 프리미엄 시즌 집중. 💊 NAD+·PLLA·Microbiome 성분 연말 안티에이징 루틴 수요. 🏢 Goodai Global IPO 연내 예정 — 유통 파트너십 조기 확보 권장.",
+      "weekly_signals": [],
+      "kw_rank_tooltips": {
+        "Hanbang 현대화": "출처: Hello Magazine Dec 2025 · TheIndustry.beauty Dec 2025 · Boots 2026 Trends Report",
+        "AI 개인화": "출처: Hello Magazine Dec 2025 · TheIndustry.beauty Dec 2025 · Boots 2026 Trends Report",
+        "NAD+ 성분": "출처: Hello Magazine Dec 2025 · TheIndustry.beauty Dec 2025 · Boots 2026 Trends Report",
+        "Microbiome Barrier": "출처: Hello Magazine Dec 2025 · TheIndustry.beauty Dec 2025 · Boots 2026 Trends Report",
+        "PLLA 성분": "출처: Hello Magazine Dec 2025 · TheIndustry.beauty Dec 2025 · Boots 2026 Trends Report"
+      }
     },
     "sea": {
       "metrics": [
@@ -1048,7 +1093,15 @@
           "peak": "Aug-Oct"
         }
       ],
-      "season_insight": "☀️ SPF·Cooling Skincare 지금(5~8월) 자외선·더위 피크. 🍵 Inner Beauty·Post-Procedure Care 8~11월 하반기 성장 예상. 👩 Slow Ageing 30+대 연중 성장 — 고단가 제품 수요 증가."
+      "season_insight": "☀️ SPF·Cooling Skincare 지금(5~8월) 자외선·더위 피크. 🍵 Inner Beauty·Post-Procedure Care 8~11월 하반기 성장 예상. 👩 Slow Ageing 30+대 연중 성장 — 고단가 제품 수요 증가.",
+      "weekly_signals": [],
+      "kw_rank_tooltips": {
+        "SPF 필수화": "출처: CosmeticsDesign-Asia Dec 2025 · Olive Young 2026 Trend Report · knok Mar 2026",
+        "Inner Beauty": "출처: CosmeticsDesign-Asia Dec 2025 · Olive Young 2026 Trend Report · knok Mar 2026",
+        "Post-Procedure Care": "출처: CosmeticsDesign-Asia Dec 2025 · Olive Young 2026 Trend Report · knok Mar 2026",
+        "Slow Ageing": "출처: CosmeticsDesign-Asia Dec 2025 · Olive Young 2026 Trend Report · knok Mar 2026",
+        "Cooling Skincare": "출처: CosmeticsDesign-Asia Dec 2025 · Olive Young 2026 Trend Report · knok Mar 2026"
+      }
     },
     "mideast": {
       "metrics": [
@@ -1396,7 +1449,15 @@
           "peak": "연중 성장"
         }
       ],
-      "season_insight": "🤝 Arab+K-beauty Fusion 연중 성장 — 현지화 파트너십 조기 구축 필요. ❄️ Slow Ageing·PDRN·Hanbang 겨울(10~11월) 집중. 🚀 Q-Commerce 뷰티 신규 채널 — 두바이·아부다비 즉구 수요 테스트 타이밍."
+      "season_insight": "🤝 Arab+K-beauty Fusion 연중 성장 — 현지화 파트너십 조기 구축 필요. ❄️ Slow Ageing·PDRN·Hanbang 겨울(10~11월) 집중. 🚀 Q-Commerce 뷰티 신규 채널 — 두바이·아부다비 즉구 수요 테스트 타이밍.",
+      "weekly_signals": [],
+      "kw_rank_tooltips": {
+        "Arab+K-beauty Fusion": "출처: CosmeticsBusiness Beauty Hotspots 2026 · WWD Beauty Geographies Jan 2026",
+        "Slow Ageing": "출처: CosmeticsBusiness Beauty Hotspots 2026 · WWD Beauty Geographies Jan 2026",
+        "PDRN Post-Procedure": "출처: CosmeticsBusiness Beauty Hotspots 2026 · WWD Beauty Geographies Jan 2026",
+        "Hanbang 럭셔리": "출처: CosmeticsBusiness Beauty Hotspots 2026 · WWD Beauty Geographies Jan 2026",
+        "Q-Commerce 뷰티": "출처: CosmeticsBusiness Beauty Hotspots 2026 · WWD Beauty Geographies Jan 2026"
+      }
     },
     "india": {
       "metrics": [
@@ -1744,7 +1805,15 @@
           "peak": "Oct-Nov"
         }
       ],
-      "season_insight": "☀️ SPF 혹서기 지금(5~6월) 최고점 — 선크림 마케팅 집중. 🛒 Nykaa Mid-Year Sale 6월 9~15일 — 재고 확보 필수. 🚀 Q-Commerce(Blinkit·Zepto) 신규 채널 테스트 타이밍. ⚔️ A-beauty 경쟁 심화 — K-beauty 성분 혁신(PDRN·NAD+) 차별화 강화."
+      "season_insight": "☀️ SPF 혹서기 지금(5~6월) 최고점 — 선크림 마케팅 집중. 🛒 Nykaa Mid-Year Sale 6월 9~15일 — 재고 확보 필수. 🚀 Q-Commerce(Blinkit·Zepto) 신규 채널 테스트 타이밍. ⚔️ A-beauty 경쟁 심화 — K-beauty 성분 혁신(PDRN·NAD+) 차별화 강화.",
+      "weekly_signals": [],
+      "kw_rank_tooltips": {
+        "Nykaa Mid-Year Sale": "출처: WWD Beauty Geographies Jan 2026 · GrabOn May 2026 · BeautyMatter Nykaa Apr 2026",
+        "Q-Commerce K-beauty": "출처: WWD Beauty Geographies Jan 2026 · GrabOn May 2026 · BeautyMatter Nykaa Apr 2026",
+        "SPF 혹서기": "출처: WWD Beauty Geographies Jan 2026 · GrabOn May 2026 · BeautyMatter Nykaa Apr 2026",
+        "Slow Ageing (인도)": "출처: WWD Beauty Geographies Jan 2026 · GrabOn May 2026 · BeautyMatter Nykaa Apr 2026",
+        "A-beauty vs K-beauty": "출처: WWD Beauty Geographies Jan 2026 · GrabOn May 2026 · BeautyMatter Nykaa Apr 2026"
+      }
     }
   }
 }
