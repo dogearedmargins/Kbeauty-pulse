@@ -738,7 +738,36 @@
         }
       ],
       "season_insight": "🌿 Hanbang 현대화·AI 개인화는 겨울(10~12월) 프리미엄 시즌 집중. 💊 NAD+·PLLA·Microbiome 성분 연말 안티에이징 루틴 수요. 🏢 Goodai Global IPO 연내 예정 — 유통 파트너십 조기 확보 권장.",
-      "weekly_signals": [],
+      "weekly_signals": [
+        {
+          "type": "THIS WEEK'S LEAD",
+          "title": "Goodai Global IPO 추진 — Beauty of Joseon 유럽 대규모 확장 임박",
+          "source": "WWD Beauty",
+          "date": "Jan 2026",
+          "url": "https://wwd.com/beauty-industry-news/beauty-features/k-beauty-2026-global-expansion/",
+          "image_keyword": "Korean beauty luxury skincare",
+          "bg": "unsplash"
+        },
+        {
+          "type": "NUMBERS",
+          "title": "유럽 K-beauty YoY +26.6% — Lookfantastic 2배+ 성장",
+          "source": "THG/Lookfantastic",
+          "date": "Q1 2026",
+          "url": "https://wwd.com",
+          "number": "+26.6%",
+          "number_label": "유럽 K-beauty YoY",
+          "bg": "gradient"
+        },
+        {
+          "type": "ON THE RADAR",
+          "title": "Hanbang 현대화 — 인삼·쑥+펩타이드 융합 2026 대surge",
+          "source": "Hello Magazine",
+          "date": "Dec 2025",
+          "url": "https://www.hellomagazine.com/hfm/beauty-trends/874525/k-beauty-trends-2026/",
+          "flat_text": "Hanbang\n현대화",
+          "bg": "flat"
+        }
+      ],
       "kw_rank_tooltips": {
         "Hanbang 현대화": "출처: Hello Magazine Dec 2025 · TheIndustry.beauty Dec 2025 · Boots 2026 Trends Report",
         "AI 개인화": "출처: Hello Magazine Dec 2025 · TheIndustry.beauty Dec 2025 · Boots 2026 Trends Report",
@@ -1094,7 +1123,36 @@
         }
       ],
       "season_insight": "☀️ SPF·Cooling Skincare 지금(5~8월) 자외선·더위 피크. 🍵 Inner Beauty·Post-Procedure Care 8~11월 하반기 성장 예상. 👩 Slow Ageing 30+대 연중 성장 — 고단가 제품 수요 증가.",
-      "weekly_signals": [],
+      "weekly_signals": [
+        {
+          "type": "THIS WEEK'S LEAD",
+          "title": "SPF 필수화 — SEA 소비자 선크림을 매일 일과로 채택",
+          "source": "CosmeticsDesign-Asia",
+          "date": "Dec 2025",
+          "url": "https://www.cosmeticsdesign-asia.com/Article/2025/12/15/k-beauty-2026-sea-trends",
+          "image_keyword": "sunscreen SPF Asian beauty",
+          "bg": "unsplash"
+        },
+        {
+          "type": "NUMBERS",
+          "title": "Shopee K-beauty 카테고리 YoY +45% — SEA 최대 채널",
+          "source": "knok/Shopee",
+          "date": "Mar 2026",
+          "url": "https://cosmeticsdesign-asia.com",
+          "number": "+45%",
+          "number_label": "Shopee K-beauty YoY",
+          "bg": "gradient"
+        },
+        {
+          "type": "ON THE RADAR",
+          "title": "Inner Beauty 신카테고리 부상 — 먹는 뷰티 동남아 공략",
+          "source": "Olive Young",
+          "date": "2026 Trend Report",
+          "url": "https://cosmeticsdesign-asia.com",
+          "flat_text": "Inner\nBeauty",
+          "bg": "flat"
+        }
+      ],
       "kw_rank_tooltips": {
         "SPF 필수화": "출처: CosmeticsDesign-Asia Dec 2025 · Olive Young 2026 Trend Report · knok Mar 2026",
         "Inner Beauty": "출처: CosmeticsDesign-Asia Dec 2025 · Olive Young 2026 Trend Report · knok Mar 2026",
@@ -1450,7 +1508,36 @@
         }
       ],
       "season_insight": "🤝 Arab+K-beauty Fusion 연중 성장 — 현지화 파트너십 조기 구축 필요. ❄️ Slow Ageing·PDRN·Hanbang 겨울(10~11월) 집중. 🚀 Q-Commerce 뷰티 신규 채널 — 두바이·아부다비 즉구 수요 테스트 타이밍.",
-      "weekly_signals": [],
+      "weekly_signals": [
+        {
+          "type": "THIS WEEK'S LEAD",
+          "title": "중동, 글로벌 5대 뷰티 핫스팟 선정 — Arab+K-beauty 융합 가속",
+          "source": "CosmeticsBusiness",
+          "date": "2026",
+          "url": "https://cosmeticsbusiness.com/4-predicted-k-beauty-trends-for-2026",
+          "image_keyword": "luxury beauty Dubai skincare",
+          "bg": "unsplash"
+        },
+        {
+          "type": "NUMBERS",
+          "title": "UAE K-beauty 수출 YoY +85% — 중동 채널 급성장",
+          "source": "관세청",
+          "date": "2025 확정치",
+          "url": "https://wwd.com",
+          "number": "+85%",
+          "number_label": "UAE K-beauty 수출 YoY",
+          "bg": "gradient"
+        },
+        {
+          "type": "ON THE RADAR",
+          "title": "Q-Commerce 뷰티 — 두바이 8분 배송 채널 부상",
+          "source": "WWD Beauty",
+          "date": "Jan 2026",
+          "url": "https://wwd.com/beauty-industry-news/",
+          "flat_text": "Q-\nCommerce",
+          "bg": "flat"
+        }
+      ],
       "kw_rank_tooltips": {
         "Arab+K-beauty Fusion": "출처: CosmeticsBusiness Beauty Hotspots 2026 · WWD Beauty Geographies Jan 2026",
         "Slow Ageing": "출처: CosmeticsBusiness Beauty Hotspots 2026 · WWD Beauty Geographies Jan 2026",
@@ -1806,7 +1893,36 @@
         }
       ],
       "season_insight": "☀️ SPF 혹서기 지금(5~6월) 최고점 — 선크림 마케팅 집중. 🛒 Nykaa Mid-Year Sale 6월 9~15일 — 재고 확보 필수. 🚀 Q-Commerce(Blinkit·Zepto) 신규 채널 테스트 타이밍. ⚔️ A-beauty 경쟁 심화 — K-beauty 성분 혁신(PDRN·NAD+) 차별화 강화.",
-      "weekly_signals": [],
+      "weekly_signals": [
+        {
+          "type": "THIS WEEK'S LEAD",
+          "title": "Nykaa Mid-Year Sale 6월 9~15일 — K-beauty 최대 50% 할인",
+          "source": "GrabOn",
+          "date": "May 2026",
+          "url": "https://www.grabon.in/indulge/beauty-trends/nykaa-mid-year-beauty-sale/",
+          "image_keyword": "Nykaa India beauty shopping",
+          "bg": "unsplash"
+        },
+        {
+          "type": "NUMBERS",
+          "title": "인도 K-beauty 수출 YoY +100% — 최고 성장 시장",
+          "source": "관세청/WWD",
+          "date": "2025 확정치",
+          "url": "https://wwd.com",
+          "number": "+100%",
+          "number_label": "인도 K-beauty 수출 YoY",
+          "bg": "gradient"
+        },
+        {
+          "type": "ON THE RADAR",
+          "title": "A-beauty vs K-beauty — Nykaa x 82°E 인수로 경쟁 본격화",
+          "source": "BoF",
+          "date": "Apr 2026",
+          "url": "https://www.businessoffashion.com",
+          "flat_text": "A-beauty\nvs K",
+          "bg": "flat"
+        }
+      ],
       "kw_rank_tooltips": {
         "Nykaa Mid-Year Sale": "출처: WWD Beauty Geographies Jan 2026 · GrabOn May 2026 · BeautyMatter Nykaa Apr 2026",
         "Q-Commerce K-beauty": "출처: WWD Beauty Geographies Jan 2026 · GrabOn May 2026 · BeautyMatter Nykaa Apr 2026",
