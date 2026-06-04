@@ -732,9 +732,9 @@ function initExportCharts() {
   });
 
   // 클릭 가능 레전드 렌더링
-  const legendEl = document.getElementById('exportLegend');
-  if(legendEl) {
-    legendEl.innerHTML = EXPORT_REGION_DATA.datasets.map((d, i) =>
+  const exportLegEl = document.getElementById('exportLegend');
+  if(exportLegEl) {
+    exportLegEl.innerHTML = EXPORT_REGION_DATA.datasets.map((d, i) =>
       `<span style="cursor:pointer;padding:2px 6px;border-radius:3px;border:1px solid transparent;transition:all 0.15s"
         id="expLeg${i}"
         onmouseenter="this.style.borderColor='${d.color}'"
