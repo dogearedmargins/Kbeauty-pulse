@@ -302,14 +302,14 @@ nav {
 .signal-grid { display: grid; grid-template-columns: repeat(3,1fr); gap: 6px; }
 .signal-card { border-radius: 6px; overflow: hidden; cursor: pointer; border: 0.5px solid rgba(23,36,63,0.1); transition: transform 0.15s; text-decoration: none; display: block; }
 .signal-card:hover { transform: translateY(-2px); }
-.signal-img { height: 190px; position: relative; overflow: hidden; }
+.signal-img { height: 110px; position: relative; overflow: hidden; }
 .signal-img img { width: 100%; height: 100%; object-fit: cover; }
 .signal-grad { width: 100%; height: 100%; background: linear-gradient(135deg, #17243F 0%, #788CE3 100%); display: flex; align-items: flex-end; padding: 8px; }
 .signal-grad-num { font-size: 20px; font-weight: 700; color: #DFF478; line-height: 1; }
 .signal-grad-sub { font-size: 8px; color: rgba(255,255,255,0.6); margin-top: 1px; }
 .signal-flat { width: 100%; height: 100%; background: #DFF478; display: flex; align-items: center; justify-content: center; }
 .signal-flat-name { font-size: 16px; font-weight: 700; color: #17243F; text-align: center; line-height: 1.2; }
-.signal-body { background: #fff; padding: 20px 22px; }
+.signal-body { background: #fff; padding: 8px 10px; }
 .signal-tag { font-size: 8px; font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase; color: #788CE3; margin-bottom: 3px; }
 .signal-title { font-size: 10px; font-weight: 700; color: #17243F; line-height: 1.35; margin-bottom: 6px; }
 .signal-footer { display: flex; align-items: center; justify-content: space-between; }
@@ -327,6 +327,12 @@ nav {
   pointer-events: none;
 }
 .kw-rank-item:hover .kw-tip { display: block; }
+
+/* PULSE ANIMATION */
+@keyframes pulse {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.3; }
+}
 
 /* PAGE */
 .page { display: none; }
@@ -846,7 +852,14 @@ function renderTrend(r){
     <div class="ri">
       <div class="ri-num ${i<3?'top':''}">#${i+1}</div>
       <div class="ri-info"><div class="ri-name">${s.n}</div><div class="ri-brand">${s.b}</div></div>
-      <div class="ri-bar-wrap"><div class="ri-bar-bg"><div class="ri-bar-fill" style="width:${s.pct}%"></div></div><div class="ri-val">${s.pct}</div></div>
+      <div class="ri-bar-wrap has-tip" style="cursor:help">
+        <div class="ri-bar-bg"><div class="ri-bar-fill" style="width:${s.pct}%"></div></div>
+        <div class="ri-val">${s.pct}</div>
+        <div class="tip tip-above" style="width:230px;right:0;left:auto;transform:none">
+          <strong>트렌드 강도 지수 ${s.pct}/100</strong><br>
+          TikTok 언급량·플랫폼 순위·리뷰 수를 종합한 상대적 트렌드 강도. 1위 제품=100 기준 상대값. 실제 매출액 아님.
+        </div>
+      </div>
     </div>`).join('');
   document.getElementById('tSellSrc').textContent=d.sellSrc;
 
@@ -900,12 +913,32 @@ async function renderSignalCards(signals, region) {
   if(!wrap) return;
 
   if(!signals || !signals.length) {
-    wrap.innerHTML = `
-      <div style="padding:1rem;background:var(--card);border-radius:var(--radius);border:0.5px solid var(--border)">
-        <div style="font-size:9px;font-weight:700;color:#788CE3;text-transform:uppercase;letter-spacing:0.1em;margin-bottom:6px">This Week in K-Beauty</div>
-        <div style="font-size:11px;color:var(--mid)">이번 주 data.json에 weekly_signals 데이터를 추가해주세요.</div>
+    // data.json에 signals 없으면 API 자동 수집
+    wrap.innerHTML = `<div style="padding:1rem;background:var(--card);border-radius:var(--radius);border:0.5px solid var(--border)">
+      <div style="font-size:9px;font-weight:700;color:#788CE3;text-transform:uppercase;letter-spacing:0.1em;margin-bottom:6px">This Week in K-Beauty — ${region}</div>
+      <div style="font-size:11px;color:var(--mid);display:flex;align-items:center;gap:6px">
+        <span style="display:inline-block;width:8px;height:8px;border-radius:50%;background:#788CE3;animation:pulse 1s infinite"></span>
+        최신 K-Beauty 뉴스 수집 중...
+      </div>
+    </div>`;
+    try {
+      const res = await fetch('/api/news?region=' + encodeURIComponent(region));
+      const data = await res.json();
+      if(data.articles && data.articles.length) {
+        signals = data.articles;
+      } else {
+        wrap.innerHTML = `<div style="padding:1rem;background:var(--card);border-radius:var(--radius);border:0.5px solid var(--border)">
+          <div style="font-size:9px;font-weight:700;color:#788CE3;text-transform:uppercase;letter-spacing:0.1em;margin-bottom:6px">This Week in K-Beauty</div>
+          <div style="font-size:11px;color:var(--mid)">뉴스를 불러오지 못했어요. data.json에 weekly_signals를 추가해주세요.</div>
+        </div>`;
+        return;
+      }
+    } catch(e) {
+      wrap.innerHTML = `<div style="padding:1rem;background:var(--card);border-radius:var(--radius);border:0.5px solid var(--border)">
+        <div style="font-size:11px;color:var(--mid)">뉴스 수집 실패. 잠시 후 다시 시도해주세요.</div>
       </div>`;
-    return;
+      return;
+    }
   }
 
   const bgTypes = ['unsplash', 'gradient', 'flat'];
@@ -929,7 +962,7 @@ async function renderSignalCards(signals, region) {
       </div>`;
     } else if(bg === 'flat') {
       imgHTML = `<div class="signal-flat" style="background:${flatColors[i%3]}">
-        <div class="signal-flat-name">${s.flat_text||s.title.split(' ')[0]}</div>
+        <div class="signal-flat-name">${(s.flat_text||s.title.split(' ')[0]).replace('\n','<br>')}</div>
       </div>`;
     } else {
       const keyword = encodeURIComponent(s.image_keyword || 'korean beauty skincare');
@@ -943,7 +976,11 @@ async function renderSignalCards(signals, region) {
           const d = await r.json();
           if(d.url) {
             const el = document.getElementById(imgId);
-            if(el) el.innerHTML = '<img src="' + d.url + '" style="width:100%;height:100%;object-fit:cover">';
+            if(el) el.innerHTML = '<img src="' + d.url + '" style="width:100%;height:100%;object-fit:cover">'
+              + '<div style="position:absolute;bottom:0;left:0;right:0;padding:8px 10px;background:linear-gradient(transparent,rgba(23,36,63,0.75))">'
+              + '<div style="font-size:8px;font-weight:700;color:rgba(223,244,120,0.9);text-transform:uppercase;letter-spacing:0.1em">' + s.type + '</div>'
+              + '<div style="font-size:10px;font-weight:700;color:#fff;line-height:1.3;margin-top:2px">' + s.title + '</div>'
+              + '</div>';
           }
         } catch(e) {}
       }, 150 * i);
