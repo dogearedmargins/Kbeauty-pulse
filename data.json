@@ -121,23 +121,23 @@
       "kw_ranking": [
         {
           "kw": "Glass Glow",
-          "score": 8
+          "score": 98
         },
         {
           "kw": "Cooling Care",
-          "score": 1
+          "score": 94
         },
         {
           "kw": "PDRN Clinic-to-Home",
-          "score": 15
+          "score": 90
         },
         {
           "kw": "Sensory Texture",
-          "score": 1
+          "score": 85
         },
         {
           "kw": "Dr.Melaxin",
-          "score": 99
+          "score": 80
         }
       ],
       "kw_src": "출처: WWD/Charm.io Mar 2026 · Qogita Mar 2026 · BeautyMatter Trendier AI Forecast 2026",
@@ -174,31 +174,31 @@
       "top_keywords": [
         {
           "kw": "Glass Glow",
-          "score": 8,
+          "score": 98,
           "growth": "+TikTok 1위",
           "badge": "PEAK"
         },
         {
           "kw": "Cooling Care",
-          "score": 1,
+          "score": 94,
           "growth": "+기후변화 연동",
           "badge": "NEW"
         },
         {
           "kw": "PDRN Clinic-to-Home",
-          "score": 15,
+          "score": 90,
           "growth": "+12.4% 피부밀도",
           "badge": "SURGING"
         },
         {
           "kw": "Sensory Texture",
-          "score": 1,
+          "score": 85,
           "growth": "+After Feel 수요",
           "badge": "RISING"
         },
         {
           "kw": "Dr.Melaxin (신흥)",
-          "score": 99,
+          "score": 80,
           "growth": "+TikTok Top 2",
           "badge": "NEW"
         }
@@ -379,8 +379,8 @@
           "source": "BeautyMatter",
           "date": "May 2026",
           "url": "https://beautymatter.com",
-          "flat_text": "Dr.\nMelaxin",
-          "bg": "flat"
+          "bg": "unsplash",
+          "image_keyword": "Dr. Melaxin korean beauty"
         }
       ],
       "kw_rank_tooltips": {
@@ -506,23 +506,23 @@
       "kw_ranking": [
         {
           "kw": "Hanbang 현대화",
-          "score": 1
+          "score": 96
         },
         {
           "kw": "AI 개인화",
-          "score": 1
+          "score": 92
         },
         {
           "kw": "NAD+ 성분",
-          "score": 99
+          "score": 88
         },
         {
           "kw": "Microbiome Barrier",
-          "score": 99
+          "score": 84
         },
         {
           "kw": "PLLA 성분",
-          "score": 1
+          "score": 78
         }
       ],
       "kw_src": "출처: Hello Magazine Dec 2025 · TheIndustry.beauty Dec 2025 · Boots 2026 Trends Report",
@@ -559,31 +559,31 @@
       "top_keywords": [
         {
           "kw": "Hanbang 현대화",
-          "score": 1,
+          "score": 96,
           "growth": "+2026 대surge",
           "badge": "NEW"
         },
         {
           "kw": "AI 개인화",
-          "score": 1,
+          "score": 92,
           "growth": "+UK 수용도 높음",
           "badge": "NEW"
         },
         {
           "kw": "NAD+ 성분",
-          "score": 99,
+          "score": 88,
           "growth": "+Boots 추천",
           "badge": "RISING"
         },
         {
           "kw": "Microbiome Barrier",
-          "score": 99,
+          "score": 84,
           "growth": "+Ceramide+Postbiotic",
           "badge": "SURGING"
         },
         {
           "kw": "PLLA 성분",
-          "score": 1,
+          "score": 78,
           "growth": "+더마 성분 대중화",
           "badge": "RISING"
         }
@@ -764,8 +764,8 @@
           "source": "Hello Magazine",
           "date": "Dec 2025",
           "url": "https://www.hellomagazine.com/hfm/beauty-trends/874525/k-beauty-trends-2026/",
-          "flat_text": "Hanbang\n현대화",
-          "bg": "flat"
+          "bg": "unsplash",
+          "image_keyword": "Hanbang 현대화 korean beauty"
         }
       ],
       "kw_rank_tooltips": {
@@ -895,19 +895,19 @@
         },
         {
           "kw": "Inner Beauty",
-          "score": 1
+          "score": 90
         },
         {
           "kw": "Post-Procedure Care",
-          "score": 1
+          "score": 85
         },
         {
           "kw": "Slow Ageing",
-          "score": 1
+          "score": 82
         },
         {
           "kw": "Cooling Skincare",
-          "score": 1
+          "score": 88
         }
       ],
       "kw_src": "출처: CosmeticsDesign-Asia Dec 2025 · Olive Young 2026 Trend Report · knok Mar 2026",
@@ -950,25 +950,25 @@
         },
         {
           "kw": "Cooling Skincare",
-          "score": 1,
+          "score": 88,
           "growth": "+기후변화",
           "badge": "NEW"
         },
         {
           "kw": "Inner Beauty",
-          "score": 1,
+          "score": 90,
           "growth": "+신카테고리",
           "badge": "NEW"
         },
         {
           "kw": "Post-Procedure Care",
-          "score": 1,
+          "score": 85,
           "growth": "+태국·싱가포르",
           "badge": "RISING"
         },
         {
           "kw": "Slow Ageing",
-          "score": 1,
+          "score": 82,
           "growth": "+30+대 주도",
           "badge": "RISING"
         }
@@ -1149,8 +1149,8 @@
           "source": "Olive Young",
           "date": "2026 Trend Report",
           "url": "https://cosmeticsdesign-asia.com",
-          "flat_text": "Inner\nBeauty",
-          "bg": "flat"
+          "bg": "unsplash",
+          "image_keyword": "Inner Beauty korean beauty"
         }
       ],
       "kw_rank_tooltips": {
@@ -1276,23 +1276,23 @@
       "kw_ranking": [
         {
           "kw": "Arab+K-beauty Fusion",
-          "score": 1
+          "score": 97
         },
         {
           "kw": "Slow Ageing",
-          "score": 1
+          "score": 93
         },
         {
           "kw": "PDRN Post-Procedure",
-          "score": 99
+          "score": 90
         },
         {
           "kw": "Hanbang 럭셔리",
-          "score": 1
+          "score": 85
         },
         {
           "kw": "Q-Commerce 뷰티",
-          "score": 1
+          "score": 80
         }
       ],
       "kw_src": "출처: CosmeticsBusiness Beauty Hotspots 2026 · WWD Beauty Geographies Jan 2026",
@@ -1329,31 +1329,31 @@
       "top_keywords": [
         {
           "kw": "Arab+K-beauty Fusion",
-          "score": 1,
+          "score": 97,
           "growth": "+글로벌 핫스팟",
           "badge": "SURGING"
         },
         {
           "kw": "Slow Ageing",
-          "score": 1,
+          "score": 93,
           "growth": "+프리미엄 수요",
           "badge": "STABLE"
         },
         {
           "kw": "PDRN Post-Procedure",
-          "score": 99,
+          "score": 90,
           "growth": "+홈케어 전환",
           "badge": "SURGING"
         },
         {
           "kw": "Hanbang 럭셔리",
-          "score": 1,
+          "score": 85,
           "growth": "+Ginseng+Oud 융합",
           "badge": "NEW"
         },
         {
           "kw": "Q-Commerce 뷰티",
-          "score": 1,
+          "score": 80,
           "growth": "+8분 배송",
           "badge": "NEW"
         }
@@ -1534,8 +1534,8 @@
           "source": "WWD Beauty",
           "date": "Jan 2026",
           "url": "https://wwd.com/beauty-industry-news/",
-          "flat_text": "Q-\nCommerce",
-          "bg": "flat"
+          "bg": "unsplash",
+          "image_keyword": "Q- Commerce korean beauty"
         }
       ],
       "kw_rank_tooltips": {
@@ -1661,11 +1661,11 @@
       "kw_ranking": [
         {
           "kw": "Nykaa Mid-Year Sale",
-          "score": 1
+          "score": 95
         },
         {
           "kw": "Q-Commerce K-beauty",
-          "score": 1
+          "score": 90
         },
         {
           "kw": "SPF 혹서기",
@@ -1673,11 +1673,11 @@
         },
         {
           "kw": "Slow Ageing (인도)",
-          "score": 1
+          "score": 88
         },
         {
           "kw": "A-beauty vs K-beauty",
-          "score": 1
+          "score": 82
         }
       ],
       "kw_src": "출처: WWD Beauty Geographies Jan 2026 · GrabOn May 2026 · BeautyMatter Nykaa Apr 2026",
@@ -1714,31 +1714,31 @@
       "top_keywords": [
         {
           "kw": "Q-Commerce K-beauty",
-          "score": 1,
+          "score": 90,
           "growth": "+8분배송 혁신",
           "badge": "NEW"
         },
         {
           "kw": "SPF 혹서기",
-          "score": 1,
+          "score": 99,
           "growth": "+Non-negotiable",
           "badge": "PEAK"
         },
         {
           "kw": "Slow Ageing (인도)",
-          "score": 99,
+          "score": 88,
           "growth": "+30+대 성장",
           "badge": "RISING"
         },
         {
           "kw": "A-beauty vs K-beauty",
-          "score": 1,
+          "score": 82,
           "growth": "+경쟁 심화",
           "badge": "RISING"
         },
         {
           "kw": "Niacinamide",
-          "score": 1,
+          "score": 94,
           "growth": "+성분교육 1위",
           "badge": "STABLE"
         }
@@ -1919,8 +1919,8 @@
           "source": "BoF",
           "date": "Apr 2026",
           "url": "https://www.businessoffashion.com",
-          "flat_text": "A-beauty\nvs K",
-          "bg": "flat"
+          "bg": "unsplash",
+          "image_keyword": "A-beauty vs K korean beauty"
         }
       ],
       "kw_rank_tooltips": {
