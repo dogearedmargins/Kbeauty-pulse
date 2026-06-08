@@ -1,32 +1,29 @@
 """
 K-Beauty Pulse — main.py
-전체 파이프라인: 수집 → 분석 → 발송
+data.json을 읽어서 HTML 이메일로 발송
 """
 
 import os
-from scraper  import collect_all
-from analyzer import analyze
-from emailer  import send_email
-
+import json
+from emailer import send_email
 
 def run():
     print("\n" + "="*50)
-    print(" K-Beauty Pulse 위클리 파이프라인 시작")
+    print(" K-Beauty Pulse 위클리 이메일 발송 시작")
     print("="*50 + "\n")
 
-    os.makedirs("data", exist_ok=True)
+    # data.json 로드
+    data_path = os.path.join(os.path.dirname(__file__), "data.json")
+    print(f"[1/2] data.json 로드 중... ({data_path})")
+    with open(data_path, encoding="utf-8") as f:
+        data = json.load(f)
 
-    print("[1/3] 데이터 수집 중...\n")
-    raw = collect_all()
-
-    print("\n[2/3] Groq AI 분석 중...\n")
-    analysis = analyze(raw)
-
-    print("\n[3/3] 이메일 발송 중...\n")
-    send_email(analysis)
+    # 이메일 발송
+    print("[2/2] 이메일 발송 중...\n")
+    send_email(data)
 
     print("\n" + "="*50)
-    print(" 완료! → dogearedmargins@gmail.com 발송됨")
+    print(" 완료! 이메일이 발송되었습니다.")
     print("="*50 + "\n")
 
 
