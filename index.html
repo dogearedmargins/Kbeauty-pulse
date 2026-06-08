@@ -302,14 +302,14 @@ nav {
 .signal-grid { display: grid; grid-template-columns: repeat(3,1fr); gap: 6px; align-items: stretch; }
 .signal-card { border-radius: 6px; overflow: hidden; cursor: pointer; border: 0.5px solid rgba(23,36,63,0.1); transition: transform 0.15s; text-decoration: none; display: flex; flex-direction: column; height: 100%; }
 .signal-card:hover { transform: translateY(-2px); }
-.signal-img { height: 190px; min-height: 190px; position: relative; overflow: hidden; background: #e8ebf5; }
+.signal-img { height: 110px; min-height: 110px; position: relative; overflow: hidden; background: #e8ebf5; }
 .signal-img img { width: 100%; height: 100%; object-fit: cover; }
 .signal-grad { width: 100%; height: 100%; background: linear-gradient(135deg, #17243F 0%, #788CE3 100%); display: flex; align-items: flex-end; padding: 8px; }
 .signal-grad-num { font-size: 20px; font-weight: 700; color: #DFF478; line-height: 1; }
 .signal-grad-sub { font-size: 8px; color: rgba(255,255,255,0.6); margin-top: 1px; }
 .signal-flat { width: 100%; height: 100%; background: #DFF478; display: flex; align-items: center; justify-content: center; }
 .signal-flat-name { font-size: 16px; font-weight: 700; color: #17243F; text-align: center; line-height: 1.2; }
-.signal-body { background: #fff; padding: 20px 22px; flex: 1; }
+.signal-body { background: #fff; padding: 8px 10px; flex: 1; }
 .signal-tag { font-size: 8px; font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase; color: #788CE3; margin-bottom: 3px; }
 .signal-title { font-size: 10px; font-weight: 700; color: #17243F; line-height: 1.35; margin-bottom: 6px; }
 .signal-footer { display: flex; align-items: center; justify-content: space-between; }
@@ -881,9 +881,16 @@ function renderTrend(r){
     <div class="ri">
       <div class="ri-num ${i<3?'top':''}">#${i+1}</div>
       <div class="ri-info"><div class="ri-name">${k.k}</div></div>
-      <div class="ri-bar-wrap"><div class="ri-bar-bg"><div class="ri-bar-fill" style="width:${k.s}%;background:#788CE3"></div></div><div class="ri-val">${k.s}</div></div>
+      <div class="ri-bar-wrap has-tip" style="cursor:help">
+        <div class="ri-bar-bg"><div class="ri-bar-fill" style="width:${k.s}%;background:#788CE3"></div></div>
+        <div class="ri-val">${k.s}</div>
+        <div class="tip tip-above" style="width:200px;right:0;left:auto;transform:none">
+          <strong>트렌드 강도 지수 ${k.s}/100</strong><br>
+          Google Trends 데이터 기반, 최근 12개월 검색 관심도.
+        </div>
+      </div>
     </div>`).join('');
-  document.getElementById('tKwSrc').textContent=d.kwSrc;
+  document.getElementById('tKwSrc').textContent='';
   const topKws = (d.kwRank||[]).slice(0,3);
   const kwColors = ['#17243F','#788CE3','#92BAD5'];
   document.getElementById('tSrcFooter').innerHTML=`<strong>데이터 출처</strong><br>${d.srcAll}`;
@@ -1194,7 +1201,12 @@ async function runKwAI(){
 
 // ── INIT ────────────────────────────────────────────────────
 document.addEventListener('DOMContentLoaded', function() {
-  document.querySelectorAll('#trendTabs .rtab').forEach(t=>t.addEventListener('click',()=>renderTrend(t.dataset.r)));
+  const REGION_TO_EXPORT_IDX = { americas: 0, europe: 1, sea: 2, mideast: 3, india: 4 };
+  document.querySelectorAll('#trendTabs .rtab').forEach(t=>t.addEventListener('click',()=>{
+    renderTrend(t.dataset.r);
+    const exportIdx = REGION_TO_EXPORT_IDX[t.dataset.r];
+    if(exportLineChartInst && exportIdx !== undefined) clickExportLegend(exportIdx);
+  }));
   document.querySelectorAll('#kwTabs .rtab').forEach(t=>t.addEventListener('click',()=>renderKeyword(t.dataset.r)));
   loadHistoryIndex();
   loadData();
