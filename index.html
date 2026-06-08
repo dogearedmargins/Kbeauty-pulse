@@ -299,17 +299,17 @@ nav {
 /* SIGNAL CARDS */
 .signal-section { font-family: Helvetica, sans-serif; }
 .signal-label { font-size: 9px; font-weight: 700; color: #788CE3; text-transform: uppercase; letter-spacing: 0.1em; margin-bottom: 8px; }
-.signal-grid { display: grid; grid-template-columns: repeat(3,1fr); gap: 6px; }
-.signal-card { border-radius: 6px; overflow: hidden; cursor: pointer; border: 0.5px solid rgba(23,36,63,0.1); transition: transform 0.15s; text-decoration: none; display: block; }
+.signal-grid { display: grid; grid-template-columns: repeat(3,1fr); gap: 6px; align-items: stretch; }
+.signal-card { border-radius: 6px; overflow: hidden; cursor: pointer; border: 0.5px solid rgba(23,36,63,0.1); transition: transform 0.15s; text-decoration: none; display: flex; flex-direction: column; height: 100%; }
 .signal-card:hover { transform: translateY(-2px); }
-.signal-img { height: 190px; position: relative; overflow: hidden; }
+.signal-img { height: 110px; position: relative; overflow: hidden; }
 .signal-img img { width: 100%; height: 100%; object-fit: cover; }
 .signal-grad { width: 100%; height: 100%; background: linear-gradient(135deg, #17243F 0%, #788CE3 100%); display: flex; align-items: flex-end; padding: 8px; }
 .signal-grad-num { font-size: 20px; font-weight: 700; color: #DFF478; line-height: 1; }
 .signal-grad-sub { font-size: 8px; color: rgba(255,255,255,0.6); margin-top: 1px; }
 .signal-flat { width: 100%; height: 100%; background: #DFF478; display: flex; align-items: center; justify-content: center; }
 .signal-flat-name { font-size: 16px; font-weight: 700; color: #17243F; text-align: center; line-height: 1.2; }
-.signal-body { background: #fff; padding: 20px 22px; }
+.signal-body { background: #fff; padding: 8px 10px; }
 .signal-tag { font-size: 8px; font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase; color: #788CE3; margin-bottom: 3px; }
 .signal-title { font-size: 10px; font-weight: 700; color: #17243F; line-height: 1.35; margin-bottom: 6px; }
 .signal-footer { display: flex; align-items: center; justify-content: space-between; }
@@ -871,7 +871,12 @@ function renderTrend(r){
     </div>`).join('');
   document.getElementById('tChSrc').textContent=d.chSrc;
 
-  document.getElementById('tKwCloud').innerHTML=d.kws.map(k=>`<span class="kw kw${k.t}">${k.k}</span>`).join('');
+  document.getElementById('tKwCloud').innerHTML=d.kws.map(k=>{
+    const tip = d.kwRankTooltips[k.k] || '';
+    return tip
+      ? `<span class="kw kw${k.t} has-tip" style="cursor:help">${k.k}<span class="tip tip-above-left" style="width:220px">${tip}</span></span>`
+      : `<span class="kw kw${k.t}">${k.k}</span>`;
+  }).join('');
   document.getElementById('tKwRank').innerHTML=d.kwRank.map((k,i)=>`
     <div class="ri">
       <div class="ri-num ${i<3?'top':''}">#${i+1}</div>
@@ -967,23 +972,14 @@ async function renderSignalCards(signals, region) {
     } else {
       const keyword = encodeURIComponent(s.image_keyword || 'korean beauty skincare');
       const imgId = `sig-img-${region}-${i}`;
-      imgHTML = `<div id="${imgId}" style="width:100%;height:100%;background:#C0CFEE;display:flex;align-items:center;justify-content:center">
+      const sType = s.type || '';
+      const sTitle = s.title || '';
+      imgHTML = `<div id="${imgId}" style="position:relative;width:100%;height:100%;background:#C0CFEE;display:flex;align-items:center;justify-content:center">
         <div style="font-size:10px;color:#788CE3">···</div>
       </div>`;
-      setTimeout(async () => {
-        try {
-          const r = await fetch('/api/unsplash?keyword=' + keyword);
-          const d = await r.json();
-          if(d.url) {
-            const el = document.getElementById(imgId);
-            if(el) el.innerHTML = '<img src="' + d.url + '" style="width:100%;height:100%;object-fit:cover">'
-              + '<div style="position:absolute;bottom:0;left:0;right:0;padding:8px 10px;background:linear-gradient(transparent,rgba(23,36,63,0.75))">'
-              + '<div style="font-size:8px;font-weight:700;color:rgba(223,244,120,0.9);text-transform:uppercase;letter-spacing:0.1em">' + s.type + '</div>'
-              + '<div style="font-size:10px;font-weight:700;color:#fff;line-height:1.3;margin-top:2px">' + s.title + '</div>'
-              + '</div>';
-          }
-        } catch(e) {}
-      }, 150 * i);
+      // 이미지 로드 큐에 추가
+      if(!window._signalImgQueue) window._signalImgQueue = [];
+      window._signalImgQueue.push({imgId, keyword, sType, sTitle});
     }
 
     cardsHTML += `
@@ -1002,6 +998,28 @@ async function renderSignalCards(signals, region) {
 
   cardsHTML += '</div></div>';
   wrap.innerHTML = cardsHTML;
+
+  // innerHTML 설정 후 이미지 로드
+  const queue = window._signalImgQueue || [];
+  window._signalImgQueue = [];
+  queue.forEach(async ({imgId, keyword, sType, sTitle}, idx) => {
+    await new Promise(r => setTimeout(r, 200 * idx));
+    try {
+      const r = await fetch('/api/unsplash?keyword=' + keyword);
+      const d = await r.json();
+      if(d.url) {
+        const el = document.getElementById(imgId);
+        if(el) {
+          el.style.background = 'transparent';
+          el.innerHTML = '<img src="' + d.url + '" style="width:100%;height:100%;object-fit:cover;position:absolute;top:0;left:0">'
+            + '<div style="position:absolute;bottom:0;left:0;right:0;padding:8px 10px;background:linear-gradient(transparent,rgba(23,36,63,0.82));z-index:1">'
+            + '<div style="font-size:8px;font-weight:700;color:rgba(223,244,120,0.95);text-transform:uppercase;letter-spacing:0.1em">' + sType + '</div>'
+            + '<div style="font-size:10px;font-weight:700;color:#fff;line-height:1.3;margin-top:2px">' + sTitle + '</div>'
+            + '</div>';
+        }
+      }
+    } catch(e) { console.error('Unsplash load error:', e); }
+  });
 }
 
 // ── RENDER KEYWORD ──────────────────────────────────────────
