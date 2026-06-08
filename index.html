@@ -598,8 +598,8 @@ async function processData(json) {
         kws: d.keywords.map(k => ({ k: k.kw, t: k.tier })),
         kwRank: d.kw_ranking.map(k => ({ k: k.kw, s: k.score })),
         kwSrc: d.kw_src,
-        trend: d.trend_12w,
-        trend2: d.trend_12w_2,
+        trend: d.trend_12w || [],
+        trend2: d.trend_12w_2 || [],
         trendTooltip: d.trend_tooltip,
         srcAll: d.src_all,
         aiCtx: `${r}: ${d.kw_ranking.map(k=>k.kw).join(', ')} 급상승. ${d.sellers_src}`,
@@ -607,27 +607,26 @@ async function processData(json) {
         kwRankTooltips: d.kw_rank_tooltips || {}
       };
 
-      KW_DATA[r] = {
-        kwSrc: d.kw_src_deep,
-        keywords: d.top_keywords.map((k, i) => {
-          const colors = [
-            {bg:'#17243F',tc:'#fff'},
-            {bg:'#788CE3',tc:'#fff'},
-            {bg:'#92BAD5',tc:'#17243F'},
-            {bg:'#DFF478',tc:'#17243F'},
-            {bg:'#ECE9DF',tc:'#17243F'}
-          ];
-          return { k: k.kw, score: k.score, growth: k.growth, badge: k.badge, ...colors[i] };
-        }),
-        seasonality: d.seasonality.map(s => ({ k: s.kw, months: s.months, peak: s.peak })),
-        kwMap: d.kw_map,
-        seasonInsight: d.season_insight,
-        trendInsight: d.trend_insight,
-        srcAll: d.src_all,
-        trend_monthly: d.trend_monthly,
-        trend_monthly_2: d.trend_monthly_2
-      };
-    });
+  KW_DATA[r] = {
+    kwSrc: d.kw_src_deep || d.kw_src || '',
+    keywords: (d.top_keywords || []).map((k, i) => {
+      const colors = [
+        {bg:'#17243F',tc:'#fff'},
+        {bg:'#788CE3',tc:'#fff'},
+        {bg:'#92BAD5',tc:'#17243F'},
+        {bg:'#DFF478',tc:'#17243F'},
+        {bg:'#ECE9DF',tc:'#17243F'}
+      ];
+      return { k: k.kw, score: k.score, growth: k.growth, badge: k.badge, ...colors[i] };
+    }),
+    seasonality: (d.seasonality || []).map(s => ({ k: s.kw, months: s.months, peak: s.peak })),
+    kwMap: d.kw_map || {},
+    seasonInsight: d.season_insight || '',
+    trendInsight: d.trend_insight || '',
+    srcAll: d.src_all || '',
+    trend_monthly: d.trend_monthly || [],
+    trend_monthly_2: d.trend_monthly_2 || []
+  };
 
     // Init render after data loaded
     renderTrend('americas');
