@@ -1,8 +1,16 @@
 {
   "weeks": [
     {
-      "label": "2026 · May · Week 3 (최신)",
+      "label": "2026 · June · Week 1 (최신)",
       "file": "data.json"
+    },
+    {
+      "label": "2026 · May · Week 4",
+      "file": "history/data_2026-05-25.json"
+    },
+    {
+      "label": "2026 · May · Week 3",
+      "file": "history/data_2026-05-18.json"
     },
     {
       "label": "2026 · May · Week 2",
