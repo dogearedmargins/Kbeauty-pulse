@@ -1,0 +1,685 @@
+{
+  "meta": {
+    "updated_at": "2026-05-31",
+    "updated_by": "manual research",
+    "week_label": "2026 · May · Week 4",
+    "note": "Sources: BeautyMatter May 28 2026 (Olive Young US), GCI Magazine May 2026 (Olive Young Pasadena), Fitt Insider May 29 2026, Fashionista May 28 2026, eMarketer (Sephora x Olive Young), Korea Post May 2026 (COSMOBEAUTY SEOUL 2026), The K Beauty Science May 2026 (Cosmobeauty Trend Report), KoreaTechDesk Apr 2026 (Goodai Global IPO), CosmeticsDesign-Asia Jan 2026, WWD Beauty Geographies Jan 2026, Qogita Mar 2026"
+  },
+  "regions": {
+    "americas": {
+      "metrics": [
+        {
+          "label": "Olive Young 미국 1호점 오픈",
+          "value": "Pasadena CA",
+          "delta": "5월 29일 공식 오픈",
+          "tooltip": "GCI Magazine/PRNewswire May 29 2026: Olive Young이 캘리포니아 패서디나에 8,647 sq ft 미국 1호 오프라인 매장 오픈. 400개 브랜드·5,000개 제품. 동시에 미국 전용 이커머스 런칭. 미국 고객이 Olive Young 글로벌 D2C 매출의 절반 이상 차지."
+        },
+        {
+          "label": "미국 K-beauty 매출",
+          "value": "$2B",
+          "delta": "YoY +37% (Nielsen)",
+          "tooltip": "eMarketer/Nielsen 2026: 미국 K-beauty 매출 YoY +37.2%로 $20억 돌파. Sephora가 Olive Young과 파트너십 체결 — 2026년 하반기부터 미국·캐나다 650개 매장에 K-beauty 큐레이션 존 도입 예정."
+        },
+        {
+          "label": "Sephora x Olive Young",
+          "value": "파트너십 체결",
+          "delta": "2026 하반기 650개 매장",
+          "tooltip": "eMarketer/RetailDive May 2026: Sephora가 Olive Young과 글로벌 파트너십 체결. 2026 하반기 미국·캐나다 650개 + 싱가포르·말레이시아·태국·홍콩 48개 매장에 K-beauty 큐레이션 존 도입. 2027년 중동·영국·호주로 확장."
+        },
+        {
+          "label": "Mixsoon, Costco 500개 입점",
+          "value": "오프라인 확장",
+          "delta": "Costco.com → 창고형 매장",
+          "tooltip": "GCI Magazine May 2026: Mixsoon이 Costco.com에서 미국 전역 약 500개 Costco 창고형 매장으로 확장. K-beauty 메인스트림 오프라인 채널 진입 가속화 신호."
+        }
+      ],
+      "sellers": [
+        {
+          "name": "Medicube Glass Glow 8-Piece Set",
+          "brand": "TikTok Shop #skincare·#koreanskincare 1위 — WWD/Charm.io Mar 2026",
+          "score": 100
+        },
+        {
+          "name": "Beauty of Joseon Relief Sun SPF50+",
+          "brand": "Olive Young 미국 1호점 입점 브랜드 · SPF 스테디",
+          "score": 92
+        },
+        {
+          "name": "Anua Heartleaf Pore Serum",
+          "brand": "Olive Young 패서디나 런칭 브랜드 · 성분 리터러시 소비자 선호",
+          "score": 84
+        },
+        {
+          "name": "Mixsoon Bean Essence",
+          "brand": "Costco 500개 입점 확장 — 오프라인 메인스트림 진입",
+          "score": 76
+        },
+        {
+          "name": "Biodance Bio-Collagen Mask",
+          "brand": "Olive Young 패서디나 입점 · TikTok 지속 바이럴",
+          "score": 68
+        }
+      ],
+      "sellers_src": "출처: GCI Magazine May 2026 · Fitt Insider May 29 2026 · WWD/Charm.io Mar 2026",
+      "channels": [
+        {
+          "name": "Amazon",
+          "pct": 36,
+          "tooltip": "오프라인 Olive Young 오픈에도 Amazon 절대 규모 1위 유지. TikTok 발견 → Amazon 전환 패턴 지속."
+        },
+        {
+          "name": "TikTok Shop",
+          "pct": 32,
+          "tooltip": "WWD Mar 2026: #skincare 해시태그 매출 $142M(12개월). K-beauty가 핵심 카테고리 점령."
+        },
+        {
+          "name": "Sephora/Ulta",
+          "pct": 19,
+          "tooltip": "Sephora x Olive Young 파트너십으로 2026 하반기 K-beauty 큐레이션 존 도입 예정. 오프라인 비중 확대 전망."
+        },
+        {
+          "name": "Olive Young / DTC",
+          "pct": 13,
+          "tooltip": "5월 29일 패서디나 1호점 오픈. 연내 캘리포니아 추가 5개점, 뉴욕 확장 계획. 미국 전용 이커머스 동시 런칭."
+        }
+      ],
+      "channels_src": "출처: GCI Magazine May 2026 · eMarketer May 2026 · WWD/Charm.io Mar 2026",
+      "keywords": [
+        { "kw": "Glass Glow", "tier": 1 },
+        { "kw": "Cooling Care", "tier": 1 },
+        { "kw": "PDRN Clinic-to-Home", "tier": 2 },
+        { "kw": "Cloud Skin", "tier": 2 },
+        { "kw": "Skin Longevity", "tier": 3 },
+        { "kw": "Olive Young", "tier": 3 },
+        { "kw": "Korean Lash Lift", "tier": 4 }
+      ],
+      "kw_ranking": [
+        { "kw": "Glass Glow", "score": 98 },
+        { "kw": "Cooling Care", "score": 92 },
+        { "kw": "PDRN Clinic-to-Home", "score": 88 },
+        { "kw": "Cloud Skin", "score": 84 },
+        { "kw": "Skin Longevity", "score": 78 }
+      ],
+      "kw_src": "출처: Qogita Mar 2026 · BeautyMatter May 2026 · WWD/Charm.io Mar 2026",
+      "trend_tooltip": "Olive Young 미국 1호점(패서디나) 오픈과 Sephora 파트너십 체결로 K-beauty 오프라인 채널이 본격 확장 국면 진입. 미국 K-beauty 매출 $20억(+37% YoY). Cloud Skin·Skin Longevity 키워드로 소비자 관심이 바이럴 제품에서 루틴 기반 스킨케어로 이동.",
+      "src_all": "GCI Magazine May 2026 · BeautyMatter May 28 2026 · Fitt Insider May 29 2026 · eMarketer May 2026 · Qogita Mar 2026",
+      "weekly_signals": [
+        {
+          "type": "THIS WEEK'S LEAD",
+          "title": "Olive Young 미국 1호점 패서디나 오픈 — 오픈 전날 밤샘 줄서기",
+          "source": "GCI Magazine",
+          "date": "May 29, 2026",
+          "url": "https://www.gcimagazine.com/brands-products/skin-care/article/22967753/olive-young-plants-its-flag-in-the-us-as-kbeautys-retail-expansion-accelerates",
+          "image_keyword": "Olive Young store Korean beauty retail",
+          "bg": "unsplash"
+        },
+        {
+          "type": "NUMBERS",
+          "title": "미국 K-beauty 매출 YoY +37%, $20억 돌파",
+          "source": "Nielsen/eMarketer",
+          "date": "May 2026",
+          "url": "https://www.emarketer.com/content/sephora-taps-olive-young-scale-k-beauty-demand-surges",
+          "number": "$2B",
+          "number_label": "미국 K-beauty 연매출 (YoY +37%)",
+          "bg": "gradient"
+        },
+        {
+          "type": "ON THE RADAR",
+          "title": "Sephora x Olive Young 파트너십 — 2026 하반기 650개 매장 K-beauty 존 도입",
+          "source": "eMarketer",
+          "date": "May 2026",
+          "url": "https://www.emarketer.com/content/sephora-taps-olive-young-scale-k-beauty-demand-surges",
+          "bg": "unsplash",
+          "image_keyword": "Sephora beauty store interior"
+        }
+      ],
+      "kw_rank_tooltips": {
+        "Glass Glow": "WWD/Charm.io Mar 2026: Medicube Glass Glow Set TikTok Shop 1위 지속. Olive Young 패서디나 입점으로 오프라인 노출 확대.",
+        "Cooling Care": "BeautyMatter 2026: 여름 시즌(6~8월) 쿨링 스킨케어 수요 피크. 지금이 포지셔닝 타이밍.",
+        "PDRN Clinic-to-Home": "Qogita Mar 2026: 피부과 성분 홈케어 확산 지속. 가을(9~11월) 피크 대비 재고 확보 필요.",
+        "Cloud Skin": "Qogita Jun 2026: Glass Skin 다음 트렌드. 소프트 포커스·블러 피니시 제품 수요 증가.",
+        "Skin Longevity": "BeautyMatter May 2026: 빠른 트렌드 소비에서 루틴 기반 장기 스킨케어로 소비자 이동."
+      }
+    },
+    "europe": {
+      "metrics": [
+        {
+          "label": "Goodai Global IPO 준비",
+          "value": "10조원 목표",
+          "delta": "Beauty of Joseon·TIRTIR 모회사",
+          "tooltip": "KoreaTechDesk Apr 2026: Goodai Global(Beauty of Joseon·TIRTIR·Skinfood·Round Lab 보유)이 Mirae Asset·NH·Citi·Morgan Stanley를 주관사로 선정, IPO 본격화. 목표 밸류에이션 10조원. IPO 성공 시 유럽 오프라인 채널 대규모 확장 예정."
+        },
+        {
+          "label": "유럽 K-beauty 온라인 점유율",
+          "value": "11%",
+          "delta": "2022년 3%에서 급성장",
+          "tooltip": "CosmeticsDesign-Asia Jan 2026: 글로벌 K-beauty 온라인 매출 중 유럽 비중이 2022년 3%에서 2025년 11%로 급성장. 영국·독일 TOP 시장. Boots·Space NK K-beauty 카테고리 전략적 확장 중."
+        },
+        {
+          "label": "Sephora x Olive Young",
+          "value": "글로벌 확장",
+          "delta": "싱가포르·홍콩·말레이시아·태국",
+          "tooltip": "eMarketer May 2026: Sephora x Olive Young 파트너십 — 2026 하반기 아시아 48개 매장, 2027년 중동·영국·호주로 확장 예정. 유럽 진출 로드맵 확인."
+        },
+        {
+          "label": "Hanbang 현대화",
+          "value": "진행 중",
+          "delta": "인삼·쑥 + 펩타이드 융합",
+          "tooltip": "Hello Magazine Dec 2025: 2026 유럽 K-beauty 트렌드 — 인삼·쑥·대나무 수액 등 한방 성분과 펩타이드·인캡슐레이션 현대 기술 융합. 유럽 프리미엄 소비자의 성분 리터러시 높아 '검증된 한방' 포지셔닝 유효."
+        }
+      ],
+      "sellers": [
+        {
+          "name": "Beauty of Joseon Relief Sun SPF50+",
+          "brand": "Boots UK·Lookfantastic 유럽 SPF 1위 — IPO 앞두고 채널 확장 가속",
+          "score": 100
+        },
+        {
+          "name": "TIRTIR Milk Sun Cream",
+          "brand": "Goodai Global 포트폴리오 · 일본 선행 바이럴 후 유럽 확산",
+          "score": 88
+        },
+        {
+          "name": "Anua Heartleaf Pore Serum",
+          "brand": "Sephora 유럽 K-beauty 존 입점 후보 — 성분 리터러시 소비자 선호",
+          "score": 80
+        },
+        {
+          "name": "Numbuzin No.9 NAD+ Collagen Serum",
+          "brand": "Boots 2026 추천 — NAD+·한방 융합",
+          "score": 72
+        },
+        {
+          "name": "Round Lab Dokdo Toner",
+          "brand": "Goodai Global 인수(Seorin) 후 유럽 채널 확장 예상",
+          "score": 64
+        }
+      ],
+      "sellers_src": "출처: CosmeticsDesign-Asia Jan 2026 · WWD Beauty Geographies Jan 2026 · KoreaTechDesk Apr 2026",
+      "channels": [
+        {
+          "name": "Boots / Space NK",
+          "pct": 32,
+          "tooltip": "CosmeticsDesign-Asia Jan 2026: Boots·Space NK K-beauty 카테고리 전략적 확장. Beauty of Joseon·Anua 정식 입점."
+        },
+        {
+          "name": "Lookfantastic / ASOS",
+          "pct": 28,
+          "tooltip": "유럽 온라인 K-beauty 주요 채널. SPF·세럼 카테고리 강세."
+        },
+        {
+          "name": "Sephora",
+          "pct": 24,
+          "tooltip": "eMarketer May 2026: Sephora x Olive Young 파트너십으로 2027년 영국 K-beauty 존 도입 예정."
+        },
+        {
+          "name": "DTC / Amazon EU",
+          "pct": 16,
+          "tooltip": "브랜드 직영 이커머스 성장. Goodai Global IPO 후 유럽 물류 직접 투자 예상."
+        }
+      ],
+      "channels_src": "출처: CosmeticsDesign-Asia Jan 2026 · eMarketer May 2026",
+      "keywords": [
+        { "kw": "Slow Ageing", "tier": 1 },
+        { "kw": "Post-Procedure Care", "tier": 1 },
+        { "kw": "Inner Beauty", "tier": 2 },
+        { "kw": "Hanbang 현대화", "tier": 2 },
+        { "kw": "SPF 필수화", "tier": 3 },
+        { "kw": "Skin Longevity", "tier": 3 },
+        { "kw": "AI 개인화", "tier": 4 }
+      ],
+      "kw_ranking": [
+        { "kw": "Slow Ageing", "score": 94 },
+        { "kw": "Post-Procedure Care", "score": 90 },
+        { "kw": "Inner Beauty", "score": 86 },
+        { "kw": "Hanbang 현대화", "score": 80 },
+        { "kw": "SPF 필수화", "score": 76 }
+      ],
+      "kw_src": "출처: CosmeticsDesign-Asia Jan 2026 · Hello Magazine Dec 2025 · WWD Jan 2026",
+      "trend_tooltip": "Goodai Global(Beauty of Joseon·TIRTIR 모회사) IPO 준비로 유럽 오프라인 채널 확장 기대감 고조. 유럽 K-beauty 온라인 점유율이 3%→11%로 급성장. 30~40대 소비자 중심의 Slow Ageing·Post-Procedure Care 수요가 트렌드를 주도.",
+      "src_all": "CosmeticsDesign-Asia Jan 2026 · WWD Beauty Geographies Jan 2026 · KoreaTechDesk Apr 2026 · eMarketer May 2026",
+      "weekly_signals": [
+        {
+          "type": "THIS WEEK'S LEAD",
+          "title": "Goodai Global, IPO 주관사 선정 완료 — 10조원 밸류에이션 목표",
+          "source": "KoreaTechDesk",
+          "date": "Apr 2026",
+          "url": "https://koreatechdesk.com/goodai-global-ipo-2026-kbeauty-venture",
+          "image_keyword": "Korean beauty brand skincare serum",
+          "bg": "unsplash"
+        },
+        {
+          "type": "NUMBERS",
+          "title": "유럽 K-beauty 온라인 점유율 3%→11% (2022→2025)",
+          "source": "CosmeticsDesign-Asia",
+          "date": "Jan 2026",
+          "url": "https://www.cosmeticsdesign-asia.com/Article/2026/01/14/advanced-tech-stronger-branding-mid-range-prices-under-spotlight-for-k-beauty-20/",
+          "number": "11%",
+          "number_label": "유럽 K-beauty 온라인 점유율",
+          "bg": "gradient"
+        },
+        {
+          "type": "ON THE RADAR",
+          "title": "Sephora x Olive Young — 2027년 영국·중동·호주 K-beauty 존 확장 로드맵 확정",
+          "source": "eMarketer",
+          "date": "May 2026",
+          "url": "https://www.emarketer.com/content/sephora-taps-olive-young-scale-k-beauty-demand-surges",
+          "bg": "unsplash",
+          "image_keyword": "beauty retail store luxury cosmetics"
+        }
+      ],
+      "kw_rank_tooltips": {
+        "Slow Ageing": "CosmeticsDesign-Asia Jan 2026: 30~40대 소비자 중심. 빠른 트렌드보다 피부 건강 유지·자연스러운 노화 관리.",
+        "Post-Procedure Care": "CosmeticsDesign-Asia Jan 2026: 레이저·필링·인젝터블 시술 일반화로 시술 후 케어 제품 수요 급증.",
+        "Inner Beauty": "CosmeticsDesign-Asia Jan 2026: 수면·호르몬·스트레스 연계 이너뷰티 서플리먼트 성장.",
+        "Hanbang 현대화": "Hello Magazine Dec 2025: 인삼·쑥·대나무 수액 + 펩타이드·인캡슐레이션 기술 융합. 유럽 프리미엄 소비자 공략.",
+        "SPF 필수화": "CosmeticsDesign-Asia Jan 2026: 선크림이 선택이 아닌 데일리 필수 카테고리로 정착. 유럽 SPF 시장 지속 성장."
+      }
+    },
+    "sea": {
+      "metrics": [
+        {
+          "label": "Olive Young SEA 확장",
+          "value": "48개 매장",
+          "delta": "싱가포르·말레이시아·태국·홍콩",
+          "tooltip": "eMarketer May 2026: Sephora x Olive Young 파트너십으로 2026 하반기 SEA 48개 Sephora 매장에 K-beauty 큐레이션 존 도입. 싱가포르·말레이시아·태국·홍콩 포함."
+        },
+        {
+          "label": "폴란드 K-beauty 수출",
+          "value": "+111.7%",
+          "delta": "2025 동유럽 신규 TOP10 진입",
+          "tooltip": "CosmeticsDesign-Asia Feb 2026: 2025년 K-beauty 수출 국가 202개로 확대. 폴란드 +111.7%, UAE +69.7% 급성장으로 TOP10 신규 진입. 동남아 주요국 수출도 안정적 성장."
+        },
+        {
+          "label": "SPF 필수화 트렌드",
+          "value": "SEA 피크",
+          "delta": "5~8월 혹서기 시즌",
+          "tooltip": "CosmeticsDesign-Asia Dec 2025: SEA는 연중 자외선 강도 높아 SPF 필수화 트렌드 가장 빠르게 정착. 한국 SPF 기술력(Beauty of Joseon·TIRTIR·Mixsoon) 가성비로 로컬 브랜드 대비 우위."
+        },
+        {
+          "label": "TikTok Shop SEA",
+          "value": "핵심 채널",
+          "delta": "Shopee와 양강 구도",
+          "tooltip": "Qogita Mar 2026: TikTok Shop이 SEA K-beauty 주요 발견·구매 채널로 정착. Shopee와 함께 양강 구도. 라이브 커머스 비중 높아 브랜드 라이브 전략 필수."
+        }
+      ],
+      "sellers": [
+        {
+          "name": "Beauty of Joseon Relief Sun SPF50+",
+          "brand": "SEA 전역 SPF 카테고리 1위 · Shopee·TikTok Shop 스테디",
+          "score": 100
+        },
+        {
+          "name": "TIRTIR Milk Sun Cream",
+          "brand": "SEA 피부톤 다양성 대응 쉐이드 라인업 강점",
+          "score": 90
+        },
+        {
+          "name": "Some By Mi AHA BHA PHA Toner",
+          "brand": "Shopee SEA 스킨케어 스테디셀러",
+          "score": 82
+        },
+        {
+          "name": "Cosrx Snail Mucin Essence",
+          "brand": "TikTok Shop SEA 라이브 커머스 인기 지속",
+          "score": 75
+        },
+        {
+          "name": "Isntree Hyaluronic Acid Toner",
+          "brand": "SEA 보습·수분 카테고리 성장 수혜",
+          "score": 68
+        }
+      ],
+      "sellers_src": "출처: CosmeticsDesign-Asia Jan 2026 · Qogita Mar 2026 · eMarketer May 2026",
+      "channels": [
+        {
+          "name": "Shopee",
+          "pct": 38,
+          "tooltip": "SEA K-beauty 최대 이커머스 채널. 플래시 세일·번들 전략 필수."
+        },
+        {
+          "name": "TikTok Shop",
+          "pct": 30,
+          "tooltip": "Qogita Mar 2026: 라이브 커머스 비중 높음. 브랜드 라이브 방송 전략 필수."
+        },
+        {
+          "name": "Sephora SEA",
+          "pct": 20,
+          "tooltip": "eMarketer May 2026: Sephora x Olive Young 파트너십으로 2026 하반기 K-beauty 큐레이션 존 도입 예정."
+        },
+        {
+          "name": "Watsons / Guardian",
+          "pct": 12,
+          "tooltip": "오프라인 드럭스토어 채널. K-beauty 인지도 높은 소비자 재구매 채널."
+        }
+      ],
+      "channels_src": "출처: Qogita Mar 2026 · eMarketer May 2026 · CosmeticsDesign-Asia",
+      "keywords": [
+        { "kw": "SPF 필수화", "tier": 1 },
+        { "kw": "Tone-Up Sunscreen", "tier": 1 },
+        { "kw": "Glass Skin", "tier": 2 },
+        { "kw": "Brightening Serum", "tier": 2 },
+        { "kw": "Scalp Care", "tier": 3 },
+        { "kw": "Inner Beauty", "tier": 3 },
+        { "kw": "Post-Procedure", "tier": 4 }
+      ],
+      "kw_ranking": [
+        { "kw": "SPF 필수화", "score": 99 },
+        { "kw": "Tone-Up Sunscreen", "score": 92 },
+        { "kw": "Glass Skin", "score": 88 },
+        { "kw": "Brightening Serum", "score": 82 },
+        { "kw": "Scalp Care", "score": 74 }
+      ],
+      "kw_src": "출처: CosmeticsDesign-Asia Dec 2025 · Qogita Mar 2026",
+      "trend_tooltip": "Sephora x Olive Young 파트너십으로 SEA 48개 매장에 K-beauty 큐레이션 존 도입 예정(2026 하반기). SPF 필수화 트렌드 혹서기 피크 구간 진입 — 선크림 마케팅 집중 타이밍. TikTok Shop 라이브 커머스가 핵심 발견 채널로 정착.",
+      "src_all": "CosmeticsDesign-Asia Jan·Dec 2025 · eMarketer May 2026 · Qogita Mar 2026",
+      "weekly_signals": [
+        {
+          "type": "THIS WEEK'S LEAD",
+          "title": "Sephora x Olive Young SEA 48개 매장 K-beauty 존 — 2026 하반기 도입",
+          "source": "eMarketer",
+          "date": "May 2026",
+          "url": "https://www.emarketer.com/content/sephora-taps-olive-young-scale-k-beauty-demand-surges",
+          "image_keyword": "Sephora Southeast Asia beauty store",
+          "bg": "unsplash"
+        },
+        {
+          "type": "NUMBERS",
+          "title": "SEA K-beauty 수출 지속 성장 — 주요국 두자릿수 증가율",
+          "source": "CosmeticsDesign-Asia",
+          "date": "Feb 2026",
+          "url": "https://www.cosmeticsdesign-asia.com/Article/2026/02/02/latest-news-on-k-beauty-exports-olive-young-mediheal-and-anua/",
+          "number": "+12.3%",
+          "number_label": "한국 화장품 수출 YoY (2025 확정)",
+          "bg": "gradient"
+        },
+        {
+          "type": "ON THE RADAR",
+          "title": "Scalp Care — SEA 헤어케어 Skinification 트렌드 본격화",
+          "source": "CosmeticsDesign-Asia",
+          "date": "Jan 2026",
+          "url": "https://www.cosmeticsdesign-asia.com/Article/2026/01/14/advanced-tech-stronger-branding-mid-range-prices-under-spotlight-for-k-beauty-20/",
+          "bg": "unsplash",
+          "image_keyword": "scalp care hair treatment Korean beauty"
+        }
+      ],
+      "kw_rank_tooltips": {
+        "SPF 필수화": "CosmeticsDesign-Asia Dec 2025: SEA 연중 자외선 — 선크림 데일리 필수 카테고리 완전 정착.",
+        "Tone-Up Sunscreen": "Qogita Mar 2026: 화이트닝+SPF 복합 기능 선크림 SEA 수요 지속.",
+        "Glass Skin": "SEA 유리피부 트렌드 스테디. 에센스·토너 레이어링 루틴 정착.",
+        "Brightening Serum": "나이아신아마이드·비타민C 브라이트닝 세럼 SEA 스테디셀러.",
+        "Scalp Care": "CosmeticsDesign-Asia Jan 2026: 스킨케어 성분을 두피에 적용하는 Skinification 트렌드 SEA 확산."
+      }
+    },
+    "mideast": {
+      "metrics": [
+        {
+          "label": "UAE K-beauty 수출",
+          "value": "+69.7%",
+          "delta": "2025 TOP10 신규 진입",
+          "tooltip": "CosmeticsDesign-Asia Feb 2026: 2025년 UAE K-beauty 수출 +69.7% 급성장으로 TOP10 신규 진입. 중동 K-beauty 시장 고성장 확인. Sephora x Olive Young 파트너십 2027년 중동 확장 예정."
+        },
+        {
+          "label": "Arab Beauty 부상",
+          "value": "경쟁 심화",
+          "delta": "Huda Beauty·Bassam Fattouh",
+          "tooltip": "WWD Beauty Jan 2026 · CosmeticsBusiness 2026: Arab Beauty가 글로벌 트렌드로 부상. Huda Beauty·Bassam Fattouh·Hindash Cosmetics 성장. K-beauty는 성분 혁신(PDRN·NAD+)으로 차별화 필요."
+        },
+        {
+          "label": "Halal 인증 수요",
+          "value": "증가",
+          "delta": "걸프 프리미엄 소비자 공략",
+          "tooltip": "CosmeticsBusiness 2026: 중동 프리미엄 소비자의 Halal 인증 K-beauty 수요 증가. 인삼·발효 성분 기반 Hanbang 현대화 제품이 중동 프리미엄 포지셔닝에 적합."
+        },
+        {
+          "label": "PDRN 메디코스메틱",
+          "value": "급부상",
+          "delta": "클리닉 연계 홈케어",
+          "tooltip": "Qogita Mar 2026: 중동 소비자 의료미용 관심 높아 PDRN·엑소좀 등 클리닉 성분 홈케어 제품 수요 급증. Medicube·VT PDRN 등 한국 브랜드 유리."
+        }
+      ],
+      "sellers": [
+        {
+          "name": "Beauty of Joseon Ginseng Serum",
+          "brand": "중동 인삼 성분 선호 · Sephora ME 스테디",
+          "score": 100
+        },
+        {
+          "name": "Medicube PDRN Pink Serum",
+          "brand": "중동 메디코스메틱 트렌드 수혜 — 클리닉 성분 홈케어",
+          "score": 88
+        },
+        {
+          "name": "VT PDRN Essence",
+          "brand": "PDRN 카테고리 확장 — Noon·Sephora ME 입점",
+          "score": 80
+        },
+        {
+          "name": "Sulwhasoo First Care Activating Serum",
+          "brand": "중동 프리미엄 한방 포지셔닝 강점",
+          "score": 72
+        },
+        {
+          "name": "Laneige Lip Sleeping Mask",
+          "brand": "중동 건조 기후 수혜 · Sephora ME 스테디셀러",
+          "score": 65
+        }
+      ],
+      "sellers_src": "출처: WWD Beauty Jan 2026 · CosmeticsBusiness 2026 · Qogita Mar 2026",
+      "channels": [
+        {
+          "name": "Sephora ME",
+          "pct": 42,
+          "tooltip": "중동 K-beauty 주요 프리미엄 채널. UAE·사우디 주요 몰 입점."
+        },
+        {
+          "name": "Noon / Amazon AE",
+          "pct": 30,
+          "tooltip": "중동 이커머스 주요 채널. K-beauty 카테고리 성장 중."
+        },
+        {
+          "name": "FeelUnique / DTC",
+          "pct": 18,
+          "tooltip": "온라인 뷰티 전문몰. 중동 영어권 소비자 공략."
+        },
+        {
+          "name": "오프라인 드럭스토어",
+          "pct": 10,
+          "tooltip": "UAE·사우디 로컬 뷰티 리테일. K-beauty 입점 확대 중."
+        }
+      ],
+      "channels_src": "출처: WWD Beauty Jan 2026 · CosmeticsBusiness 2026",
+      "keywords": [
+        { "kw": "PDRN Clinic-to-Home", "tier": 1 },
+        { "kw": "Ginseng Serum", "tier": 1 },
+        { "kw": "Halal K-beauty", "tier": 2 },
+        { "kw": "Anti-Ageing Korean", "tier": 2 },
+        { "kw": "Arab+K Beauty 융합", "tier": 3 },
+        { "kw": "Glass Skin", "tier": 3 },
+        { "kw": "Slow Ageing", "tier": 4 }
+      ],
+      "kw_ranking": [
+        { "kw": "PDRN Clinic-to-Home", "score": 92 },
+        { "kw": "Ginseng Serum", "score": 88 },
+        { "kw": "Halal K-beauty", "score": 82 },
+        { "kw": "Anti-Ageing Korean", "score": 78 },
+        { "kw": "Arab+K Beauty 융합", "score": 72 }
+      ],
+      "kw_src": "출처: WWD Beauty Jan 2026 · CosmeticsBusiness 2026 · Qogita Mar 2026",
+      "trend_tooltip": "UAE K-beauty 수출 +69.7%로 2025 글로벌 TOP10 신규 진입. Arab Beauty 부상으로 경쟁 심화 — K-beauty는 PDRN·NAD+ 성분 혁신으로 차별화 필요. Sephora x Olive Young 파트너십 2027년 중동 확장 로드맵 확정.",
+      "src_all": "WWD Beauty Geographies Jan 2026 · CosmeticsDesign-Asia Feb 2026 · CosmeticsBusiness 2026",
+      "weekly_signals": [
+        {
+          "type": "THIS WEEK'S LEAD",
+          "title": "Sephora x Olive Young 2027년 중동 K-beauty 존 확장 로드맵 확정",
+          "source": "eMarketer",
+          "date": "May 2026",
+          "url": "https://www.emarketer.com/content/sephora-taps-olive-young-scale-k-beauty-demand-surges",
+          "image_keyword": "Dubai beauty store luxury skincare",
+          "bg": "unsplash"
+        },
+        {
+          "type": "NUMBERS",
+          "title": "UAE K-beauty 수출 YoY +69.7% — 2025 TOP10 신규 진입",
+          "source": "CosmeticsDesign-Asia",
+          "date": "Feb 2026",
+          "url": "https://www.cosmeticsdesign-asia.com/Article/2026/02/02/latest-news-on-k-beauty-exports-olive-young-mediheal-and-anua/",
+          "number": "+69.7%",
+          "number_label": "UAE K-beauty 수출 YoY",
+          "bg": "gradient"
+        },
+        {
+          "type": "ON THE RADAR",
+          "title": "Arab Beauty vs K-beauty — Huda Beauty·Bassam Fattouh 성장으로 경쟁 심화",
+          "source": "WWD",
+          "date": "Jan 2026",
+          "url": "https://wwd.com/beauty-industry-news/beauty-features/beauty-2026-geographies-to-watch-south-korea-middle-east-1238436648/",
+          "bg": "unsplash",
+          "image_keyword": "Middle East beauty makeup luxury"
+        }
+      ],
+      "kw_rank_tooltips": {
+        "PDRN Clinic-to-Home": "Qogita Mar 2026: 중동 의료미용 관심 높아 클리닉 성분 홈케어 수요 급증.",
+        "Ginseng Serum": "중동 인삼 성분 선호. Beauty of Joseon·Sulwhasoo 프리미엄 포지셔닝.",
+        "Halal K-beauty": "중동 소비자 Halal 인증 수요 증가. K-beauty 브랜드 인증 취득 확대 중.",
+        "Anti-Ageing Korean": "WWD Jan 2026: 중동 프리미엄 소비자 한국 안티에이징 성분 신뢰도 높음.",
+        "Arab+K Beauty 융합": "CosmeticsBusiness 2026: Arab Beauty 트렌드와 K-beauty 기술력 융합 제품 수요 증가."
+      }
+    },
+    "india": {
+      "metrics": [
+        {
+          "label": "인도 K-beauty 수출",
+          "value": "+100%",
+          "delta": "2025 최고 성장 시장",
+          "tooltip": "관세청/WWD 2025 확정치: 인도 K-beauty 수출 YoY +100% — 5개 지역 중 최고 성장률. Nykaa K-beauty 카테고리 급성장. Medicube APR이 Nykaa 파트너십으로 공식 진출."
+        },
+        {
+          "label": "Medicube x Nykaa",
+          "value": "공식 파트너십",
+          "delta": "APR, 오프라인 확장 검토 중",
+          "tooltip": "PersonalCareInsights Apr 2026: APR(Medicube 모회사)이 Nykaa 파트너십으로 인도 공식 진출. 수십 개 스킨케어 제품 Nykaa 온라인 론칭. 오프라인 브릭앤모르타르 확장 계획 중."
+        },
+        {
+          "label": "Nykaa Mid-Year Sale",
+          "value": "6월 9~15일",
+          "delta": "K-beauty 최대 50% 할인",
+          "tooltip": "GrabOn May 2026: Nykaa Mid-Year Sale 6월 9~15일 — K-beauty 카테고리 최대 50% 할인. 인도 K-beauty 소비자 최대 구매 이벤트. 사전 재고 확보 필수."
+        },
+        {
+          "label": "A-beauty 경쟁",
+          "value": "심화",
+          "delta": "Nykaa x 82°E 인수",
+          "tooltip": "BoF Apr 2026: Nykaa가 인도 로컬 브랜드 82°E 인수로 A-beauty 강화. K-beauty는 PDRN·NAD+ 성분 혁신으로 차별화 전략 필요."
+        }
+      ],
+      "sellers": [
+        {
+          "name": "Medicube Zero Pore Pads 2.0",
+          "brand": "Nykaa x APR 공식 파트너십 — 인도 론칭 제품",
+          "score": 100
+        },
+        {
+          "name": "Beauty of Joseon Relief Sun SPF50+",
+          "brand": "인도 SPF 혹서기(5~6월) 피크 — 스테디셀러",
+          "score": 90
+        },
+        {
+          "name": "Cosrx Snail Mucin Essence",
+          "brand": "Nykaa K-beauty 입문 제품 1위",
+          "score": 82
+        },
+        {
+          "name": "Some By Mi Niacinamide Serum",
+          "brand": "인도 브라이트닝 수요 — 나이아신아마이드 스테디",
+          "score": 74
+        },
+        {
+          "name": "Illiyoon Ato Mild Top to Toe Lotion",
+          "brand": "인도 민감성 피부 수요 · 공식 론칭",
+          "score": 66
+        }
+      ],
+      "sellers_src": "출처: PersonalCareInsights Apr 2026 · GrabOn May 2026 · WWD Beauty Jan 2026",
+      "channels": [
+        {
+          "name": "Nykaa",
+          "pct": 52,
+          "tooltip": "인도 최대 뷰티 이커머스. K-beauty 카테고리 급성장. Mid-Year Sale 6월 9~15일."
+        },
+        {
+          "name": "Amazon India / Myntra",
+          "pct": 28,
+          "tooltip": "Myntra K-beauty 카테고리 확장 중. Amazon India 빠른 배송 강점."
+        },
+        {
+          "name": "Q-Commerce (Blinkit·Zepto)",
+          "pct": 12,
+          "tooltip": "CosmeticsDesign-Asia 2026: 10분 배송 Q-commerce 신규 K-beauty 채널 테스트 타이밍."
+        },
+        {
+          "name": "오프라인 / DTC",
+          "pct": 8,
+          "tooltip": "APR(Medicube) 오프라인 브릭앤모르타르 확장 검토 중."
+        }
+      ],
+      "channels_src": "출처: PersonalCareInsights Apr 2026 · GrabOn May 2026",
+      "keywords": [
+        { "kw": "SPF 혹서기", "tier": 1 },
+        { "kw": "Nykaa Mid-Year Sale", "tier": 1 },
+        { "kw": "Niacinamide", "tier": 2 },
+        { "kw": "Q-Commerce K-beauty", "tier": 2 },
+        { "kw": "Slow Ageing (인도)", "tier": 3 },
+        { "kw": "A-beauty vs K-beauty", "tier": 3 },
+        { "kw": "PDRN", "tier": 4 }
+      ],
+      "kw_ranking": [
+        { "kw": "SPF 혹서기", "score": 99 },
+        { "kw": "Nykaa Mid-Year Sale", "score": 94 },
+        { "kw": "Niacinamide", "score": 90 },
+        { "kw": "Q-Commerce K-beauty", "score": 80 },
+        { "kw": "Slow Ageing (인도)", "score": 74 }
+      ],
+      "kw_src": "출처: GrabOn May 2026 · PersonalCareInsights Apr 2026 · CosmeticsDesign-Asia",
+      "trend_tooltip": "Medicube x Nykaa 공식 파트너십으로 인도 진출 본격화. Nykaa Mid-Year Sale(6/9~15) K-beauty 최대 할인 이벤트 앞두고 재고 확보 시급. 인도 K-beauty 수출 +100%(2025) — 5개 지역 중 최고 성장률 유지.",
+      "src_all": "PersonalCareInsights Apr 2026 · GrabOn May 2026 · WWD Beauty Jan 2026 · 관세청 2025 확정치",
+      "weekly_signals": [
+        {
+          "type": "THIS WEEK'S LEAD",
+          "title": "Nykaa Mid-Year Sale 6월 9~15일 — K-beauty 최대 50% 할인, 재고 확보 필수",
+          "source": "GrabOn",
+          "date": "May 2026",
+          "url": "https://www.grabon.in/indulge/beauty-trends/nykaa-mid-year-beauty-sale/",
+          "image_keyword": "Nykaa India beauty shopping sale",
+          "bg": "unsplash"
+        },
+        {
+          "type": "NUMBERS",
+          "title": "인도 K-beauty 수출 YoY +100% — 5개 지역 최고 성장률",
+          "source": "관세청/WWD",
+          "date": "2025 확정치",
+          "url": "https://wwd.com",
+          "number": "+100%",
+          "number_label": "인도 K-beauty 수출 YoY",
+          "bg": "gradient"
+        },
+        {
+          "type": "ON THE RADAR",
+          "title": "A-beauty vs K-beauty — Nykaa x 82°E 인수로 로컬 경쟁 본격화",
+          "source": "BoF",
+          "date": "Apr 2026",
+          "url": "https://www.businessoffashion.com",
+          "bg": "unsplash",
+          "image_keyword": "India beauty market cosmetics shopping"
+        }
+      ],
+      "kw_rank_tooltips": {
+        "SPF 혹서기": "인도 5~6월 혹서기 SPF 수요 최고점. Beauty of Joseon·TIRTIR 선크림 집중 마케팅 타이밍.",
+        "Nykaa Mid-Year Sale": "GrabOn May 2026: 6월 9~15일 Nykaa 최대 세일. K-beauty 브랜드 할인 행사 참여 필수.",
+        "Niacinamide": "인도 브라이트닝 수요 스테디. Some By Mi·Cosrx 나이아신아마이드 제품 인기.",
+        "Q-Commerce K-beauty": "Blinkit·Zepto 10분 배송 채널에 K-beauty 입점 테스트 타이밍.",
+        "Slow Ageing (인도)": "인도 30~40대 소비자 안티에이징 관심 증가. K-beauty 한방 성분 신뢰도 높음."
+      }
+    }
+  }
+}
