@@ -569,16 +569,16 @@ async function loadHistoryData(file) {
 }
 
 async function loadData() {
-  return processData(await (await fetch("data.json?v=" + Date.now())).json());
+  const json = await (await fetch("data.json?v=" + Date.now())).json();
+  // 배지는 최초 data.json 로드 시에만 고정
+  const db = document.getElementById('dateBadge');
+  if(db) db.textContent = 'UPDATED · ' + (json.meta.week_label || json.meta.updated_at);
+  return processData(json);
 }
 
 async function processData(json) {
   try {
     DATA_META = json.meta;
-
-    // Update date badge
-    const db = document.getElementById('dateBadge');
-    if(db) db.textContent = 'UPDATED · ' + (json.meta.week_label || json.meta.updated_at);
 
     Object.keys(json.regions).forEach(r => {
       const d = json.regions[r];
